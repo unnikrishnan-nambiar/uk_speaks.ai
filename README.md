@@ -16,7 +16,7 @@ are in `design/`.
 ## Layout
 
 ```
-index.html                 home (no JavaScript)
+index.html                 home (only JS: the Buy Me a Coffee button)
 404.html
 g/_template/index.html     copy this to make a guide (not deployed)
 g/reply-prompt/index.html  sample guide

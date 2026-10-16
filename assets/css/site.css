@@ -292,6 +292,13 @@ img {
   color: var(--on-ink-soft);
 }
 
+/* Holds Buy Me a Coffee's script-rendered button. */
+.bmc {
+  display: flex;
+  justify-content: center;
+  min-height: 60px;
+}
+
 .footer {
   margin-top: auto;
   border-top: 1px solid var(--on-ink-rule);
