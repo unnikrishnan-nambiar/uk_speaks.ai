@@ -86,6 +86,11 @@ and `tools/`, and it removes `g/_template/` from the copy. If you add a new
 top-level public file, such as `CNAME` or `robots.txt`, add it to that `cp`
 line.
 
+GitHub Pages lets browsers cache CSS and JS for about 10 minutes. Whenever
+you change `assets/css/site.css`, bump the `?v=` number on its `<link>` in
+every HTML file. For example, find and replace `site.css?v=2` with
+`site.css?v=3`. Visitors then get the new styles immediately.
+
 One-time setup: go to **Settings → Pages** and set **Source** to **GitHub
 Actions**.
 
