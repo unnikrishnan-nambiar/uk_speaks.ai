@@ -41,7 +41,8 @@
     if (!btn) return;
     var el = document.getElementById(btn.getAttribute('data-copy-target'));
     if (!el) return;
-    var text = el.textContent.replace(/\s+/g, ' ').trim();
+    // Collapse spaces but keep paragraph breaks, so long prompts paste as written.
+    var text = el.textContent.replace(/[ \t]+/g, ' ').replace(/ *\n */g, '\n').replace(/\n{3,}/g, '\n\n').trim();
 
     function fallback() {
       if (legacyCopy(el)) {

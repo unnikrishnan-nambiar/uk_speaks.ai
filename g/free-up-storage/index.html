@@ -5,21 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
   <title>Free up space on your laptop, safely — uk_speaks.ai</title>
-  <meta name="description" content="Use Claude Code to find what's eating your Mac or Windows storage, clean only what you approve, and make your laptop feel faster. Nothing gets deleted without your yes.">
+  <meta name="description" content="One prompt for Claude that finds what's eating your Mac or Windows storage, cleans only what you approve, and makes your laptop feel faster. Nothing gets deleted without your yes.">
   <meta name="theme-color" content="#0a0a0a">
 
   <!-- Social previews need absolute URLs. BASE_URL = https://unnikrishnan-nambiar.github.io/uk_speaks.ai/ (see README). -->
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="uk_speaks.ai">
   <meta property="og:title" content="Free up space on your laptop, safely">
-  <meta property="og:description" content="Use Claude Code to find what's eating your storage, clean only what you approve, and make your laptop feel faster.">
+  <meta property="og:description" content="One prompt for Claude that finds what's eating your storage, cleans only what you approve, and makes your laptop feel faster.">
   <meta property="og:url" content="https://unnikrishnan-nambiar.github.io/uk_speaks.ai/g/free-up-storage/">
   <meta property="og:image" content="https://unnikrishnan-nambiar.github.io/uk_speaks.ai/assets/og/og-free-up-storage.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Free up space on your laptop, safely">
-  <meta name="twitter:description" content="Use Claude Code to find what's eating your storage, clean only what you approve, and make your laptop feel faster.">
+  <meta name="twitter:description" content="One prompt for Claude that finds what's eating your storage, cleans only what you approve, and makes your laptop feel faster.">
   <meta name="twitter:image" content="https://unnikrishnan-nambiar.github.io/uk_speaks.ai/assets/og/og-free-up-storage.png">
 
   <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
@@ -27,8 +27,8 @@
   <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
 
   <link rel="preload" href="../../assets/fonts/plus-jakarta-sans-800.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../../assets/css/site.css?v=4">
-  <script src="../../assets/js/copy.js" defer></script>
+  <link rel="stylesheet" href="../../assets/css/site.css?v=5">
+  <script src="../../assets/js/copy.js?v=2" defer></script>
 </head>
 <body>
   <main class="page guide">
@@ -37,16 +37,78 @@
       <span class="label">Free guide</span>
     </header>
 
-    <section class="card guide-intro">
+    <!-- First screen: everything needed in a few seconds. -->
+    <section class="card guide-intro quick">
       <span class="label keyword">Storage</span>
       <h1 class="guide-title">Free up space on your laptop, <span class="underline">safely.</span></h1>
-      <p class="card-text">Claude Code finds what's eating your storage on a Mac or Windows laptop, cleans only what you approve, then makes it feel faster. It can't delete anything without your yes.</p>
+      <ol class="quick-steps">
+        <li><div>Open the Claude app<span>Mac or Windows · go to the <strong>Code</strong> tab</span></div></li>
+        <li><div>Create a project<span><strong>+ New session</strong> → Local → pick your home folder → mode <strong>Plan</strong></span></div></li>
+        <li><div>Paste this prompt<span>Claude reports first. Nothing is deleted without your yes.</span></div></li>
+      </ol>
     </section>
+
+    <section class="prompt on-ink" aria-labelledby="prompt-1-label">
+      <div class="prompt-head">
+        <h2 class="label" id="prompt-1-label">The prompt</h2>
+        <button class="copy-btn" type="button" data-copy-target="prompt-1">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+          <span class="copy-label" aria-live="polite">Copy</span>
+        </button>
+      </div>
+      <p class="prompt-text prompt-text--paras" id="prompt-1">Help me free up storage and make this laptop faster, safely. First check whether it's a Mac or Windows.
+
+PART 1 — CHECK-UP (read-only). Do not delete, move, rename or change anything. Look at file names and sizes only, never open my personal files, and skip system folders. Show disk size, used and free space. Find the biggest folders and every file over 500 MB in my user folder, plus the usual space hogs: Downloads, Desktop, Trash or Recycle Bin, app and browser caches, old phone backups, installers (.dmg .pkg .exe .msi .zip), duplicate files, big old videos, and developer leftovers like node_modules, Xcode or Docker. Also list the apps that open at login and the apps using the most memory. Give me ONE numbered table sorted by size: item, location, size, what it is in plain English, and safety (Safe / Check first / Keep). End with how much space I'd get back by removing only the Safe items. Then STOP and wait for me.
+
+PART 2 — CLEAN-UP (only after I reply with item numbers). One item at a time, and tell me exactly what you'll do before each action. Move things to the Trash or Recycle Bin, never delete permanently: no rm -rf, del /s or Remove-Item -Force. Use built-in tools when they exist (Storage settings on Mac, Disk Cleanup or Storage Sense on Windows, an app's own "clear cache"). Never touch system folders, installed apps, my Photos library, iCloud/OneDrive/Google Drive folders, password managers or anything marked Keep. If you're unsure, stop and ask. Show the space freed after each item, and free space before vs now at the end.
+
+PART 3 — SPEED. Suggest the 5 changes that would make this laptop faster, easiest first, one line each. Change a setting only after I say yes, and tell me how to undo it.</p>
+    </section>
+
+    <p class="section-break label">Need help? Full steps</p>
 
     <section class="card step">
       <span class="step-num" aria-hidden="true">01</span>
-      <h2 class="step-title"><span class="visually-hidden">Step 1: </span>Install Claude Code</h2>
-      <p class="card-text">You need a paid Claude plan (Pro or higher). On a <strong>Mac</strong>, open the Terminal app (press ⌘ Space and type “Terminal”). On <strong>Windows</strong>, open PowerShell from the Start menu. Copy the command for your laptop, paste it, press Enter, then close the window and open a new one.</p>
+      <h2 class="step-title"><span class="visually-hidden">Step 1: </span>Get the Claude app</h2>
+      <p class="card-text">Download it from <strong>claude.ai/download</strong> and sign in. Using Claude on your own files needs a paid plan (Pro or higher). Open the app and click the <strong>Code</strong> tab at the top.</p>
+    </section>
+
+    <section class="card step">
+      <span class="step-num" aria-hidden="true">02</span>
+      <h2 class="step-title"><span class="visually-hidden">Step 2: </span>Create the project in Plan mode</h2>
+      <p class="card-text">Click <strong>+ New session</strong>. Under the message box, set the environment to <strong>Local</strong> and choose your home folder as the project folder. That's the one with your name, inside Users. Then set the mode to <strong>Plan</strong>. In Plan mode Claude can look and report, but it can't change or delete anything.</p>
+    </section>
+
+    <section class="card step">
+      <span class="step-num" aria-hidden="true">03</span>
+      <h2 class="step-title"><span class="visually-hidden">Step 3: </span>Paste the prompt, read the check-up</h2>
+      <p class="card-text">Paste the prompt from the top and press Enter. You'll get one table like this, and nothing changes yet.</p>
+      <figure class="shot">
+        <img src="../../assets/img/guides/free-up-storage/audit.webp" width="720" height="483" loading="lazy" decoding="async" alt="Example check-up table: old iPhone backup 14.2 GB (check first), installers in Downloads 11 GB (safe), app and browser caches 6.4 GB (safe), Trash 3.1 GB (safe), duplicate videos 2.3 GB (check first), Photos Library 48 GB (keep). Safe to free now: 20.5 GB. Nothing changed.">
+        <figcaption>An example check-up. Your numbers will be different.</figcaption>
+      </figure>
+    </section>
+
+    <section class="card step">
+      <span class="step-num" aria-hidden="true">04</span>
+      <h2 class="step-title"><span class="visually-hidden">Step 4: </span>Say which items to clean</h2>
+      <p class="card-text">Switch the mode to <strong>Manual</strong>, so Claude asks before every action. Then reply with the numbers you're happy to remove, for example “2, 3, 4”. Approve each step only after reading it, and say No if you're unsure.</p>
+    </section>
+
+    <section class="card step">
+      <span class="step-num" aria-hidden="true">05</span>
+      <h2 class="step-title"><span class="visually-hidden">Step 5: </span>Empty the Trash next week</h2>
+      <p class="card-text">Everything removed is still in your Trash or Recycle Bin. Use your laptop normally for a week. If nothing is missing, empty it to actually get the space back. Run the prompt again every month or two.</p>
+    </section>
+
+    <section class="card step">
+      <span class="step-num" aria-hidden="true">+</span>
+      <h2 class="step-title">Prefer the Terminal?</h2>
+      <p class="card-text">Install with the command for your laptop, open a new window, type <code>cd ~</code> and then <code>claude</code>. Press <strong>Shift + Tab</strong> until you see <strong>plan mode on</strong>, then paste the prompt.</p>
+      <figure class="shot">
+        <img src="../../assets/img/guides/free-up-storage/plan.webp" width="720" height="466" loading="lazy" decoding="async" alt="A terminal running Claude Code with the label 'plan mode on (shift+tab to cycle)' under the prompt box.">
+        <figcaption>Claude Code in the Terminal, in plan mode.</figcaption>
+      </figure>
     </section>
 
     <section class="prompt on-ink" aria-labelledby="mac-install-label">
@@ -71,85 +133,11 @@
       <p class="prompt-text" id="win-install">irm https://claude.ai/install.ps1 | iex</p>
     </section>
 
-    <section class="card step">
-      <span class="step-num" aria-hidden="true">02</span>
-      <h2 class="step-title"><span class="visually-hidden">Step 2: </span>Start it in “look only” mode</h2>
-      <p class="card-text">In the new window, type <code>cd ~</code> and press Enter, then type <code>claude</code> and press Enter. Sign in when it asks. Now press <strong>Shift + Tab</strong> until you see <strong>plan mode on</strong>. In plan mode Claude can look and report, but it can't change or delete anything.</p>
-      <figure class="shot">
-        <img src="../../assets/img/guides/free-up-storage/plan.webp" width="720" height="466" loading="lazy" decoding="async" alt="A terminal running Claude Code with the label 'plan mode on (shift+tab to cycle)' under the prompt box.">
-        <figcaption>What it looks like. Your window may look slightly different.</figcaption>
-      </figure>
-    </section>
-
-    <section class="card step">
-      <span class="step-num" aria-hidden="true">03</span>
-      <h2 class="step-title"><span class="visually-hidden">Step 3: </span>Ask for a storage check-up</h2>
-      <p class="card-text">Copy this prompt, paste it into Claude and press Enter. It works on Mac and Windows. Claude only reads file names and sizes, never what's inside your files.</p>
-    </section>
-
-    <section class="prompt on-ink" aria-labelledby="prompt-1-label">
-      <div class="prompt-head">
-        <h3 class="label" id="prompt-1-label">Prompt 1 · Check-up</h3>
-        <button class="copy-btn" type="button" data-copy-target="prompt-1">
-          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
-          <span class="copy-label" aria-live="polite">Copy</span>
-        </button>
-      </div>
-      <p class="prompt-text" id="prompt-1">Help me free up storage on this laptop. First check whether it's a Mac or Windows. This is a READ-ONLY check-up: do not delete, move, rename or change anything, and don't run any command that writes to the disk. Look at file names and sizes only, never open my personal files. Skip system folders. 1) Show total disk size, used and free space. 2) List the 20 biggest folders and every file over 500 MB in my user folder. 3) Check the usual space hogs: Downloads, Desktop, Trash or Recycle Bin, app and browser caches, old iPhone/Android backups, installer files (.dmg .pkg .exe .msi .zip), duplicate files, big old videos, and developer leftovers like node_modules, Xcode or Docker if I have them. Give me ONE table sorted by size: number, item, location, size, what it is in plain English, safety (Safe / Check first / Keep) and how it would be removed. End with how much space I'd get back by removing only the Safe items.</p>
-    </section>
-
-    <section class="card step">
-      <figure class="shot">
-        <img src="../../assets/img/guides/free-up-storage/audit.webp" width="720" height="483" loading="lazy" decoding="async" alt="Example check-up table: old iPhone backup 14.2 GB (check first), installers in Downloads 11 GB (safe), app and browser caches 6.4 GB (safe), Trash 3.1 GB (safe), duplicate videos 2.3 GB (check first), Photos Library 48 GB (keep). Safe to free now: 20.5 GB. Nothing changed.">
-        <figcaption>An example check-up. Your numbers will be different. Read it before you go on.</figcaption>
-      </figure>
-    </section>
-
-    <section class="card step">
-      <span class="step-num" aria-hidden="true">04</span>
-      <h2 class="step-title"><span class="visually-hidden">Step 4: </span>Clean up only what you approve</h2>
-      <p class="card-text">Press <strong>Shift + Tab</strong> until plan mode is off. Claude will now ask before every action, and you answer Yes or No each time. Then send this prompt with the numbers you're happy to remove, for example “2, 3, 4”.</p>
-    </section>
-
-    <section class="prompt on-ink" aria-labelledby="prompt-2-label">
-      <div class="prompt-head">
-        <h3 class="label" id="prompt-2-label">Prompt 2 · Safe clean-up</h3>
-        <button class="copy-btn" type="button" data-copy-target="prompt-2">
-          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
-          <span class="copy-label" aria-live="polite">Copy</span>
-        </button>
-      </div>
-      <p class="prompt-text" id="prompt-2">Clean up only these items from your table: [NUMBERS]. Rules: 1) One item at a time, and tell me exactly what you're about to do before each action. 2) Move files to the Trash or Recycle Bin instead of deleting them permanently, so I can undo. Never use rm -rf, del /s, Remove-Item -Recurse -Force or anything that skips the Trash. 3) Where a built-in tool exists, use it instead: Storage settings on Mac, Disk Cleanup or Storage Sense on Windows, or the app's own "clear cache" option. 4) Never touch system folders, installed apps, my Photos library, iCloud/OneDrive/Google Drive folders, password managers or anything marked Keep. 5) If you're unsure about anything, stop and ask me. After each item, show how much space it freed. At the end, show free space before and now.</p>
-    </section>
-
-    <section class="card step">
-      <span class="step-num" aria-hidden="true">05</span>
-      <h2 class="step-title"><span class="visually-hidden">Step 5: </span>Make it feel faster</h2>
-      <p class="card-text">Space is only half of it. Apps that start at login and apps hogging memory are what usually make a laptop slow. This prompt finds them and changes nothing until you agree.</p>
-    </section>
-
-    <section class="prompt on-ink" aria-labelledby="prompt-3-label">
-      <div class="prompt-head">
-        <h3 class="label" id="prompt-3-label">Prompt 3 · Speed check</h3>
-        <button class="copy-btn" type="button" data-copy-target="prompt-3">
-          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
-          <span class="copy-label" aria-live="polite">Copy</span>
-        </button>
-      </div>
-      <p class="prompt-text" id="prompt-3">Now find out why my laptop feels slow. Read-only first: don't change any setting yet. Show me: apps that open automatically when I log in, the 10 apps using the most memory and CPU right now, how full my disk is (under about 15% free slows things down), whether system updates are waiting, how long since the last restart, and anything else unusual. Then suggest the 5 changes that will help most, easiest first, one line each in plain English. Only make a change after I say yes, and tell me how to undo it.</p>
-    </section>
-
-    <section class="card step">
-      <span class="step-num" aria-hidden="true">06</span>
-      <h2 class="step-title"><span class="visually-hidden">Step 6: </span>Empty the Trash next week</h2>
-      <p class="card-text">Everything removed is still in your Trash or Recycle Bin, so nothing is lost yet. Use your laptop normally for a week. If nothing is missing, empty it to actually get the space back. Run Prompt 1 again every month or two.</p>
-    </section>
-
     <section class="card" aria-labelledby="rules-label">
       <h2 class="label" id="rules-label">Your safety net</h2>
       <ul class="rules">
-        <li>Plan mode (Step 2) means Claude can only look and report.</li>
-        <li>With plan mode off, Claude still asks before every action. Read it, and say No if you're unsure.</li>
+        <li>Plan mode means Claude can only look and report.</li>
+        <li>In Manual mode Claude asks before every action. Read it, and say No if you're unsure.</li>
         <li>Everything goes to the Trash or Recycle Bin first, so you can put it back.</li>
         <li>Never approve anything in System, Windows, Program Files or Applications folders.</li>
         <li>Back up first if you can: Time Machine on Mac, File History on Windows.</li>

@@ -468,6 +468,11 @@ img {
   user-select: text;
 }
 
+/* Long prompts written as paragraphs keep their line breaks. */
+.prompt-text--paras {
+  white-space: pre-line;
+}
+
 .prompt-text ::selection,
 .prompt-text::selection {
   background: var(--paper);
@@ -595,6 +600,71 @@ img {
   background: var(--soft);
   padding: 1px 5px;
   border-radius: 5px;
+}
+
+/* "Do this now" list at the top of a guide: 1-2-3 in black circles. */
+.quick {
+  gap: 14px;
+}
+
+.quick-steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: quick;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.quick-steps li {
+  counter-increment: quick;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.quick-steps li::before {
+  content: counter(quick);
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.quick-steps span {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+/* Divider between the quick start and the detailed steps. */
+.section-break {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 8px 4px 0;
+  color: var(--muted);
+}
+
+.section-break::after {
+  content: "";
+  flex: 1;
+  border-top: 1.5px dashed var(--ink);
 }
 
 /* ---- 404 --------------------------------------------------------------- */
