@@ -106,7 +106,7 @@ Elsewhere it falls back to selecting the text.
   paths, keep each under ~60KB, then re-run `python3 tools/make-images.py`
   so `og-home.png` uses it. Bump the `?v=` number on the photo and OG image
   URLs in `index.html` so browsers and link previews pick up the change.
-- **Links** in `index.html`: Buy Me a Coffee, LinkedIn and X are still `#`
+- **Links** in `index.html`: LinkedIn and X are still `#`
   (marked `TODO`).
 - **OG images and favicons** are generated placeholders. You can replace
   them with Canva or Figma exports at the same paths and sizes (1200×630,
