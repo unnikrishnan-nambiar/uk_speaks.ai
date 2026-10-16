@@ -543,6 +543,75 @@ img {
   padding: 24px;
 }
 
+/* ---- Home on wide screens ------------------------------------------------
+   Phones keep the single column above. From 1080px the home page splits:
+   intro centered on the left, cards + Instagram band on the right. */
+
+@media (min-width: 1080px) {
+  .home {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 440px;
+    grid-template-rows: auto 1fr;
+    column-gap: 72px;
+    max-width: 1100px;
+    padding: 72px 48px;
+    align-items: start;
+    align-content: center;
+  }
+
+  .hero {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    align-self: center;
+    gap: 32px;
+    padding: 0;
+  }
+
+  /* Fit the left column: viewport minus padding (96), gap (72) and the
+     440px right column, capped by the 1100px max-width. */
+  .home-title {
+    font-size: clamp(56px, calc((100vw - 608px) / 6), 82px);
+  }
+
+  .byline {
+    font-size: 28px;
+  }
+
+  .tagline {
+    font-size: 36px;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 8px;
+  }
+
+  .intro {
+    gap: 32px;
+    max-width: 520px;
+  }
+
+  .bio {
+    font-size: 18px;
+  }
+
+  .photo {
+    width: 136px;
+    height: 136px;
+    box-shadow: 6px 6px 0 var(--ink);
+  }
+
+  .cards {
+    grid-column: 2;
+    grid-row: 1;
+    padding: 0 0 16px;
+  }
+
+  .band {
+    grid-column: 2;
+    grid-row: 2;
+    flex: none;
+    border-radius: 28px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     transition: none !important;
