@@ -23,7 +23,7 @@ g/reply-prompt/index.html  sample guide
 assets/css/site.css        shared by every page
 assets/js/copy.js          copy buttons, guides only
 assets/fonts/              Plus Jakarta Sans 500/800 + Rajdhani 700, subset WOFF2
-assets/img/photo.webp|jpg  home photo (placeholder for now)
+assets/img/photo.webp|jpg  home photo
 assets/og/                 1200×630 link-preview images
 favicon.svg, favicon-32.png, apple-touch-icon.png
 tools/make-images.py       regenerates placeholder images (optional)
@@ -101,10 +101,11 @@ Elsewhere it falls back to selecting the text.
 
 ## Things to fill in
 
-- **Photo**: replace `assets/img/photo.webp` and `assets/img/photo.jpg` with
-  a square crop of at least 208×208px, each under ~60KB. Then re-run
-  `python3 tools/make-images.py` so `og-home.png` uses it. The script never
-  overwrites an existing photo.
+- **Photo**: the real photo is in `assets/img/photo.webp` and
+  `assets/img/photo.jpg` (288×288). To swap it, save new files at the same
+  paths, keep each under ~60KB, then re-run `python3 tools/make-images.py`
+  so `og-home.png` uses it. Bump the `?v=` number on the photo and OG image
+  URLs in `index.html` so browsers and link previews pick up the change.
 - **Links** in `index.html`: Buy Me a Coffee, LinkedIn and X are still `#`
   (marked `TODO`).
 - **OG images and favicons** are generated placeholders. You can replace

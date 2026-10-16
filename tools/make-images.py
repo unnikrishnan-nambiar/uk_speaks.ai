@@ -171,7 +171,7 @@ def make_og_home():
     d.rectangle([64, ty + 62, end, ty + 68], fill=INK)
     circle_photo(img, os.path.join(ROOT, "assets", "img", "photo.jpg"), (985, 270), 290)
     footer_band(img, "Learn it with me on Instagram  ·  @uk_speaks.ai")
-    save_og(img, "og-home.png")
+    save_og(img, "og-home.png", full_color=True)  # a palette would posterize the photo
 
 
 def make_og_guide(keyword, title, filename):
@@ -203,9 +203,11 @@ def make_og_guide(keyword, title, filename):
     save_og(img, filename)
 
 
-def save_og(img, filename):
+def save_og(img, filename, full_color=False):
     path = os.path.join(ROOT, "assets", "og", filename)
-    img.quantize(colors=64, method=Image.Quantize.MEDIANCUT).save(path, optimize=True)
+    if not full_color:
+        img = img.quantize(colors=64, method=Image.Quantize.MEDIANCUT)
+    img.save(path, optimize=True)
     print(f"{os.path.relpath(path, ROOT)}  {os.path.getsize(path) // 1024}KB")
 
 
