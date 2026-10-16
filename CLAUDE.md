@@ -9,7 +9,7 @@ The approved visual design is in `design/home.dc.html` and `design/guide.dc.html
 
 ## Hard constraints
 - Plain static HTML/CSS. No frameworks, no build step, no npm. Hosted on **GitHub Pages**.
-- **Mobile-first**: ~95% of traffic is phones, mostly inside Instagram's in-app browser. Design at 390px wide, then let it breathe up to a ~480px centered column. Exception: from 1080px the **home page** splits into two columns (intro on the left, cards + Instagram band on the right) so wide screens don't look empty; guides stay single-column everywhere.
+- **Mobile-first**: ~95% of traffic is phones, mostly inside Instagram's in-app browser. Design at 390px wide, then let it breathe up to a ~480px centered column. Exception: from 1080px the **home page** splits into two columns (intro on the left, cards + Instagram band on the right) so wide screens don't look empty; guides stay single-column everywhere (680px wide from 720px screens).
 - Fast on 4G: total home page weight under ~150KB. No JS on the home page, except the official Buy Me a Coffee button script (yellow button, approved by the owner). Guides get one tiny script for copy buttons.
 - **Relative links only** for internal links and assets. The site must work at `username.github.io/repo/` today and on a custom domain later.
 - No mention of guides, links pages or a blog anywhere public.

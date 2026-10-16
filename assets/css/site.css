@@ -679,6 +679,14 @@ img {
   padding: 24px;
 }
 
+/* Guides stay one column but get a wider column on tablets and laptops. */
+@media (min-width: 720px) {
+  .guide {
+    max-width: 680px;
+    padding-top: 32px;
+  }
+}
+
 /* ---- Home on wide screens ------------------------------------------------
    Phones keep the single column above. From 1080px the home page splits:
    intro centered on the left, cards + Instagram band on the right. */
