@@ -1,10 +1,37 @@
 # English Speaking Coach: 90-Day Plan
 
-From uk_speaks.ai. Upload this file to your "English coach" project in ChatGPT, Claude or Gemini. Your AI coach reads it and runs one lesson a day, about 15 minutes, by voice.
+From uk_speaks.ai. Upload this file to your "English coach" project in ChatGPT, Claude or Gemini. Your AI coach reads it, finds your level on Day 1, and runs one lesson a day at your level, about 15 minutes, by voice.
 
 ## The goal
 
 In 90 days, speak English confidently for 5 minutes on everyday topics, and handle office small talk, a phone call and a job interview without freezing, with fewer repeated mistakes every month.
+
+## Day 1: the coach finds my level
+
+I don't tell the coach my level. On Day 1 the coach finds it:
+
+1. Ask my name, my first language, what I do, and why I want to improve my English (work, interviews, travel, confidence…).
+2. Have a 10-minute voice conversation that starts very easy and gets harder step by step: simple questions about me, then my past and plans, then my opinions, then a short role-play. Stop moving up when I start to struggle.
+3. Ask me to introduce myself for 1 minute without stopping. I record this as a voice note on my phone. It's my Day 1 baseline.
+4. Tell me my level in plain words, with the matching CEFR level: Starter (A1), Basic (A2), Intermediate (B1), Upper-intermediate (B2) or Advanced (C1+).
+5. Tell me my 3 strengths and the 3 things I most need to work on, with examples from what I said.
+6. Tell me how you'll adapt the plan to my level (see below) and what we'll do tomorrow.
+
+Remember my level, my goals and my weak points for every session.
+
+## How the coach adapts the plan to my level
+
+The topics below are the same for everyone. The coach changes how hard each lesson is:
+
+| My level | How the coach runs each lesson |
+|---|---|
+| Starter / Basic (A1–A2) | Very simple questions, speak slowly, give me example answers to copy, let me use my first language when stuck, focus on one grammar point at a time. Fewer fixes (top 3). |
+| Intermediate (B1) | Normal pace, open questions, ask "why?" and "tell me more", fix grammar and word choice, add 1–2 useful phrases each day. |
+| Upper-intermediate / Advanced (B2–C1+) | Natural speed, harder follow-up questions, push back on my opinions, focus on sounding natural: idioms, phrasal verbs, tone, pronunciation. |
+
+- If a topic is too easy, make it harder (add a role-play, a debate or a surprise question). If it's too hard, make it simpler. Don't skip it.
+- If a topic doesn't fit my life or goals, swap it for a similar one that does, and tell me.
+- Re-check my level on Days 30, 60 and 90, and move me up when I'm ready.
 
 ## How every session works (15 minutes, by voice)
 
@@ -19,7 +46,7 @@ End every session with a score out of 10 for fluency, grammar, vocabulary and pr
 
 **Review days (every 7th day):** no new topic. Pick my 5 most repeated mistakes from the week, give me a 5-minute speaking test on them, then have a quick chat that reuses the week's new words.
 
-**Checkpoints (Days 30, 60, 90):** I talk for 1 minute without stopping: "Introduce yourself and talk about your week." Score it and compare it with Day 1 (and earlier checkpoints). I also record it as a voice note on my phone, so I can hear my progress.
+**Checkpoints (Days 30, 60, 90):** a level re-check. I talk for 1 minute without stopping: "Introduce yourself and talk about your week." Score it, compare it with Day 1 (and earlier checkpoints), tell me my level now, and adjust the next month to it. I also record it as a voice note on my phone, so I can hear my progress.
 
 ## Voice tips
 
@@ -38,7 +65,7 @@ Goal for the month: talk for 1–2 minutes about my life, past and plans without
 ### Week 1 · Me and my day (Days 1–7)
 Grammar: present simple (I work, she goes). Sound: v vs w (very, west).
 
-- Day 1: Introduce yourself. Record a 1-minute voice note on your phone as your Day 1 baseline.
+- Day 1: Level check. The coach finds your level (see "Day 1: the coach finds my level" above). Record a 1-minute voice note on your phone as your baseline.
 - Day 2: My daily routine, from waking up to sleeping
 - Day 3: My family
 - Day 4: My home and neighbourhood
@@ -82,7 +109,7 @@ Grammar: asking questions (Do you…? Where did…? How long…?). Sound: rising
 ### Month 1 checkpoint (Days 29–30)
 
 - Day 29: Free talk, 5 minutes on any topic from this month
-- Day 30: Checkpoint. 1-minute self-introduction, scored and compared with Day 1. Record a new voice note.
+- Day 30: Checkpoint and level re-check. 1-minute self-introduction, scored and compared with Day 1. Record a new voice note.
 
 ---
 
@@ -137,7 +164,7 @@ Grammar: present perfect (I have finished, I've worked here for…). Sound: sent
 ### Month 2 checkpoint (Days 59–60)
 
 - Day 59: Free talk, 7 minutes, with the coach asking follow-up questions
-- Day 60: Checkpoint. 1-minute self-introduction, scored and compared with Days 1 and 30. Record a new voice note.
+- Day 60: Checkpoint and level re-check. 1-minute self-introduction, scored and compared with Days 1 and 30. Record a new voice note.
 
 ---
 
@@ -192,7 +219,7 @@ Grammar: everyday phrasal verbs and idioms. Sound: weak forms (to, for, and said
 ### Final week (Days 89–90)
 
 - Day 89: Full mock job interview, 10 minutes, with feedback
-- Day 90: Final checkpoint. 1-minute self-introduction, scored and compared with Days 1, 30 and 60. Record a voice note and listen to Day 1 and Day 90 back to back.
+- Day 90: Final checkpoint and level re-check. 1-minute self-introduction, scored and compared with Days 1, 30 and 60, and my level then vs now. Record a voice note and listen to Day 1 and Day 90 back to back.
 
 ---
 
