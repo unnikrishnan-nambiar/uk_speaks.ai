@@ -55,7 +55,7 @@ Each guide lives at `g/<slug>/index.html` (e.g. `g/reply-prompt/`). Copy the tem
    - Fallback if the clipboard API fails (some in-app browsers): select the prompt text so the user can long-press copy.
    - Use `data-copy-target` attributes so one small script (`assets/js/copy.js`, deferred) handles every card.
 5. Example card: `EXAMPLE` label, a grey "BEFORE" box and an outlined "AFTER" box with a 4px hard shadow.
-6. Black closer card: `Liked this? Next one drops this week.`, white `Follow @uk_speaks.ai` button, small note `Comment a keyword on any reel to get the next guide.`
+6. Black closer card: `Liked this? Next one drops this week.`, white `Follow @uk_speaks.ai` button, small link `Visit the uk_speaks.ai website →` linking to the home page (`../../`).
 - Every guide page: `<meta name="robots" content="noindex, nofollow">`.
 - Do **not** list guides in `robots.txt` (it's public and would reveal paths) and don't create a sitemap that includes them.
 - Build one real sample guide from the mockup content at `g/reply-prompt/` so the template is proven.

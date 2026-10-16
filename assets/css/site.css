@@ -543,6 +543,15 @@ img {
   text-align: center;
 }
 
+.closer-note a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--paper);
+  font-size: 14px;
+  font-weight: 800;
+}
+
 /* Screenshot / illustration inside a guide card. */
 .shot {
   margin: 0;
