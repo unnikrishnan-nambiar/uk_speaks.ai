@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Launch Video Guide — get a launch video from Claude</title>
+  <meta name="description" content="Describe your product in a short brief. This page writes the prompt you paste into Claude, which builds a 30-second animated launch video with music.">
+  <meta name="theme-color" content="#201e1d">
+
+  <!-- Social previews need absolute URLs. BASE_URL = https://unnikrishnan-nambiar.github.io/uk_speaks.ai/ (see README). -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="uk_speaks.ai">
+  <meta property="og:title" content="Describe your product and get a launch video from Claude">
+  <meta property="og:description" content="Fill in a short brief, copy the prompt, and Claude builds a 30-second animated launch video with music.">
+  <meta property="og:url" content="https://unnikrishnan-nambiar.github.io/uk_speaks.ai/g/launch-video/">
+  <meta property="og:image" content="https://unnikrishnan-nambiar.github.io/uk_speaks.ai/assets/og/og-launch-video.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Describe your product and get a launch video from Claude">
+  <meta name="twitter:description" content="Fill in a short brief, copy the prompt, and Claude builds a 30-second animated launch video with music.">
+  <meta name="twitter:image" content="https://unnikrishnan-nambiar.github.io/uk_speaks.ai/assets/og/og-launch-video.png">
+
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../../favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Load the font without blocking the first paint. -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;800&display=swap"></noscript>
+
+  <style>
+    :root {
+      --bg: #f3f2f2;
+      --ink: #201e1d;
+      --red: #ec3013;        /* step numbers, primary button */
+      --red-text: #b3200c;   /* small red text: labels */
+      --rule: 2px solid var(--ink);
+      --max: 1080px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; border-radius: 0; }
+
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Archivo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, p, ol, ul { margin: 0; }
+    a { color: var(--ink); }
+    :focus-visible { outline: 3px solid var(--red); outline-offset: 2px; }
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    section.block {
+      border-top: var(--rule);
+      padding: 40px 0 48px;
+    }
+
+    .label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--red-text);
+    }
+
+    /* ---- Header ---- */
+    header.top { padding: 40px 0 48px; }
+    h1 {
+      margin-top: 16px;
+      max-width: 15ch;
+      font-size: clamp(38px, 7.4vw, 76px);
+      line-height: 0.98;
+      font-weight: 800;
+      letter-spacing: -0.035em;
+    }
+    .subhead {
+      margin-top: 24px;
+      max-width: 60ch;
+      font-size: 19px;
+      line-height: 1.5;
+    }
+
+    /* ---- Grids with visible 2px borders ---- */
+    .grid {
+      display: grid;
+      border-top: var(--rule);
+      border-left: var(--rule);
+    }
+    .grid > * {
+      border-right: var(--rule);
+      border-bottom: var(--rule);
+      padding: 18px 18px 22px;
+    }
+    .strip { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    .tips { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    @media (max-width: 900px) {
+      .strip { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .tips { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 560px) {
+      .strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .tips { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 359px) {
+      .strip { grid-template-columns: 1fr; }
+    }
+    .cell h3 { margin-top: 10px; font-size: 19px; font-weight: 700; line-height: 1.2; letter-spacing: -0.01em; }
+    .cell p { margin-top: 6px; font-size: 15px; line-height: 1.45; }
+
+    /* ---- Step headings ---- */
+    .step-head { display: flex; align-items: baseline; gap: 18px; flex-wrap: wrap; }
+    .step-num {
+      font-size: clamp(48px, 8vw, 72px);
+      line-height: 0.9;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      color: var(--red);
+    }
+    h2 {
+      font-size: clamp(26px, 4vw, 38px);
+      line-height: 1.05;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+    }
+    .intro { margin-top: 16px; max-width: 62ch; font-size: 17px; }
+
+    /* ---- Form ---- */
+    .form {
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px 28px;
+    }
+    @media (max-width: 720px) { .form { grid-template-columns: 1fr; } }
+    .field { display: flex; flex-direction: column; gap: 4px; }
+    .field label { font-size: 16px; font-weight: 700; }
+    .field .help { font-size: 14px; color: #4a4645; }
+    textarea {
+      margin-top: 6px;
+      width: 100%;
+      min-height: 84px;
+      resize: vertical;
+      padding: 12px 14px;
+      border: var(--rule);
+      background: #fff;
+      color: var(--ink);
+      font: inherit;
+      font-size: 16px;
+      line-height: 1.45;
+    }
+    textarea:focus { outline: 3px solid var(--red); outline-offset: 0; }
+
+    .options {
+      margin-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px 40px;
+    }
+    fieldset { margin: 0; padding: 0; border: 0; min-width: 0; }
+    legend { padding: 0; font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+    .seg { display: flex; flex-wrap: wrap; }
+    .seg label { position: relative; }
+    .seg input {
+      position: absolute;
+      opacity: 0;
+      width: 1px;
+      height: 1px;
+    }
+    .seg span {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 48px;
+      min-width: 92px;
+      padding: 0 16px;
+      border: var(--rule);
+      margin: 0 -2px -2px 0;
+      background: #fff;
+      font-weight: 700;
+      font-size: 15px;
+      text-align: left;
+      cursor: pointer;
+    }
+    .seg input:checked + span { background: var(--ink); color: #fff; }
+    .seg input:focus-visible + span { outline: 3px solid var(--red); outline-offset: 2px; position: relative; z-index: 1; }
+
+    .reset {
+      margin-top: 18px;
+      padding: 0;
+      min-height: 44px;
+      border: 0;
+      background: none;
+      font: inherit;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      color: var(--ink);
+      cursor: pointer;
+      text-align: left;
+    }
+
+    /* ---- Prompt box ---- */
+    .prompt-box { margin-top: 28px; border: var(--rule); background: #fff; }
+    .prompt-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 12px 12px 12px 18px;
+      border-bottom: var(--rule);
+    }
+    .prompt-bar h3 { font-size: 18px; font-weight: 800; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 52px;
+      min-width: 160px;
+      padding: 0 20px;
+      border: 0;
+      background: var(--red);
+      color: #fff;
+      font: inherit;
+      font-size: 19px; /* large text, so white on the brand red passes contrast */
+      font-weight: 700;
+      text-align: left;
+      cursor: pointer;
+    }
+    .btn:hover { background: #c9260d; }
+    pre#prompt {
+      margin: 0;
+      padding: 20px 18px 24px;
+      max-height: 560px;
+      overflow: auto;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* ---- Tips ---- */
+    .tips { margin-top: 28px; }
+    .tips h3 { font-size: 18px; font-weight: 700; line-height: 1.25; }
+    .tips p { margin-top: 6px; font-size: 15px; }
+    .tips .n { display: block; margin-bottom: 8px; }
+
+    /* ---- Export list ---- */
+    ol.export {
+      margin-top: 28px;
+      padding: 0;
+      list-style: none;
+      counter-reset: exp;
+      border-top: var(--rule);
+    }
+    ol.export li {
+      counter-increment: exp;
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 12px;
+      padding: 18px 0;
+      border-bottom: var(--rule);
+      max-width: 820px;
+    }
+    ol.export li::before {
+      content: counter(exp, decimal-leading-zero);
+      font-weight: 800;
+      font-size: 24px;
+      line-height: 1.1;
+      color: var(--red);
+    }
+    .callout {
+      margin-top: 28px;
+      max-width: 820px;
+      border: var(--rule);
+      padding: 18px 20px 20px;
+      background: #fff;
+    }
+    .callout p { margin-top: 8px; }
+
+    .next {
+      margin-top: 22px;
+      max-width: 820px;
+      border: var(--rule);
+      padding: 18px 20px 20px;
+    }
+    .next h3 { margin-top: 8px; font-size: 20px; font-weight: 800; }
+    .next p { margin-top: 6px; }
+    .next a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; }
+
+    footer.end {
+      border-top: var(--rule);
+      padding: 24px 0 40px;
+      font-size: 15px;
+    }
+    footer.end a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+
+    <!-- 1. Header -->
+    <header class="top">
+      <span class="label">Guide</span>
+      <h1>Describe your product and get a launch video from Claude</h1>
+      <p class="subhead">Fill in the brief below. It writes a prompt for you to paste into Claude with your logo attached. Claude then builds a 30-second animated explainer with music that you can export.</p>
+    </header>
+
+    <!-- 2. Video structure strip -->
+    <section class="block" aria-labelledby="structure-title">
+      <h2 id="structure-title" class="label" style="margin-bottom:16px">The video, scene by scene</h2>
+      <div class="grid strip">
+        <div class="cell"><span class="label">Opening</span><h3>The problem.</h3><p>The pain your customer feels today.</p></div>
+        <div class="cell"><span class="label">Middle</span><h3>Product in action.</h3><p>One real moment where your product solves it.</p></div>
+        <div class="cell"><span class="label">Middle</span><h3>Results.</h3><p>A dashboard with three or four numbers.</p></div>
+        <div class="cell"><span class="label">Late</span><h3>Setup.</h3><p>Three steps that show how easy it is to start.</p></div>
+        <div class="cell"><span class="label">Close</span><h3>Logo and CTA.</h3><p>Your mark and one clear next step.</p></div>
+      </div>
+    </section>
+
+    <!-- 3. Step 01: the brief -->
+    <section class="block" aria-labelledby="s1">
+      <div class="step-head"><span class="step-num" aria-hidden="true">01</span><h2 id="s1">Fill in the brief</h2></div>
+      <p class="intro">The example is already filled in, so replace it with your product. Keep each answer short, because every line becomes text on screen.</p>
+
+      <form id="brief" class="form" autocomplete="off" onsubmit="return false">
+        <div class="field">
+          <label for="f-name">Product name</label>
+          <span class="help" id="h-name">As it should appear on screen</span>
+          <textarea id="f-name" name="name" rows="1" aria-describedby="h-name"></textarea>
+        </div>
+        <div class="field">
+          <label for="f-pitch">One-line pitch</label>
+          <span class="help" id="h-pitch">The sentence under your logo</span>
+          <textarea id="f-pitch" name="pitch" rows="2" aria-describedby="h-pitch"></textarea>
+        </div>
+        <div class="field">
+          <label for="f-audience">Who it is for</label>
+          <span class="help" id="h-audience">Sets the tone and the scenario</span>
+          <textarea id="f-audience" name="audience" rows="2" aria-describedby="h-audience"></textarea>
+        </div>
+        <div class="field">
+          <label for="f-problem">The problem</label>
+          <span class="help" id="h-problem">What goes wrong without you, in one sentence</span>
+          <textarea id="f-problem" name="problem" rows="2" aria-describedby="h-problem"></textarea>
+        </div>
+        <div class="field">
+          <label for="f-moment">Your product in action</label>
+          <span class="help" id="h-moment">One concrete scene, step by step</span>
+          <textarea id="f-moment" name="moment" rows="4" aria-describedby="h-moment"></textarea>
+        </div>
+        <div class="field">
+          <label for="f-results">Results</label>
+          <span class="help" id="h-results">3–4 numbers, one per line</span>
+          <textarea id="f-results" name="results" rows="4" aria-describedby="h-results"></textarea>
+        </div>
+        <div class="field">
+          <label for="f-setup">Setup steps</label>
+          <span class="help" id="h-setup">Three short steps, one per line</span>
+          <textarea id="f-setup" name="setup" rows="3" aria-describedby="h-setup"></textarea>
+        </div>
+        <div class="field">
+          <label for="f-cta">Call to action</label>
+          <span class="help" id="h-cta">Final line on screen</span>
+          <textarea id="f-cta" name="cta" rows="1" aria-describedby="h-cta"></textarea>
+        </div>
+      </form>
+
+      <div class="options">
+        <fieldset>
+          <legend>Look</legend>
+          <div class="seg">
+            <label><input type="radio" name="look" value="light" form="brief" checked><span>Light</span></label>
+            <label><input type="radio" name="look" value="dark" form="brief"><span>Dark</span></label>
+            <label><input type="radio" name="look" value="brand" form="brief"><span>Brand colours</span></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Length</legend>
+          <div class="seg">
+            <label><input type="radio" name="length" value="15" form="brief"><span>15s</span></label>
+            <label><input type="radio" name="length" value="30" form="brief" checked><span>30s</span></label>
+            <label><input type="radio" name="length" value="45" form="brief"><span>45s</span></label>
+          </div>
+        </fieldset>
+      </div>
+      <button type="button" class="reset" id="reset">Reset to the example</button>
+    </section>
+
+    <!-- 4. Step 02: the prompt -->
+    <section class="block" aria-labelledby="s2">
+      <div class="step-head"><span class="step-num" aria-hidden="true">02</span><h2 id="s2">Copy the prompt and send it to Claude</h2></div>
+      <p class="intro">Start a new project, attach your logo as a PNG with a transparent background, then paste the prompt.</p>
+
+      <div class="prompt-box">
+        <div class="prompt-bar">
+          <h3>Your prompt</h3>
+          <button type="button" class="btn" id="copy"><span id="copy-label" aria-live="polite">Copy prompt</span></button>
+        </div>
+        <pre id="prompt" tabindex="0" aria-label="Your prompt, updates as you edit the brief"></pre>
+      </div>
+    </section>
+
+    <!-- 5. Step 03: review -->
+    <section class="block" aria-labelledby="s3">
+      <div class="step-head"><span class="step-num" aria-hidden="true">03</span><h2 id="s3">Review and refine</h2></div>
+      <div class="grid tips">
+        <div><span class="label n">Tip 1</span><h3>Watch it twice first.</h3><p>Once for the story, once for the timing, before you ask for changes.</p></div>
+        <div><span class="label n">Tip 2</span><h3>One change per message.</h3><p>For example, “Make the caption in scene 2 fade at 11.5s.” Small requests come back exactly right.</p></div>
+        <div><span class="label n">Tip 3</span><h3>Give real numbers.</h3><p>Placeholder metrics look generic. Paste your actual figures.</p></div>
+        <div><span class="label n">Tip 4</span><h3>Name the scene and the second.</h3><p>“At 4s the receipt appears too fast” is clearer than “it feels rushed”.</p></div>
+        <div><span class="label n">Tip 5</span><h3>Listen with headphones.</h3><p>Check the opening build and the move into the ending. Ask for the music to be regenerated if either feels off.</p></div>
+        <div><span class="label n">Tip 6</span><h3>Ask for a dark version.</h3><p>Claude can copy the video into a second file, so you keep both.</p></div>
+      </div>
+    </section>
+
+    <!-- 6. Step 04: export -->
+    <section class="block" aria-labelledby="s4">
+      <div class="step-head"><span class="step-num" aria-hidden="true">04</span><h2 id="s4">Export with sound</h2></div>
+      <ol class="export">
+        <li><span>In the video preview, click <strong>Export video</strong> and choose <strong>1080p</strong>. This downloads an MP4 with no sound.</span></li>
+        <li><span>Open the music combine page Claude built, choose that MP4 and click <strong>Combine</strong>. Keep the tab open in Chrome for the length of the video.</span></li>
+        <li><span>You get one MP4 with picture and sound, ready to post.</span></li>
+      </ol>
+      <div class="callout" role="note">
+        <span class="label">Note</span>
+        <p>The built-in video export saves picture only. Always ask for the music combine page (it's already in the prompt), or add the soundtrack in CapCut, iMovie or Premiere at 0:00.</p>
+      </div>
+
+      <div class="next">
+        <span class="label">Next</span>
+        <h3>Launching on Instagram?</h3>
+        <p>A vertical 9:16 version for Reels and Stories, with captions sized for phones.</p>
+        <!-- TODO: point this at the Instagram launch video guide when it's ready. -->
+        <a href="#" aria-disabled="true">Make an Instagram launch video (coming soon) →</a>
+      </div>
+    </section>
+
+    <footer class="end">
+      <a href="../../">Visit the uk_speaks.ai website →</a>
+    </footer>
+  </main>
+
+  <script>
+  (function () {
+    'use strict';
+
+    var STORE_KEY = 'launch-video-brief-v1';
+
+    var EXAMPLE = {
+      name: 'Tidy',
+      pitch: 'Bookkeeping that does itself, so freelancers can get back to work.',
+      audience: 'Freelancers and solo founders who dread tax season',
+      problem: 'Receipts pile up, invoices go unpaid, and tax day becomes a panic.',
+      moment: 'A freelancer snaps a photo of a receipt. Tidy reads it, sorts it into "Software", matches it to a bank payment, and sends a reminder for an overdue invoice.',
+      results: 'Receipts sorted: 2,316\nHours saved per month: 9\nInvoices paid on time: 94%\nTax set aside: $14,820',
+      setup: 'Connect your bank account\nForward your receipts email\nTurn on invoice reminders, no spreadsheets needed',
+      cta: 'Try Tidy free at tidy.app',
+      look: 'light',
+      length: '30'
+    };
+
+    var LOOKS = {
+      light: 'Light, monochrome',
+      dark: 'Dark, monochrome',
+      brand: 'Use the colours from my logo, sparingly'
+    };
+
+    var FIELDS = ['name', 'pitch', 'audience', 'problem', 'moment', 'results', 'setup', 'cta'];
+
+    var form = document.getElementById('brief');
+    var out = document.getElementById('prompt');
+
+    function el(name) { return document.getElementById('f-' + name); }
+    function radio(name) {
+      var r = document.querySelector('input[name="' + name + '"]:checked');
+      return r ? r.value : EXAMPLE[name];
+    }
+    function setRadio(name, value) {
+      var r = document.querySelector('input[name="' + name + '"][value="' + value + '"]');
+      if (r) r.checked = true;
+    }
+
+    // Single-line value: collapse whitespace; show a bracketed hint when empty.
+    function one(name, hint) {
+      var v = el(name).value.replace(/\s+/g, ' ').trim();
+      return v || '[' + hint + ']';
+    }
+    // List value: one item per line (a "·" also splits, for pasted lists).
+    function list(name, hint) {
+      var items = el(name).value.split(/\n|·/).map(function (s) { return s.trim(); }).filter(Boolean);
+      return items.length ? items : ['[' + hint + ']'];
+    }
+
+    function build() {
+      var L = parseInt(radio('length'), 10) || 30;
+      var A = Math.round(L * 0.17), B = Math.round(L * 0.5), C = Math.round(L * 0.67), D = Math.round(L * 0.87);
+      var pitch = one('pitch', 'one-line pitch');
+      var metrics = list('results', 'a result, e.g. Hours saved: 9').map(function (m) { return '- ' + m; }).join('\n');
+      var steps = list('setup', 'a setup step').map(function (s) { return '- ' + s; }).join('\n');
+
+      return [
+        'Make a ' + L + '-second animated launch video for my product. My logo is attached — use it exactly as provided.',
+        '',
+        'PRODUCT',
+        'Name: ' + one('name', 'product name'),
+        'Pitch: ' + pitch,
+        'For: ' + one('audience', 'who it is for'),
+        '',
+        'LOOK',
+        (LOOKS[radio('look')] || LOOKS.light) + '. 1920×1080, 60fps. One font, generous whitespace, smooth eased motion. No stock imagery, emoji or gradients.',
+        '',
+        'STORY (5 scenes)',
+        '1. Problem (0–' + A + 's): ' + one('problem', 'the problem') + ' Show it visually, with tension building.',
+        '2. Product in action (' + A + '–' + B + 's): ' + one('moment', 'your product in action'),
+        '   Caption: "' + pitch + '" — then a second caption for the next scene. Only one caption on screen at a time.',
+        '3. Results (' + B + '–' + C + 's): a dashboard that counts up these numbers, with simple grid lines:',
+        metrics,
+        '4. Setup (' + C + '–' + D + 's): three concrete steps, ticked off one by one:',
+        steps,
+        '5. Ending (' + D + '–' + L + 's): logo centred, then "' + one('cta', 'call to action') + '".',
+        '',
+        'SOUND',
+        'Generate an original music track: tension in the opening, then steady tempo and level to the end, with no drop between scenes. Add soft chimes on key actions (each product action, each setup step, the logo) and key-tap sounds wherever text is typed.',
+        '',
+        'CONTROLS',
+        'Add tweaks to toggle the music and captions, and to edit the CTA text.',
+        '',
+        'EXPORT',
+        'The video export saves picture only, so also build me a small page that takes my exported MP4, adds the music track and downloads one file with sound.'
+      ].join('\n');
+    }
+
+    function save() {
+      var data = { look: radio('look'), length: radio('length') };
+      FIELDS.forEach(function (f) { data[f] = el(f).value; });
+      try { localStorage.setItem(STORE_KEY, JSON.stringify(data)); } catch (e) {}
+    }
+
+    function load(data) {
+      FIELDS.forEach(function (f) { el(f).value = data[f] != null ? data[f] : EXAMPLE[f]; });
+      setRadio('look', data.look || EXAMPLE.look);
+      setRadio('length', data.length || EXAMPLE.length);
+    }
+
+    function update() {
+      out.textContent = build();
+      save();
+    }
+
+    // Start from saved answers if there are any, otherwise the Tidy example.
+    var saved = null;
+    try { saved = JSON.parse(localStorage.getItem(STORE_KEY) || 'null'); } catch (e) {}
+    load(saved || EXAMPLE);
+    out.textContent = build();
+
+    form.addEventListener('input', update);
+    form.addEventListener('change', update);
+    document.querySelectorAll('input[type="radio"]').forEach(function (r) { r.addEventListener('change', update); });
+
+    document.getElementById('reset').addEventListener('click', function () {
+      load(EXAMPLE);
+      update();
+    });
+
+    // Copy: clipboard API, then select the text as a fallback.
+    var copyBtn = document.getElementById('copy');
+    var copyLabel = document.getElementById('copy-label');
+    var timer;
+    function flash(text) {
+      clearTimeout(timer);
+      copyLabel.textContent = text;
+      timer = setTimeout(function () { copyLabel.textContent = 'Copy prompt'; }, 2000);
+    }
+    function selectPrompt() {
+      var range = document.createRange();
+      range.selectNodeContents(out);
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+    }
+    copyBtn.addEventListener('click', function () {
+      var text = out.textContent;
+      if (navigator.clipboard && navigator.clipboard.writeText && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(function () { flash('Copied'); }, function () {
+          selectPrompt();
+          flash('Selected, press copy');
+        });
+      } else {
+        selectPrompt();
+        flash('Selected, press copy');
+      }
+    });
+  })();
+  </script>
+</body>
+</html>
