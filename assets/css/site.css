@@ -706,6 +706,33 @@ img {
   padding: 7px 12px;
 }
 
+/* Sample vertical video (reel) inside a guide card. */
+.reel {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.reel video {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  aspect-ratio: 338 / 600;
+  border: 1.5px solid var(--ink);
+  border-radius: 14px;
+  background: var(--ink);
+}
+
+.reel figcaption {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #404040;
+  text-align: center;
+}
+
 /* ---- 404 --------------------------------------------------------------- */
 
 .notfound {
