@@ -773,8 +773,6 @@ img {
     grid-column: 1;
     grid-row: 1 / span 2;
     align-self: start;
-    position: sticky;
-    top: 48px;
     gap: 32px;
     padding: 0;
   }
