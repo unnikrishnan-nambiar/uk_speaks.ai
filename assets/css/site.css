@@ -755,7 +755,7 @@ img {
 
 /* ---- Home on wide screens ------------------------------------------------
    Phones keep the single column above. From 1080px the home page splits:
-   intro centered on the left, cards + Instagram band on the right. */
+   intro at the top on the left, cards + Instagram band on the right. */
 
 @media (min-width: 1080px) {
   .home {
@@ -764,15 +764,17 @@ img {
     grid-template-rows: auto 1fr;
     column-gap: 72px;
     max-width: 1100px;
-    padding: 72px 48px;
+    padding: 48px 48px 72px;
     align-items: start;
-    align-content: center;
+    align-content: start;
   }
 
   .hero {
     grid-column: 1;
     grid-row: 1 / span 2;
-    align-self: center;
+    align-self: start;
+    position: sticky;
+    top: 48px;
     gap: 32px;
     padding: 0;
   }
