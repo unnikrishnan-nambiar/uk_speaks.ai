@@ -733,6 +733,149 @@ img {
   text-align: center;
 }
 
+/* Strip of still frames from a video, 4 per row. */
+.frames {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.frames figure {
+  margin: 0;
+}
+
+.frames img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  border: 1.5px solid var(--ink);
+  border-radius: 10px;
+  background: var(--soft);
+}
+
+.frames figcaption {
+  margin-top: 4px;
+  font-size: 11px;
+  line-height: 1.3;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* Small numbered tiles, e.g. a workflow overview. */
+.tiles {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: tile;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+@media (min-width: 560px) {
+  .tiles {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.tiles li {
+  counter-increment: tile;
+  border: 1.5px solid var(--ink);
+  border-radius: 14px;
+  padding: 10px 12px 12px;
+  font-size: 13px;
+  line-height: 1.35;
+  color: var(--muted);
+}
+
+.tiles li::before {
+  content: counter(tile);
+  display: block;
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.tiles strong {
+  display: block;
+  font-size: 15px;
+  color: var(--ink);
+}
+
+/* Data tables that scroll sideways inside their own box on small screens. */
+.table-wrap {
+  overflow-x: auto;
+  border: 1.5px solid var(--ink);
+  border-radius: 14px;
+  -webkit-overflow-scrolling: touch;
+}
+
+table.data {
+  width: 100%;
+  min-width: 420px;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+table.data th {
+  text-align: left;
+  font-family: var(--label);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 10px 12px;
+  background: var(--soft);
+  border-bottom: 1.5px solid var(--ink);
+}
+
+table.data td {
+  padding: 10px 12px;
+  vertical-align: top;
+  border-bottom: 1px solid #e3e3e3;
+  color: var(--muted);
+}
+
+table.data tr:last-child td {
+  border-bottom: 0;
+}
+
+table.data td:first-child {
+  white-space: nowrap;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+/* Tip box: a softer card. */
+.card.tip {
+  background: var(--soft);
+  border-style: dashed;
+}
+
+/* Text with a small image beside it. */
+.side {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.side img {
+  flex-shrink: 0;
+  width: 96px;
+  height: auto;
+  border: 1.5px solid var(--ink);
+  border-radius: 10px;
+}
+
 /* ---- 404 --------------------------------------------------------------- */
 
 .notfound {
