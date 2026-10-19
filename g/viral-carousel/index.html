@@ -42,31 +42,46 @@
       <span class="label keyword">Carousel</span>
       <h1 class="guide-title">Turn one idea into a <span class="underline">viral carousel.</span></h1>
       <ol class="quick-steps">
-        <li><div>Open Claude, start a new chat or project<span>Add your logo or screenshots if you have them</span></div></li>
-        <li><div>Paste the prompt with your idea<span>One line is enough, e.g. “AI words people pretend to know”</span></div></li>
+        <li><div>Create a project in Claude<span>Name it “Carousels”, paste the instructions below, add your logo</span></div></li>
+        <li><div>Start a new chat in it<span>Type “Carousel: [your idea]”. One line is enough.</span></div></li>
         <li><div>Pick a hook, approve, download<span>Claude asks before it builds · slides + caption + hashtags + audio</span></div></li>
       </ol>
     </section>
 
     <section class="prompt on-ink" aria-labelledby="pm-label">
       <div class="prompt-head">
-        <h2 class="label" id="pm-label">The carousel prompt</h2>
+        <h2 class="label" id="pm-label">1 · Project instructions</h2>
         <button class="copy-btn" type="button" data-copy-target="pm">
           <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
           <span class="copy-label" aria-live="polite">Copy</span>
         </button>
       </div>
-      <p class="prompt-text prompt-text--paras" id="pm">Make me a viral Instagram carousel.
-Idea: [YOUR IDEA IN ONE LINE]
-Goal: [saves / shares / comments]. Audience: [WHO IT'S FOR]. My handle: [@HANDLE].
+      <p class="prompt-text prompt-text--paras" id="pm">You make viral Instagram carousels for me. When I send "Carousel: [idea]", follow these steps.
+My handle: [@HANDLE]. My audience: [WHO IT'S FOR]. Default goal: saves. My colours: [COLOURS]. My logo is in this project.
 
 1. Ask me at most one question first: any screenshots, photos or logos to include, and my own example or take on this. If I already gave a list or order, use mine exactly.
 2. HOOK: write 5 cover options, each from a different formula (self-test, mistake, confession, how I, curiosity gap, challenged belief, tiny shift, number + outcome). 3–7 words, one statement, true, readable as a thumbnail. Mark your pick and wait for me to choose.
 3. STRUCTURE: 8 slides (6–10 is fine). Slide 1 = the hook. Slide 2 must stand alone and deliver value straight away. One idea per slide. Put the payoff late (the template, the reveal, "the one most people miss"). Last slide = one call to action that matches my goal.
 4. COPY: 1–3 short sentences or 3–5 bullets per slide. Every slide should make sense as a screenshot. Add something worth saving (a prompt, a checklist or a template). Never invent stats or results: use [PLACEHOLDER] instead. Show me the copy slide by slide before you design.
-5. DESIGN: 1080×1440 (3:4), white background, my colours [COLOURS] with one accent, one font, a small label at the top, a page counter, my handle bottom-left, a dark last slide. Give it its own theme (e.g. sticky notes, receipt, terminal, magazine cover).
+5. DESIGN: 1080×1440 (3:4), white background, my colours with one accent, one font, a small label at the top, a page counter, my handle bottom-left, a dark last slide. Give it its own theme (e.g. sticky notes, receipt, terminal, magazine cover).
 6. BUILD: make each slide as a separate 1080×1440 image I can download. Check every slide for clipped or overflowing text before you show me.
-7. FINISH: a 2–4 line caption ending with an easy question, 5–10 hashtags, an audio vibe, and this check: hook ✓/✗, slide 2 standalone ✓/✗, payoff late ✓/✗, one CTA ✓/✗, shareable slides ✓/✗.</p>
+7. FINISH: a 2–4 line caption ending with an easy question, 5–10 hashtags, an audio vibe, and this check: hook ✓/✗, slide 2 standalone ✓/✗, payoff late ✓/✗, one CTA ✓/✗, shareable slides ✓/✗.
+8. REMEMBER: note the hook formula, structure and theme of each carousel, and use different ones next time.</p>
+    </section>
+
+    <section class="prompt on-ink" aria-labelledby="pn-label">
+      <div class="prompt-head">
+        <h2 class="label" id="pn-label">2 · Every new carousel</h2>
+        <button class="copy-btn" type="button" data-copy-target="pn">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+          <span class="copy-label" aria-live="polite">Copy</span>
+        </button>
+      </div>
+      <p class="prompt-text" id="pn">Carousel: [YOUR IDEA IN ONE LINE]</p>
+    </section>
+
+    <section class="card">
+      <p class="card-text">Optional extras in the same message: the goal (saves, shares or comments), the number of slides, screenshots, your own example, or a hook you already like.</p>
     </section>
 
     <section class="card example" aria-labelledby="example-label">
@@ -85,7 +100,14 @@ Goal: [saves / shares / comments]. Audience: [WHO IT'S FOR]. My handle: [@HANDLE
 
     <section class="card step">
       <span class="step-num" aria-hidden="true">01</span>
-      <h2 class="step-title"><span class="visually-hidden">Step 1: </span>Start with one idea</h2>
+      <h2 class="step-title"><span class="visually-hidden">Step 1: </span>Create your Carousels project (once)</h2>
+      <p class="card-text">In Claude, open <strong>Projects → New project</strong> and name it <strong>“Carousels”</strong>. Paste the project instructions from the top into the project's instructions, and fill in your handle, audience and colours. Add your logo to the project files.</p>
+      <p class="card-text">Now every carousel starts as a <strong>new chat inside this project</strong>. Claude already knows your brand and the rules, and it remembers what you made before, so each post looks different.</p>
+    </section>
+
+    <section class="card step">
+      <span class="step-num" aria-hidden="true">02</span>
+      <h2 class="step-title"><span class="visually-hidden">Step 2: </span>Start with one idea</h2>
       <p class="card-text">A topic, a tool, an opinion or a screenshot. One line is enough. If you have your own example, a real result or a list in your order, give it to Claude. Your own take beats a generic list every time.</p>
       <ul class="topics">
         <li>A tool you tested</li>
@@ -96,8 +118,8 @@ Goal: [saves / shares / comments]. Audience: [WHO IT'S FOR]. My handle: [@HANDLE
     </section>
 
     <section class="card step">
-      <span class="step-num" aria-hidden="true">02</span>
-      <h2 class="step-title"><span class="visually-hidden">Step 2: </span>Pick the hook. Don't skip this.</h2>
+      <span class="step-num" aria-hidden="true">03</span>
+      <h2 class="step-title"><span class="visually-hidden">Step 3: </span>Pick the hook. Don't skip this.</h2>
       <p class="card-text">The cover is <strong>one statement or one question</strong>: 3–7 words, true, readable at thumbnail size. No subtitle, no second idea. Ask for 5 options, each from a different formula:</p>
       <div class="table-wrap" role="region" aria-label="Hook formulas" tabindex="0">
         <table class="data">
@@ -122,8 +144,8 @@ Goal: [saves / shares / comments]. Audience: [WHO IT'S FOR]. My handle: [@HANDLE
     </section>
 
     <section class="card step">
-      <span class="step-num" aria-hidden="true">03</span>
-      <h2 class="step-title"><span class="visually-hidden">Step 3: </span>Pick a structure</h2>
+      <span class="step-num" aria-hidden="true">04</span>
+      <h2 class="step-title"><span class="visually-hidden">Step 4: </span>Pick a structure</h2>
       <p class="card-text">Use a different one each time, so your posts don't all look the same:</p>
       <ul class="topics">
         <li>Numbered playbook</li>
@@ -153,8 +175,8 @@ Goal: [saves / shares / comments]. Audience: [WHO IT'S FOR]. My handle: [@HANDLE
     </section>
 
     <section class="card step">
-      <span class="step-num" aria-hidden="true">04</span>
-      <h2 class="step-title"><span class="visually-hidden">Step 4: </span>Write short, then shorter</h2>
+      <span class="step-num" aria-hidden="true">05</span>
+      <h2 class="step-title"><span class="visually-hidden">Step 5: </span>Write short, then shorter</h2>
       <ul class="rules">
         <li>One idea per slide: 1–3 short sentences, or 3–5 bullets.</li>
         <li><strong>Screenshot test:</strong> every slide makes sense on its own and is worth sending to someone.</li>
@@ -166,8 +188,8 @@ Goal: [saves / shares / comments]. Audience: [WHO IT'S FOR]. My handle: [@HANDLE
     </section>
 
     <section class="card step">
-      <span class="step-num" aria-hidden="true">05</span>
-      <h2 class="step-title"><span class="visually-hidden">Step 5: </span>Same brand, fresh look</h2>
+      <span class="step-num" aria-hidden="true">06</span>
+      <h2 class="step-title"><span class="visually-hidden">Step 6: </span>Same brand, fresh look</h2>
       <p class="card-text">Keep your brand the same every time: background, colours, font, size <strong>1080×1440</strong>, handle, and a dark last slide. Inside that, give each carousel its own theme so your grid doesn't repeat:</p>
       <ul class="topics">
         <li>Giant numbers</li>
@@ -183,8 +205,8 @@ Goal: [saves / shares / comments]. Audience: [WHO IT'S FOR]. My handle: [@HANDLE
     </section>
 
     <section class="card step">
-      <span class="step-num" aria-hidden="true">06</span>
-      <h2 class="step-title"><span class="visually-hidden">Step 6: </span>Check before you post</h2>
+      <span class="step-num" aria-hidden="true">07</span>
+      <h2 class="step-title"><span class="visually-hidden">Step 7: </span>Check before you post</h2>
       <p class="card-text">Look at every slide yourself: clipped text, empty gaps, too many colours, unreadable as a small thumbnail. Then send this:</p>
     </section>
 
@@ -200,8 +222,8 @@ Goal: [saves / shares / comments]. Audience: [WHO IT'S FOR]. My handle: [@HANDLE
     </section>
 
     <section class="card step">
-      <span class="step-num" aria-hidden="true">07</span>
-      <h2 class="step-title"><span class="visually-hidden">Step 7: </span>Post it</h2>
+      <span class="step-num" aria-hidden="true">08</span>
+      <h2 class="step-title"><span class="visually-hidden">Step 8: </span>Post it</h2>
       <ul class="rules">
         <li><strong>Slides:</strong> download them as separate images, in order.</li>
         <li><strong>Caption:</strong> 2–4 short lines that don't repeat the slides, ending with an easy question.</li>
@@ -213,7 +235,7 @@ Goal: [saves / shares / comments]. Audience: [WHO IT'S FOR]. My handle: [@HANDLE
 
     <section class="card tip">
       <span class="label">Tip</span>
-      <p class="card-text"><strong>Keep the next one different.</strong> Make all your carousels in one Claude project and ask: “Remember the hook formula, structure and theme we used, and pick different ones next time.”</p>
+      <p class="card-text"><strong>Keep the next one different.</strong> Always start new carousels inside your Carousels project. If one starts to look like the last, say: “Use a different hook formula, structure and theme from my last carousel.”</p>
     </section>
 
     <footer class="closer on-ink">
