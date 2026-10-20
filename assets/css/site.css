@@ -974,6 +974,7 @@ table.data.data--fit td:first-child {
 }
 
 .intro-mark .keyword {
+  align-self: center;
   margin-left: 4px;
 }
 
