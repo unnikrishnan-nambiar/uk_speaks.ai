@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Let Claude write your LinkedIn — uk_speaks.ai</title>
+  <meta name="description" content="11 free Claude skills that write your LinkedIn posts, comments, replies and weekly plan in your voice. Set up in about 3 minutes. You still post everything yourself.">
+  <meta name="theme-color" content="#0a0a0a">
+
+  <!-- Social previews need absolute URLs. BASE_URL = https://unnikrishnan-nambiar.github.io/uk_speaks.ai/ (see README). -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="uk_speaks.ai">
+  <meta property="og:title" content="Let Claude write your LinkedIn. You post.">
+  <meta property="og:description" content="11 free Claude skills for LinkedIn posts, comments, replies and a weekly plan, in your voice.">
+  <meta property="og:url" content="https://unnikrishnan-nambiar.github.io/uk_speaks.ai/g/linkedin-agent/">
+  <meta property="og:image" content="https://unnikrishnan-nambiar.github.io/uk_speaks.ai/assets/og/og-linkedin-agent.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Let Claude write your LinkedIn. You post.">
+  <meta name="twitter:description" content="11 free Claude skills for LinkedIn posts, comments, replies and a weekly plan, in your voice.">
+  <meta name="twitter:image" content="https://unnikrishnan-nambiar.github.io/uk_speaks.ai/assets/og/og-linkedin-agent.png">
+
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../../favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+
+  <link rel="preload" href="../../assets/fonts/plus-jakarta-sans-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../../assets/css/site.css?v=15">
+  <script src="../../assets/js/copy.js?v=2" defer></script>
+</head>
+<body>
+  <main class="page guide">
+    <header class="topbar">
+      <a class="brand" href="../../">uk_speaks.ai</a>
+      <span class="label">Free guide</span>
+    </header>
+
+    <!-- First screen: everything needed in a few seconds. -->
+    <section class="card guide-intro quick">
+      <span class="label keyword">LinkedIn</span>
+      <h1 class="guide-title">Let Claude write your LinkedIn. <span class="underline">You&nbsp;post.</span></h1>
+      <ol class="quick-steps">
+        <li><div>Add the free LinkedIn plugin to Claude<span>About 3 minutes · 11 skills · no API key</span></div></li>
+        <li><div>Type <strong>/li-post</strong> and your idea<span>Paste 3 of your own posts once, so it learns your voice</span></div></li>
+        <li><div>Copy it, check the numbers, post it yourself<span>Nothing is connected to your LinkedIn account</span></div></li>
+      </ol>
+    </section>
+
+    <section class="prompt on-ink" aria-labelledby="repo-label">
+      <div class="prompt-head">
+        <h2 class="label" id="repo-label">The plugin to add</h2>
+        <button class="copy-btn" type="button" data-copy-target="repo">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+          <span class="copy-label" aria-live="polite">Copy</span>
+        </button>
+      </div>
+      <p class="prompt-text" id="repo">avi691/linkedin-agent-skill</p>
+    </section>
+
+    <p class="section-break label">Set it up</p>
+
+    <section class="card step">
+      <span class="step-num" aria-hidden="true">01</span>
+      <h2 class="step-title"><span class="visually-hidden">Option 1: </span>In the Claude app (no code)</h2>
+      <p class="card-text">Needs a paid Claude plan (Pro or higher). Works on the web and the desktop app.</p>
+      <ol class="quick-steps">
+        <li><div>Customize → Plugins → Add → Add marketplace<span>Customize is in the left sidebar</span></div></li>
+        <li><div>Add from a repository<span>Paste the plugin name from above and click <strong>Sync</strong>. A warning shows for any plugin not made by Anthropic.</span></div></li>
+        <li><div>Open “Linkedin agent”, click Add<span>You'll see all 11 skills inside</span></div></li>
+        <li><div>Check it's there<span>Customize → Plugins → Yours</span></div></li>
+      </ol>
+    </section>
+
+    <section class="card step">
+      <span class="step-num" aria-hidden="true">02</span>
+      <h2 class="step-title"><span class="visually-hidden">Option 2: </span>In Claude Code</h2>
+      <p class="card-text">Run these two commands inside Claude Code:</p>
+    </section>
+
+    <section class="prompt on-ink" aria-labelledby="cc-label">
+      <div class="prompt-head">
+        <h3 class="label" id="cc-label">Claude Code</h3>
+        <button class="copy-btn" type="button" data-copy-target="cc">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+          <span class="copy-label" aria-live="polite">Copy</span>
+        </button>
+      </div>
+      <p class="prompt-text prompt-text--paras" id="cc">/plugin marketplace add avi691/linkedin-agent-skill
+/plugin install linkedin-agent</p>
+    </section>
+
+    <section class="card step">
+      <span class="step-num" aria-hidden="true">03</span>
+      <h2 class="step-title"><span class="visually-hidden">Option 3: </span>On the free plan</h2>
+      <p class="card-text">Plugins need a paid plan, but you can still use one skill at a time. Open the <a href="https://github.com/avi691/linkedin-agent-skill/tree/main/skills">skills folder on GitHub</a>, open the skill you want (for example <strong>li-post</strong>), copy everything in its <strong>SKILL.md</strong> file, and paste it at the top of a new chat with your request. The humanizer's scripts won't run this way, but the writing works.</p>
+    </section>
+
+    <section class="card step">
+      <span class="step-num" aria-hidden="true">04</span>
+      <h2 class="step-title"><span class="visually-hidden">Step 4: </span>Teach it your voice, once</h2>
+      <p class="card-text">Start a new chat and type <strong>/li</strong> to see all 11 skills. Start with this:</p>
+    </section>
+
+    <section class="prompt on-ink" aria-labelledby="first-label">
+      <div class="prompt-head">
+        <h3 class="label" id="first-label">Your first post</h3>
+        <button class="copy-btn" type="button" data-copy-target="first">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+          <span class="copy-label" aria-live="polite">Copy</span>
+        </button>
+      </div>
+      <p class="prompt-text" id="first">/li-post I want to write about [YOUR IDEA]</p>
+    </section>
+
+    <section class="card">
+      <p class="card-text">It gives you <strong>three hook options</strong> and asks for <strong>three of your own posts</strong>. Paste the three that sound most like you. It then writes a <strong>voice.md</strong> file describing how you write.</p>
+      <p class="card-text"><strong>Keep that voice:</strong> each new chat in the Claude app starts fresh. Ask Claude for the voice.md file, then add it to a Claude Project called “LinkedIn”. Every chat in that project will write like you.</p>
+    </section>
+
+    <p class="section-break label">The 11 skills</p>
+
+    <section class="card" aria-labelledby="skills-label">
+      <h2 class="label" id="skills-label">What each one does</h2>
+      <div class="table-wrap" role="region" aria-label="The 11 LinkedIn skills" tabindex="0">
+        <table class="data data--fit">
+          <thead><tr><th scope="col">Type</th><th scope="col">What you get</th></tr></thead>
+          <tbody>
+            <tr><td>/li-post</td><td>One idea into a post: 3 hooks from 21 formulas, then the full draft</td></tr>
+            <tr><td>/li-carousel</td><td>A slide-by-slide carousel and the PDF to upload</td></tr>
+            <tr><td>/li-repurpose</td><td>One video, newsletter or transcript into a week of posts</td></tr>
+            <tr><td>/li-comment</td><td>Two real comment options for someone else's post</td></tr>
+            <tr><td>/li-reply</td><td>Replies to the comments on your post, most important first</td></tr>
+            <tr><td>/li-dm</td><td>A connection note, a first message and two follow-ups</td></tr>
+            <tr><td>/li-inbox</td><td>Sorts your messages and drafts the replies worth sending</td></tr>
+            <tr><td>/li-plan</td><td>Your week: 4 posts, when to post, and 10 people to engage with</td></tr>
+            <tr><td>/li-profile</td><td>Scores your profile out of 100 and rewrites the weakest parts</td></tr>
+            <tr><td>/li-audit</td><td>Ranks your past posts by engagement and says what to stop</td></tr>
+            <tr><td>/li-human</td><td>Removes stock AI words and em dashes, then scores the draft</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="card-text">You don't have to remember them. Just ask normally, like “write a LinkedIn post about…”, and Claude picks the right skill.</p>
+    </section>
+
+    <section class="card tip">
+      <span class="label">Important</span>
+      <p class="card-text">It never reads LinkedIn for you. <strong>You paste in</strong> the post, the comments or the messages. Screenshots work too.</p>
+    </section>
+
+    <section class="card step">
+      <span class="step-num" aria-hidden="true">05</span>
+      <h2 class="step-title"><span class="visually-hidden">Step 5: </span>Your weekly routine</h2>
+      <ul class="rules">
+        <li><strong>Once a week:</strong> run <strong>/li-plan</strong>. Tell it what you do, your themes and what happened this week.</li>
+        <li><strong>10 minutes a day:</strong> <strong>/li-comment</strong> on 2–3 posts and <strong>/li-reply</strong> to your own comments.</li>
+        <li><strong>Before anything goes out:</strong> run it through <strong>/li-human</strong>, then read every number yourself.</li>
+        <li><strong>Links:</strong> put them in the first comment, not in the post.</li>
+      </ul>
+    </section>
+
+    <section class="card example" aria-labelledby="example-label">
+      <h2 class="label" id="example-label">Example: /li-human</h2>
+      <figure class="example-pair">
+        <figcaption class="example-caption example-caption--before">BEFORE — sounds like AI</figcaption>
+        <p class="bubble bubble--before">"In today's fast-paced world, AI isn't just a tool — it's a game-changer."</p>
+      </figure>
+      <figure class="example-pair">
+        <figcaption class="example-caption">AFTER — sounds like you</figcaption>
+        <p class="bubble bubble--after">"AI cut my weekly report from {{your number}} hours to {{your number}} minutes. Here's the one prompt I use."</p>
+      </figure>
+      <p class="card-text">The swap of stock words is automatic. Getting it to really sound like you takes a rewrite with your own details. If it doesn't have a real number, it leaves <strong>{{your number}}</strong> for you to fill in. Never post it with made-up numbers.</p>
+    </section>
+
+    <section class="card" aria-labelledby="can-label">
+      <h2 class="label" id="can-label">What it can do</h2>
+      <ul class="rules">
+        <li>Write posts, comments, replies, DMs and carousels in your voice</li>
+        <li>Plan your week: what to post, when, and who to engage with</li>
+        <li>Score your profile out of 100 and rewrite the weak parts</li>
+        <li>Clean stock AI words and em dashes out of any draft</li>
+      </ul>
+    </section>
+
+    <section class="card" aria-labelledby="cant-label">
+      <h2 class="label" id="cant-label">What it can't do</h2>
+      <ul class="rules">
+        <li>Post, comment or send anything on LinkedIn. You paste every one, which keeps your account safe: auto-posting tools break LinkedIn's rules.</li>
+        <li>Read your feed, comments or inbox. You paste them in.</li>
+        <li>Run on autopilot. Nothing is connected to your account.</li>
+        <li>Promise you'll pass AI detectors. Its score is its own check, not GPTZero or similar.</li>
+      </ul>
+    </section>
+
+    <section class="card tip">
+      <span class="label">Good to know</span>
+      <p class="card-text">It's open source under the MIT licence, free, with no signup and no API key. The skills are plain instructions plus two small Python scripts, and neither script connects to the internet. Anthropic doesn't review outside plugins, so it's worth a quick look at <a href="https://github.com/avi691/linkedin-agent-skill">the repo</a> before you add it.</p>
+      <p class="card-text">Made by Jake Schincariol and shared by Avi Grondin. All credit to them.</p>
+    </section>
+
+    <footer class="closer on-ink">
+      <h2 class="closer-title">Liked this?<br>Next one drops this week.</h2>
+      <a class="btn-primary" href="https://www.instagram.com/uk_speaks.ai/">
+        <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8"/></svg>
+        Follow @uk_speaks.ai
+      </a>
+      <p class="closer-note"><a href="../../">Visit the uk_speaks.ai website →</a></p>
+    </footer>
+  </main>
+</body>
+</html>
