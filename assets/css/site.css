@@ -967,7 +967,17 @@ table.data.data--fit td:first-child {
   flex-shrink: 0;
 }
 
-/* ---- 404 --------------------------------------------------------------- */
+.intro-plus {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.intro-mark .keyword {
+  margin-left: 4px;
+}
+
+/* ---- 404--------------------------------------------------------------- */
 
 .notfound {
   display: flex;
