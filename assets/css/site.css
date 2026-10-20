@@ -876,6 +876,84 @@ table.data td:first-child {
   border-radius: 10px;
 }
 
+/* A whole card that is a link (e.g. a guide on the home page). */
+.card-link {
+  color: var(--ink);
+  text-decoration: none;
+  box-shadow: 4px 4px 0 var(--ink);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.card-link:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0 var(--ink);
+}
+
+.card-link:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+.card-link-title {
+  font-size: 22px;
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+/* Two-column tables that should fit a phone without sideways scrolling. */
+table.data.data--fit {
+  min-width: 0;
+}
+
+table.data.data--fit td:first-child {
+  white-space: normal;
+}
+
+/* Directory of linked tools: name + one line. */
+.tools {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tools a {
+  display: block;
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 1.5px solid var(--ink);
+  border-radius: 14px;
+  background: var(--paper);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.tools a:hover {
+  box-shadow: 3px 3px 0 var(--ink);
+}
+
+.tools strong {
+  display: block;
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+.tools strong::after {
+  content: " \2197";
+  font-weight: 500;
+}
+
+.tools span {
+  display: block;
+  margin-top: 2px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
 /* ---- 404 --------------------------------------------------------------- */
 
 .notfound {
