@@ -954,6 +954,19 @@ table.data.data--fit td:first-child {
   color: var(--muted);
 }
 
+/* A product logo shown next to the keyword chip in a guide intro. */
+.intro-mark {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.intro-mark img {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+}
+
 /* ---- 404 --------------------------------------------------------------- */
 
 .notfound {
