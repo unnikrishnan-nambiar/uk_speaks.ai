@@ -49,7 +49,7 @@
       <ol class="quick-steps">
         <li><div>Add the free LinkedIn skills to Claude<span>Claude chat or Claude Code · free plan: one skill at a time</span></div></li>
         <li><div>Type <strong>/li-post</strong> and your idea<span>Paste 3 of your own posts once, so it writes like you</span></div></li>
-        <li><div>Run <strong>/li-human</strong>, then post it yourself<span>Nothing is connected to your LinkedIn account</span></div></li>
+        <li><div>Run <strong>/li-human</strong>, then post it yourself<span>Optional: connect LinkedIn with Claude in Chrome</span></div></li>
       </ol>
     </section>
 
@@ -74,6 +74,7 @@
         <li><strong>Claude chat</strong> (claude.ai or the app): easiest, no code. Needs a paid plan.</li>
         <li><strong>Claude Code:</strong> for people who already use it. The humanizer's scripts run for real here.</li>
         <li><strong>Free plan:</strong> paste one skill into a chat and use it. Free, one skill at a time.</li>
+        <li><strong>Claude in Chrome:</strong> add-on for any paid plan. Claude reads LinkedIn for you, so you stop copy-pasting.</li>
       </ul>
     </section>
 
@@ -277,6 +278,93 @@ Follow the skill above for this chat. My request: [WHAT YOU WANT, e.g. a post ab
       <p class="card-text">The score is the humanizer's own check. It doesn't run GPTZero or any other AI detector, and nothing can promise you'll pass one. Read every post out loud before you share it.</p>
     </section>
 
+    <!-- ===================== Claude in Chrome ===================== -->
+    <p class="section-break label">Connect LinkedIn: Claude in Chrome</p>
+
+    <section class="card">
+      <p class="card-text">So far you paste everything in. With the <strong>Claude in Chrome</strong> extension, Claude can <strong>read LinkedIn for you</strong>: your feed, the comments on your post, your messages, your profile. It drafts, and <strong>you still press Post</strong>.</p>
+      <p class="card-text">Needs a paid Claude plan (Pro or higher) and Chrome on a computer. It doesn't work on phones.</p>
+    </section>
+
+    <section class="card step">
+      <span class="step-num" aria-hidden="true">07</span>
+      <h2 class="step-title"><span class="visually-hidden">Claude in Chrome, step 1: </span>Install the extension</h2>
+      <ol class="rules">
+        <li>In Chrome, open the <strong>Chrome Web Store</strong> and search <strong>Claude</strong>. Pick the one by <strong>Anthropic</strong>.</li>
+        <li>Click <strong>Add to Chrome</strong>, then pin it with the puzzle-piece icon so it's always in your toolbar.</li>
+        <li>Click the Claude icon and <strong>sign in</strong> with your Claude account. A side panel opens next to the page.</li>
+      </ol>
+    </section>
+
+    <section class="card step">
+      <span class="step-num" aria-hidden="true">08</span>
+      <h2 class="step-title"><span class="visually-hidden">Claude in Chrome, step 2: </span>Connect it to LinkedIn</h2>
+      <ol class="rules">
+        <li>Open <strong>linkedin.com</strong> and log in as usual. Claude uses your own login. You never give it your password.</li>
+        <li>Open the Claude side panel. The first time it acts on LinkedIn, it asks for permission. Allow it <strong>for linkedin.com only</strong>.</li>
+        <li>Keep it on <strong>Ask before acting</strong>, so it checks with you before every click.</li>
+        <li>Paste your <strong>voice.md</strong> (from step 02) into the first message, so the drafts sound like you.</li>
+      </ol>
+    </section>
+
+    <section class="card step">
+      <span class="step-num" aria-hidden="true">09</span>
+      <h2 class="step-title"><span class="visually-hidden">Claude in Chrome, step 3: </span>Let it read, you post</h2>
+      <p class="card-text">Open the right LinkedIn page first, then send one of these in the side panel.</p>
+    </section>
+
+    <section class="prompt on-ink" aria-labelledby="chrome1-label">
+      <div class="prompt-head">
+        <h3 class="label" id="chrome1-label">Comment on your feed</h3>
+        <button class="copy-btn" type="button" data-copy-target="chrome1">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+          <span class="copy-label" aria-live="polite">Copy</span>
+        </button>
+      </div>
+      <p class="prompt-text prompt-text--paras" id="chrome1">I'm on my LinkedIn feed. Read the posts and pick the 3 best ones for me to comment on, from people in [YOUR FIELD].
+
+For each, draft one short comment in my voice (my voice.md is below). Follow the /li-human rules: no stock AI words, no em dashes, real specifics.
+
+Don't post, like, follow or send anything. Just show me the drafts. I'll post the ones I like myself.
+
+[PASTE YOUR VOICE.MD]</p>
+    </section>
+
+    <section class="prompt on-ink" aria-labelledby="chrome2-label">
+      <div class="prompt-head">
+        <h3 class="label" id="chrome2-label">Reply to your comments</h3>
+        <button class="copy-btn" type="button" data-copy-target="chrome2">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+          <span class="copy-label" aria-live="polite">Copy</span>
+        </button>
+      </div>
+      <p class="prompt-text prompt-text--paras" id="chrome2">I'm on my latest LinkedIn post. Read all the comments and draft a reply to each one that deserves it, most important first, in my voice.
+
+Show each reply under the person's name so I can paste it. Don't post anything.</p>
+    </section>
+
+    <section class="prompt on-ink" aria-labelledby="chrome3-label">
+      <div class="prompt-head">
+        <h3 class="label" id="chrome3-label">Fix your profile</h3>
+        <button class="copy-btn" type="button" data-copy-target="chrome3">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+          <span class="copy-label" aria-live="polite">Copy</span>
+        </button>
+      </div>
+      <p class="prompt-text prompt-text--paras" id="chrome3">I'm on my LinkedIn profile. Read it, score it out of 100 like /li-profile, and rewrite my headline and About section for [WHO YOU WANT TO REACH].
+
+Don't change anything on the page. Just show me the new text.</p>
+    </section>
+
+    <section class="card tip">
+      <span class="label">Keep your account safe</span>
+      <ul class="rules">
+        <li><strong>Let it read and draft. You post.</strong> LinkedIn's rules don't allow bots or automated activity, and accounts that use them can be restricted.</li>
+        <li>Never ask it to send connection requests or messages in bulk, like posts for you, or copy people's profiles.</li>
+        <li>Posts can hide instructions meant for AI. If Claude suggests something you didn't ask for, stop it and say no.</li>
+      </ul>
+    </section>
+
     <!-- ===================== All skills ===================== -->
     <p class="section-break label">All 11 skills</p>
 
@@ -304,7 +392,7 @@ Follow the skill above for this chat. My request: [WHAT YOU WANT, e.g. a post ab
 
     <section class="card tip">
       <span class="label">Important</span>
-      <p class="card-text">It never reads LinkedIn for you. <strong>You paste in</strong> the post, the comments or the messages. Screenshots work too.</p>
+      <p class="card-text">In chat and Claude Code, <strong>you paste in</strong> the post, the comments or the messages. Screenshots work too. Want Claude to read LinkedIn itself? Use <strong>Claude in Chrome</strong> (steps 07–09).</p>
     </section>
 
     <section class="card" aria-labelledby="routine-label">
@@ -320,9 +408,9 @@ Follow the skill above for this chat. My request: [WHAT YOU WANT, e.g. a post ab
     <section class="card" aria-labelledby="cant-label">
       <h2 class="label" id="cant-label">What it can't do</h2>
       <ul class="rules">
-        <li>Post, comment or send anything on LinkedIn. You paste every one, which keeps your account safe: auto-posting tools break LinkedIn's rules.</li>
-        <li>Read your feed, comments or inbox. You paste them in.</li>
-        <li>Run on autopilot. Nothing is connected to your account.</li>
+        <li>Post, comment or send anything for you. You post every one, which keeps your account safe: auto-posting tools break LinkedIn's rules.</li>
+        <li>Read your feed, comments or inbox, unless you connect <strong>Claude in Chrome</strong>. Then it reads, and you still post.</li>
+        <li>Run on autopilot. Even with Chrome, you start every task.</li>
       </ul>
     </section>
 
