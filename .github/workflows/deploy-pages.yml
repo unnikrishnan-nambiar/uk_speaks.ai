@@ -1,6 +1,7 @@
 name: Deploy to GitHub Pages
 
-# Plain static site: no install, no build. This job only copies the public
+# Plain static site: no install, no build. This job regenerates the
+# all-guides page (Python standard library only), then copies the public
 # files into _site/ so docs, mockups, tools/ and the guide template never get
 # published.
 
@@ -25,11 +26,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # full history: guides/ shows the date each guide was added
+
+      - name: Rebuild the all-guides page
+        run: python3 tools/build-guides.py
 
       - name: Collect public files
         run: |
           mkdir _site
-          cp -R index.html 404.html .nojekyll favicon.svg favicon-32.png apple-touch-icon.png assets g which-ai _site/
+          cp -R index.html 404.html .nojekyll favicon.svg favicon-32.png apple-touch-icon.png assets g which-ai guides _site/
           rm -rf _site/g/_template
 
       - uses: actions/configure-pages@v5
