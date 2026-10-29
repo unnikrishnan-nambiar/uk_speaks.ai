@@ -4,7 +4,28 @@
 
 ## Master prompt
 
-Read this guide and analyze my uploaded photograph for face visibility, pose, light, sharpness, clothing, background, and professional context. Select the best numbered style from the guide and explain your choice in one sentence. Then generate one realistic square LinkedIn headshot with head-and-shoulders framing and room for a circular crop. Preserve my recognizable identity, natural facial proportions, skin tone, facial hair, hairstyle, and distinguishing features. Do not invent hidden details, over-retouch skin, or reshape my face. If the image is too unclear, ask for a better photo. If I specify a profession or preference, prioritize it.
+Read all 60 styles from this guide:
+https://raw.githubusercontent.com/unnikrishnan-nambiar/uk_speaks.ai/main/guides/linkedin-dp-60-prompts.md
+
+Analyze my uploaded photograph, focusing on facial visibility, lighting, pose, clothing, background, and image quality.
+
+Style selection rules:
+
+1. Evaluate all 60 styles, not just career-specific ones.
+2. Do not assume my profession or use previous conversations to influence selection.
+3. Identify the five most suitable styles from different categories.
+4. Compare them based on visual compatibility, professionalism, realism, and identity preservation.
+5. Select the highest-scoring style, explaining why it beats the alternatives.
+6. Do not automatically prefer Style #31 or any particular style.
+7. Treat the selected style as the primary visual direction. Combine compatible clothing, lighting, or correction treatments when appropriate.
+
+Generate one photorealistic, high-resolution, square LinkedIn portrait.
+
+Preserve my recognizable facial identity, skin tone, hairstyle, beard, and distinctive features. Avoid excessive retouching. Ensure safe framing for LinkedIn’s circular crop.
+
+Before generating, briefly state the selected style number, its name, and why it was chosen.
+
+If the guide is inaccessible, tell me rather than inventing its contents.
 
 ## How to use
 
