@@ -1131,3 +1131,75 @@ table.data.data--fit td:first-child {
 .guide-url .copy-btn {
   flex-shrink: 0;
 }
+
+/* ---- Style cards (collapsible, used by the ANIMATE guide) ---------- */
+.style-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.style-card summary {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 56px;
+  padding: 14px 20px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.style-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.style-card summary::after {
+  content: "+";
+  margin-left: auto;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.style-card[open] summary::after {
+  content: "\2212";
+}
+
+.style-num {
+  font-family: var(--label);
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+}
+
+.style-name {
+  display: flex;
+  flex-direction: column;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.style-name span {
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.style-body {
+  padding: 0 20px 20px;
+}
+
+.style-body img {
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  margin: 0 auto 14px;
+  border-radius: 14px;
+  border: 1.5px solid var(--ink);
+}
+
+.style-body .prompt {
+  margin-top: 14px;
+  border-radius: 16px;
+}
