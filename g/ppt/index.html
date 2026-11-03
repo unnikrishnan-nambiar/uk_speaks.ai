@@ -43,7 +43,7 @@
       <ol class="quick-steps">
         <li><div>Save your content in a file<span>Copy the content file below and fill it in</span></div></li>
         <li><div>Download a free design<span>Pick any template from the sites below (.pptx)</span></div></li>
-        <li><div>Upload both to Claude + paste my prompt<span>You get a .pptx in YOUR design, with a different layout per slide</span></div></li>
+        <li><div>Upload both to Claude + paste my prompt<span>Claude asks you questions, shows 1 sample slide, then builds the full deck</span></div></li>
       </ol>
     </section>
 
@@ -52,41 +52,31 @@
         <h2 class="label" id="content-file-label">Step 1 · Your content file</h2>
         <button class="copy-btn" type="button" data-copy-target="content-file"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span class="copy-label" aria-live="polite">Copy</span></button>
       </div>
-      <p class="prompt-text prompt-text--paras" id="content-file">PRESENTATION: [Title of your talk]
-AUDIENCE: [who is watching, e.g. my manager / clients / class]
-GOAL: [what they should do or decide after it]
-LENGTH: [number of slides, e.g. 8]
+      <p class="prompt-text prompt-text--paras" id="content-file">MY CONTENT: [Title of the presentation]
 
-SLIDE 1: [Title slide]
-- [Your name, date]
+WHAT I WANT TO SAY:
+1. [The problem, in one line]
+2. [Why it matters: a number, cost or example]
+3. [My idea / solution]
+4. [How it works: steps]
+5. [Proof: result, data, customer, case study]
+6. [What I want them to do next]
 
-SLIDE 2: [The problem]
-- [point]
-- [point]
-- [a number or fact, if you have one]
+MY NUMBERS / DATA:
+- [e.g. Sales Jan 4L, Feb 5L, Mar 7L]
+- [e.g. 3 out of 10 customers come back]
 
-SLIDE 3: [Your idea / solution]
-- [point]
-- [point]
+MUST INCLUDE:
+- [logo, a specific slide, a quote, team names...]
 
-SLIDE 4: [How it works]
-- [step 1]
-- [step 2]
-- [step 3]
-
-SLIDE 5: [Proof: result, example or data]
-- [point]
-
-SLIDE 6: [Next steps / ask]
-- [what you want them to do]
-
-NOTES: [anything else: tone, words to avoid, data to highlight]</p>
+AVOID:
+- [words, topics or numbers not to show]</p>
     </section>
 
     <section class="card" aria-labelledby="sites-label">
       <h2 class="label" id="sites-label">Step 2 · Free design websites</h2>
-      <ul class="rules"><li><strong>SlidesCarnival</strong> (slidescarnival.com): Free, no sign-up. PowerPoint and Google Slides.</li><li><strong>Slidesgo</strong> (slidesgo.com): Free templates need credit to Slidesgo; free accounts have a monthly download limit.</li><li><strong>Microsoft Create</strong> (create.microsoft.com): Free PowerPoint templates from Microsoft.</li><li><strong>AllPPT</strong> (allppt.com): Direct .pptx downloads. Lots of ads, so click carefully.</li></ul>
-      <p class="card-text">Download the <strong>PowerPoint (.pptx)</strong> version. If it comes as a .zip, unzip it first and upload the .pptx inside.</p>
+      <ul class="rules"><li><strong>Slidesgo</strong> (slidesgo.com): Free templates. Download the PowerPoint version. Free templates need credit to Slidesgo, and free accounts have a monthly download limit.</li><li><strong>Figma Community</strong> (figma.com/community/presentations): Modern designs, free Figma account needed. Open the file in Figma Slides, then export it as PowerPoint (.pptx). Check the export: some designs come out as flat images.</li><li><strong>Microsoft PowerPoint templates</strong> (powerpoint.cloud.microsoft): Free templates from Microsoft. Open one, then download it as a .pptx.</li></ul>
+      <p class="card-text">Always get the <strong>PowerPoint (.pptx)</strong> file. If it comes as a .zip, unzip it first and upload the .pptx inside.</p>
     </section>
 
     <section class="prompt on-ink" aria-labelledby="prompt-1-label">
@@ -94,56 +84,82 @@ NOTES: [anything else: tone, words to avoid, data to highlight]</p>
         <h2 class="label" id="prompt-1-label">Step 3 · The prompt</h2>
         <button class="copy-btn" type="button" data-copy-target="prompt-1"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span class="copy-label" aria-live="polite">Copy</span></button>
       </div>
-      <p class="prompt-text prompt-text--paras" id="prompt-1">I&#x27;ve uploaded two files:
-1. A PowerPoint template (.pptx): use its design ONLY.
-2. My content file: use its content ONLY.
+      <p class="prompt-text prompt-text--paras" id="prompt-1">Act as a senior presentation strategist and executive designer.
 
-Build a new presentation as a downloadable .pptx file.
+I&#x27;ve uploaded 2 files:
+1. A PowerPoint template (.pptx): use its DESIGN only (fonts, colours, backgrounds, layouts).
+2. My content file: use its FACTS only. Don&#x27;t invent numbers or results. If something is missing, ask me.
 
-Design rules:
-- First, look at every slide layout in the template and list them (title, section, text, two-column, image, etc.).
-- Use the template&#x27;s fonts, colours, backgrounds and layouts. Don&#x27;t invent a new theme.
-- Pick a DIFFERENT layout that fits each slide&#x27;s content. Don&#x27;t repeat the same layout on every slide.
-- Delete the template&#x27;s sample slides and placeholder text, and any image you don&#x27;t use.
+About the presentation:
+- Topic: [your topic]
+- Audience: [e.g. my manager, clients, students, investors]
+- Goal: [e.g. get budget approval, pitch a product, teach a process]
+- Length: [e.g. 10 slides]
+- Tone: [e.g. confident, simple, data-driven, friendly]
 
-Story rules:
-- Keep my slide order unless a different order clearly tells the story better. If you change it, tell me why.
-- Use short headlines that state the point (&quot;Sales grew 30%&quot;, not &quot;Sales&quot;).
-- Max 4 bullets per slide, max 8 words per bullet. Move extra detail into the speaker notes.
-- Don&#x27;t add facts or numbers that aren&#x27;t in my content file.
+Work in 3 stages. Stop after each stage and wait for my reply.
 
-Before building: show me the slide-by-slide plan (slide → layout → headline). Then build the .pptx.</p>
+STAGE 1: ASK ME FIRST
+Before planning anything, ask me up to 5 short, numbered questions about anything missing or unclear (for example: the one decision I want, key numbers, what the audience already knows, logo or brand rules, slides that must be included).
+
+STAGE 2: PLAN + ONE SAMPLE SLIDE
+After my answers, give me:
+1. Core message: one sentence the audience must remember. Every slide must support this ONE point.
+2. Story: Hook -&gt; Problem -&gt; Insight -&gt; Solution -&gt; Proof -&gt; Call to action (one line each).
+3. Slide-by-slide plan. For each slide:
+   - Title written as the conclusion (&quot;Late payments cost us 4 lakh a month&quot;, not &quot;Payments&quot;)
+   - Max 3 short bullet fragments
+   - Visual: the chart, diagram, image or icon layout (e.g. &quot;bar chart comparing X and Y&quot;, &quot;3-step process diagram&quot;, &quot;photo + 3 icon cards&quot;)
+   - Template layout to use. Use different layouts from the template; never the same layout on 2 slides in a row.
+   - Animation: what appears, in what order (e.g. &quot;title, then bars grow one by one, then the takeaway fades in&quot;)
+4. Build ONE sample slide as a .pptx (the most visual slide) in the template&#x27;s theme, so I can check the look before you build the rest.
+
+STAGE 3: FULL DECK (only after I say &quot;approved&quot; or send changes)
+Build the full deck as a downloadable .pptx:
+- Keep the template&#x27;s fonts, colours and backgrounds. Delete its sample slides and any leftover placeholder text.
+- Every slide has a visual: a real chart from my numbers, a diagram (process, timeline, comparison, cycle), icons or an image. No slide with only bullets.
+- Images: use the template&#x27;s images, icons or shapes. If a photo would help and you can&#x27;t add one, leave a clearly labelled image box saying exactly what photo to put there.
+- Animations: add entrance animations that follow the story, one point at a time, title first. If you can&#x27;t add animations to the file, give me a table (slide -&gt; object -&gt; animation -&gt; order) so I can add them in PowerPoint.
+- Text: body at least 18pt, titles at least 28pt. Nothing outside the slide, nothing overlapping.
+- Put the details and what I should say in the speaker notes.
+At the end, list anything you assumed or couldn&#x27;t do.</p>
     </section>
 
     <p class="section-break label">Need help? Full steps</p>
     <section class="card step">
       <span class="step-num" aria-hidden="true">01</span>
       <h2 class="step-title"><span class="visually-hidden">Step 1: </span>Fill in the content file</h2>
-      <p class="card-text">Copy the content file above into Notes, Word or Google Docs. Replace everything in [brackets] with your own words, then save it as a .txt, .docx or PDF. Clear content gives a clear story. Write the point of each slide, not just a topic.</p>
+      <p class="card-text">Copy the content file above into Notes, Word or Google Docs. Replace everything in [brackets] with your own words and real numbers, then save it as a .txt, .docx or PDF. Real numbers become real charts.</p>
     </section>
 
     <section class="card step">
       <span class="step-num" aria-hidden="true">02</span>
       <h2 class="step-title"><span class="visually-hidden">Step 2: </span>Pick and download a design</h2>
-      <p class="card-text">Open any of the sites above, choose a template you like and download the PowerPoint (.pptx) file. Pick one with lots of different slide layouts. More layouts means more variety in your deck.</p>
+      <p class="card-text">Open any of the 3 sites above, choose a template you like and get the PowerPoint (.pptx) file. Pick one with lots of different slide layouts and some charts or icons in it. More layouts means more variety in your deck.</p>
     </section>
 
     <section class="card step">
       <span class="step-num" aria-hidden="true">03</span>
-      <h2 class="step-title"><span class="visually-hidden">Step 3: </span>Upload both files to Claude</h2>
-      <p class="card-text">Go to <strong>claude.ai</strong> or the Claude app, start a new chat, tap <strong>+</strong> and add both files: the template .pptx and your content file. Creating files works on the free plan too.</p>
+      <h2 class="step-title"><span class="visually-hidden">Step 3: </span>Upload both files + paste the prompt</h2>
+      <p class="card-text">Go to <strong>claude.ai</strong> or the Claude app, start a new chat, tap <strong>+</strong> and add both files: the template .pptx and your content file. Then paste <strong>The prompt</strong>. Creating files works on the free plan too.</p>
     </section>
 
     <section class="card step">
       <span class="step-num" aria-hidden="true">04</span>
-      <h2 class="step-title"><span class="visually-hidden">Step 4: </span>Paste the prompt and approve the plan</h2>
-      <p class="card-text">Paste <strong>The prompt</strong> and send. Claude first shows a slide-by-slide plan. Reply “looks good, build it”, or ask for changes. Then it builds the deck and gives you a .pptx to download.</p>
+      <h2 class="step-title"><span class="visually-hidden">Step 4: </span>Answer Claude's questions</h2>
+      <p class="card-text">Fill in the [brackets] at the top of the prompt (topic, audience, goal, length, tone) and send. Claude first asks you up to 5 questions. Answer them in one message. Better answers give a sharper story.</p>
     </section>
 
     <section class="card step">
       <span class="step-num" aria-hidden="true">05</span>
-      <h2 class="step-title"><span class="visually-hidden">Step 5: </span>Open, check, present</h2>
-      <p class="card-text">Open the file in PowerPoint, Google Slides or Keynote. Read every slide once: AI can still put text in the wrong box. Small fixes are faster by hand. For bigger ones, send the prompt below.</p>
+      <h2 class="step-title"><span class="visually-hidden">Step 5: </span>Check the plan and the sample slide</h2>
+      <p class="card-text">Claude sends the one-line core message, the story, a slide-by-slide plan with a chart or diagram for each slide, and ONE sample slide in your template's design. Open it. Don't like it? Say what to change. Like it? Reply <strong>approved</strong>.</p>
+    </section>
+
+    <section class="card step">
+      <span class="step-num" aria-hidden="true">06</span>
+      <h2 class="step-title"><span class="visually-hidden">Step 6: </span>Get the full deck and check it</h2>
+      <p class="card-text">Claude builds the full .pptx with charts, diagrams and animations. Open it in PowerPoint, Google Slides or Keynote and read every slide once. If Claude gave you an animation table, add them in PowerPoint: Animations tab, pick the object, pick the effect. Small fixes are faster by hand. For bigger ones, send the prompt below.</p>
     </section>
 
     <section class="prompt on-ink" aria-labelledby="prompt-2-label">
@@ -151,7 +167,7 @@ Before building: show me the slide-by-slide plan (slide → layout → headline)
         <h2 class="label" id="prompt-2-label">Something looks off? Send this</h2>
         <button class="copy-btn" type="button" data-copy-target="prompt-2"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span class="copy-label" aria-live="polite">Copy</span></button>
       </div>
-      <p class="prompt-text" id="prompt-2">Some slides look crowded or off-template. Recheck every slide against the template: same fonts and colours, no text overflowing, no leftover placeholder text. Fix them and give me the updated .pptx.</p>
+      <p class="prompt-text" id="prompt-2">Some slides look crowded or off-template. Recheck every slide against the template: same fonts and colours, no text overflowing, no leftover placeholder text, a visual on every slide, animations in story order. Fix them and give me the updated .pptx.</p>
     </section>
 
     <section class="card tip">
@@ -163,6 +179,8 @@ Before building: show me the slide-by-slide plan (slide → layout → headline)
       <h2 class="label" id="tips-label">Good to know</h2>
       <ul class="rules">
         <li>Free plans have daily limits. A long deck can use a lot of it, so start with 6–8 slides.</li>
+        <li>Claude can't search the web for photos inside the file. It uses the template's images, icons and charts, and marks where a photo should go. Add your own photos there.</li>
+        <li>If animations don't show up in the file, use the animation table Claude gives you. It takes a minute in PowerPoint.</li>
         <li>Templates with very complex designs (lots of shapes and animations) can confuse the AI. Simple, clean templates work best.</li>
         <li>Slidesgo's free templates ask you to credit them: keep their credit slide.</li>
         <li>Don't upload confidential company data you aren't allowed to share.</li>
