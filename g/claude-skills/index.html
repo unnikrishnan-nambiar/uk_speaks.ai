@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>What are skills in Claude? — uk_speaks.ai</title>
+  <meta name="description" content="Becoming a Claude Master, Episode 1. What a Claude skill is, the 3 types, and how to make your own by just chatting with Claude. No coding.">
+  <meta name="theme-color" content="#0a0a0a">
+
+  <!-- Social previews need absolute URLs. BASE_URL = https://unnikrishnan-nambiar.github.io/uk_speaks.ai/ (see README). -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="uk_speaks.ai">
+  <meta property="og:title" content="What are skills in Claude?">
+  <meta property="og:description" content="Becoming a Claude Master, Episode 1. What a Claude skill is, the 3 types, and how to make your own by just chatting with Claude. No coding.">
+  <meta property="og:url" content="https://unnikrishnan-nambiar.github.io/uk_speaks.ai/g/claude-skills/">
+  <meta property="og:image" content="https://unnikrishnan-nambiar.github.io/uk_speaks.ai/assets/og/og-claude-skills.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="What are skills in Claude?">
+  <meta name="twitter:description" content="Becoming a Claude Master, Episode 1. What a Claude skill is, the 3 types, and how to make your own by just chatting with Claude. No coding.">
+  <meta name="twitter:image" content="https://unnikrishnan-nambiar.github.io/uk_speaks.ai/assets/og/og-claude-skills.png">
+
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../../favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+
+  <link rel="preload" href="../../assets/fonts/plus-jakarta-sans-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../../assets/css/site.css?v=20">
+  <script src="../../assets/js/copy.js?v=2" defer></script>
+</head>
+<body>
+  <main class="page guide">
+    <header class="topbar">
+      <a class="brand" href="../../">uk_speaks.ai</a>
+      <span class="label">Free guide</span>
+    </header>
+
+    <section class="card guide-intro">
+      <span class="label keyword">CLAUDE</span>
+      <h1 class="guide-title">What are skills in Claude? <span class="underline">Write once. Use every time.</span></h1>
+      <p class="card-text"><strong>Becoming a Claude Master · Episode 1.</strong> A skill is a paper of instructions you give Claude once. Claude reads it only when that job comes up, so you never explain the same thing twice.</p>
+    </section>
+
+    <section class="card quick" aria-labelledby="short-label">
+      <h2 class="label" id="short-label">The short version</h2>
+      <ol class="quick-steps">
+        <li><div>Turn on file creation<span>Settings › Capabilities. One switch.</span></div></li>
+        <li><div>Ask Claude to make a skill<span>Explain your process, upload one example, answer its questions.</span></div></li>
+        <li><div>Save it and turn it on<span>Customize › Skills. Claude uses it on its own from then on.</span></div></li>
+      </ol>
+    </section>
+
+    <p class="section-break label">What a skill is</p>
+
+    <section class="card">
+      <h2 class="step-title">A skill is a paper of instructions</h2>
+      <p class="card-text">Think of a note you give a new assistant: <em>my style, my steps 1-2-3, one example</em>. In Claude, that note is a file called <code>SKILL.md</code>.</p>
+      <ul class="rules">
+        <li><strong>A name</strong>, like <em>weekly-client-update</em>.</li>
+        <li><strong>A description</strong>: one line that tells Claude <em>when</em> to use it.</li>
+        <li><strong>The instructions</strong>: your steps, your rules, your examples.</li>
+      </ul>
+      <p class="card-text">Claude first reads only the name and description of each skill. It opens the full instructions only when your request needs them. That's why you can keep many skills on without slowing anything down.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="step-title">3 types of skills</h2>
+      <ul class="rules">
+        <li><strong>Built-in.</strong> Made by Anthropic for Excel, Word, PowerPoint and PDF files.</li>
+        <li><strong>From apps.</strong> Apps like Notion, Figma, Canva and Atlassian have skills in Claude's skills directory.</li>
+        <li><strong>Your own.</strong> Your process, your style. This is the best part, and it's what the rest of this guide is about.</li>
+      </ul>
+    </section>
+
+    <p class="section-break label">Make your own skill</p>
+
+    <section class="card step">
+      <span class="step-num" aria-hidden="true">01</span>
+      <h2 class="step-title"><span class="visually-hidden">Step 1: </span>Turn on file creation</h2>
+      <p class="card-text">Open Claude (app or <a href="https://claude.ai/">claude.ai</a>). Go to <strong>Settings › Capabilities</strong> and turn on <strong>Code execution and file creation</strong>. In some versions it's called <strong>Create and edit files</strong>. Skills need this switch.</p>
+      <p class="card-text">Skills work on the Free plan too, not just paid plans.</p>
+    </section>
+
+    <section class="card step">
+      <span class="step-num" aria-hidden="true">02</span>
+      <h2 class="step-title"><span class="visually-hidden">Step 2: </span>Just ask Claude</h2>
+      <p class="card-text">No coding. Start a new chat and say you want a skill. You can type it in Manglish, like I did: <em>“Enikku oru skill undaakkanam.”</em> Or copy the prompt below and fill in the last line.</p>
+    </section>
+
+    <section class="prompt on-ink" aria-labelledby="prompt-1-label">
+      <div class="prompt-head">
+        <h3 class="label" id="prompt-1-label">Prompt 1</h3>
+        <button class="copy-btn" type="button" data-copy-target="prompt-1">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+          <span class="copy-label" aria-live="polite">Copy</span>
+        </button>
+      </div>
+      <p class="prompt-text prompt-text--paras" id="prompt-1">I want to create a Claude skill. Ask me questions one at a time until you clearly understand:
+1. What job this skill is for
+2. When you should use it
+3. My steps, in order
+4. My style rules
+5. What the final output should look like
+
+I will upload one example of my past work. Don't add rules I didn't give you. When you have everything, show me the skill's name, description and instructions so I can approve them before you create it.
+
+The job: [for example: writing my weekly update to clients]</p>
+    </section>
+
+    <section class="card step">
+      <span class="step-num" aria-hidden="true">03</span>
+      <h2 class="step-title"><span class="visually-hidden">Step 3: </span>Explain, upload, answer</h2>
+      <p class="card-text">Tell Claude your process in your own words and upload one good example. Claude will ask you questions: when to use it, what the steps are, what the output should be. Answer them honestly.</p>
+      <p class="card-text"><strong>The final decision is yours.</strong> Read what Claude writes and change anything that isn't how you work.</p>
+    </section>
+
+    <section class="card step">
+      <span class="step-num" aria-hidden="true">04</span>
+      <h2 class="step-title"><span class="visually-hidden">Step 4: </span>Claude makes the skill</h2>
+      <p class="card-text">Claude writes the skill for you. You can also start from the skills page: go to <strong>Customize › Skills</strong>, tap <strong>+</strong> and choose <strong>Create with Claude</strong>.</p>
+    </section>
+
+    <section class="card step">
+      <span class="step-num" aria-hidden="true">05</span>
+      <h2 class="step-title"><span class="visually-hidden">Step 5: </span>Save it and turn it on</h2>
+      <p class="card-text">Save the skill, then check it's switched <strong>ON</strong> in <strong>Customize › Skills</strong>. That's it.</p>
+      <p class="card-text">Next time that job comes up, Claude uses the skill on its own. If you want to be sure, name it in your message: <em>“Use my client update skill.”</em></p>
+    </section>
+
+    <section class="card example" aria-labelledby="example-label">
+      <h2 class="label" id="example-label">Example</h2>
+      <figure class="example-pair">
+        <figcaption class="example-caption example-caption--before">BEFORE — no skill</figcaption>
+        <p class="bubble bubble--before">Every time: “Edit this reel. Hook on top. Zoom cuts. No branding…” and I still had to fix the style again and again.</p>
+      </figure>
+      <figure class="example-pair">
+        <figcaption class="example-caption">AFTER — with my reel skill</figcaption>
+        <p class="bubble bubble--after">I taught Claude my reel style once, as a skill. My reels are edited with it now. Same style, every time.</p>
+      </figure>
+    </section>
+
+    <section class="card">
+      <h2 class="step-title">Tips that make a skill work</h2>
+      <ul class="rules">
+        <li><strong>The description matters most.</strong> Say exactly when to use it. If Claude doesn't pick the skill up, make the description more specific.</li>
+        <li><strong>One skill, one job.</strong> Make two small skills instead of one big one.</li>
+        <li><strong>Test it.</strong> Try 2–3 different requests that should use it, and check the result.</li>
+        <li><strong>Keep private things out.</strong> No passwords or personal data inside a skill.</li>
+      </ul>
+    </section>
+
+    <a class="card card-link" href="../../claude-master/">
+      <span class="label">The series</span>
+      <span class="card-link-title">Becoming a Claude Master →</span>
+      <span class="card-text">All episodes in one place. Episode 1 is Skills.</span>
+    </a>
+
+    <section class="card">
+      <h2 class="step-title">Source</h2>
+      <p class="card-text">Checked on 7 November 2026 against Claude's help pages: <a href="https://support.claude.com/en/articles/12512180-use-skills-in-claude">Use skills in Claude</a> and <a href="https://support.claude.com/en/articles/12512198-how-to-create-custom-skills">How to create custom skills</a>, and Anthropic's <a href="https://claude.com/blog/organization-skills-and-directory">skills directory announcement</a>. Menu names can change as Claude updates its app.</p>
+    </section>
+
+    <footer class="closer on-ink">
+      <h2 class="closer-title">Liked this?<br>Episode 2 drops soon.</h2>
+      <a class="btn-primary" href="https://www.instagram.com/uk_speaks.ai/">
+        <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8"/></svg>
+        Follow @uk_speaks.ai
+      </a>
+      <p class="closer-note"><a href="../../">Visit the uk_speaks.ai website →</a></p>
+    </footer>
+  </main>
+</body>
+</html>
