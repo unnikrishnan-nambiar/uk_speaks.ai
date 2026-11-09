@@ -119,7 +119,7 @@ def build():
   <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 
   <link rel="preload" href="../assets/fonts/plus-jakarta-sans-800.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../assets/css/site.css?v=20">
+  <link rel="stylesheet" href="../assets/css/site.css?v=22">
   <script src="../assets/js/copy.js?v=2" defer></script>
 </head>
 <body>

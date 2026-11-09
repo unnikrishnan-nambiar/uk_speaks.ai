@@ -1203,3 +1203,74 @@ table.data.data--fit td:first-child {
   margin-top: 14px;
   border-radius: 16px;
 }
+
+/* ---- Flowchart: simple top-to-bottom boxes with arrows ------------------
+   <ol class="flow">
+     <li><strong>Open ChatGPT</strong><span>on your phone</span></li>
+     <li class="flow-end">...</li>
+   </ol> */
+
+.flow {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.flow li {
+  position: relative;
+  padding: 12px 14px;
+  border: 1.5px solid var(--ink);
+  border-radius: 14px;
+  background: var(--paper);
+  font-size: 15px;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.flow li + li {
+  margin-top: 30px;
+}
+
+.flow li + li::before {
+  content: "\2193";
+  position: absolute;
+  top: -27px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 24px;
+}
+
+.flow strong {
+  display: block;
+  font-weight: 800;
+}
+
+.flow span {
+  display: block;
+  margin-top: 2px;
+  font-size: 13px;
+  color: #404040;
+}
+
+.flow .flow-end {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.flow .flow-end span {
+  color: #d4d4d4;
+}
+
+/* Plain-words box: what a tricky word means. */
+.wordbox {
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: var(--soft);
+  font-size: 14px;
+  line-height: 1.5;
+}
