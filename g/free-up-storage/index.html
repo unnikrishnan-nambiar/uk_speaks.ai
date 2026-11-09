@@ -43,9 +43,21 @@
       <h1 class="guide-title">Free up space on your laptop, <span class="underline">safely.</span></h1>
       <ol class="quick-steps">
         <li><div>Open the Claude app<span>Mac or Windows · go to the <strong>Code</strong> tab</span></div></li>
-        <li><div>Create a project<span><strong>+ New session</strong> → Local → pick your home folder → mode <strong>Plan</strong></span></div></li>
+        <li><div>Start a new session<span><strong>+ New session</strong> → Local → your home folder → mode <strong>Plan</strong></span></div></li>
         <li><div>Paste this prompt<span>Claude reports first. Nothing is deleted without your yes.</span></div></li>
       </ol>
+    </section>
+
+    <section class="card" aria-labelledby="flow-label">
+      <h2 class="label" id="flow-label">How it works</h2>
+      <ol class="flow">
+        <li><strong>Open the Claude app</strong><span>on your laptop</span></li>
+        <li><strong>Paste the prompt</strong><span>in Plan mode: Claude only looks</span></li>
+        <li><strong>Read the list</strong><span>of big things you could remove</span></li>
+        <li><strong>Pick the numbers</strong><span>Claude moves them to the Trash</span></li>
+        <li class="flow-end"><strong>Done!</strong><span>empty the Trash a week later</span></li>
+      </ol>
+      <p class="wordbox"><strong>What's a prompt?</strong> It's the message you type to the AI. Copy the long one below. You don't need to read it all.</p>
     </section>
 
     <section class="prompt on-ink" aria-labelledby="prompt-1-label">
@@ -70,19 +82,19 @@ PART 3 — SPEED. Suggest the 5 changes that would make this laptop faster, easi
     <section class="card step">
       <span class="step-num" aria-hidden="true">01</span>
       <h2 class="step-title"><span class="visually-hidden">Step 1: </span>Get the Claude app</h2>
-      <p class="card-text">Download it from <strong>claude.ai/download</strong> and sign in. Using Claude on your own files needs a paid plan (Pro or higher). Open the app and click the <strong>Code</strong> tab at the top.</p>
+      <p class="card-text">Download it from <strong>claude.ai/download</strong>. Sign in. This needs a paid plan (Pro or higher). Open the app. Click the <strong>Code</strong> tab at the top.</p>
     </section>
 
     <section class="card step">
       <span class="step-num" aria-hidden="true">02</span>
-      <h2 class="step-title"><span class="visually-hidden">Step 2: </span>Create the project in Plan mode</h2>
-      <p class="card-text">Click <strong>+ New session</strong>. Under the message box, set the environment to <strong>Local</strong> and choose your home folder as the project folder. That's the one with your name, inside Users. Then set the mode to <strong>Plan</strong>. In Plan mode Claude can look and report, but it can't change or delete anything.</p>
+      <h2 class="step-title"><span class="visually-hidden">Step 2: </span>Start a session in Plan mode</h2>
+      <p class="card-text">Click <strong>+ New session</strong>. Under the message box, set the environment to <strong>Local</strong>. This means “my own laptop”. Pick your home folder. It's the one with your name, inside Users. Then set the mode to <strong>Plan</strong>. In Plan mode Claude can only look. It can't change or delete anything.</p>
     </section>
 
     <section class="card step">
       <span class="step-num" aria-hidden="true">03</span>
       <h2 class="step-title"><span class="visually-hidden">Step 3: </span>Paste the prompt, read the check-up</h2>
-      <p class="card-text">Paste the prompt from the top and press Enter. You'll get one table like this, and nothing changes yet.</p>
+      <p class="card-text">Paste the prompt from the top. Press Enter. You'll get one table like this. Nothing changes yet.</p>
       <figure class="shot">
         <img src="../../assets/img/guides/free-up-storage/audit.webp" width="720" height="483" loading="lazy" decoding="async" alt="Example check-up table: old iPhone backup 14.2 GB (check first), installers in Downloads 11 GB (safe), app and browser caches 6.4 GB (safe), Trash 3.1 GB (safe), duplicate videos 2.3 GB (check first), Photos Library 48 GB (keep). Safe to free now: 20.5 GB. Nothing changed.">
         <figcaption>An example check-up. Your numbers will be different.</figcaption>
@@ -92,24 +104,25 @@ PART 3 — SPEED. Suggest the 5 changes that would make this laptop faster, easi
     <section class="card step">
       <span class="step-num" aria-hidden="true">04</span>
       <h2 class="step-title"><span class="visually-hidden">Step 4: </span>Say which items to clean</h2>
-      <p class="card-text">Switch the mode to <strong>Manual</strong>, so Claude asks before every action. Then reply with the numbers you're happy to remove, for example “2, 3, 4”. Approve each step only after reading it, and say No if you're unsure.</p>
+      <p class="card-text">Switch the mode to <strong>Manual</strong>. Now Claude asks before every action. Reply with the numbers you want removed, like “2, 3, 4”. Read each step before you say yes. Not sure? Say No.</p>
     </section>
 
     <section class="card step">
       <span class="step-num" aria-hidden="true">05</span>
       <h2 class="step-title"><span class="visually-hidden">Step 5: </span>Empty the Trash next week</h2>
-      <p class="card-text">Everything removed is still in your Trash or Recycle Bin. Use your laptop normally for a week. If nothing is missing, empty it to actually get the space back. Run the prompt again every month or two.</p>
+      <p class="card-text">Everything removed is still in your Trash or Recycle Bin. Use your laptop as normal for a week. Nothing missing? Empty the Trash to get the space back. Do this again every month or two.</p>
     </section>
 
-    <section class="card step">
-      <span class="step-num" aria-hidden="true">+</span>
-      <h2 class="step-title">Prefer the Terminal?</h2>
-      <p class="card-text">Install with the command for your laptop, open a new window, type <code>cd ~</code> and then <code>claude</code>. Press <strong>Shift + Tab</strong> until you see <strong>plan mode on</strong>, then paste the prompt.</p>
+    <details class="card style-card">
+      <summary><span class="style-name">Extra: use the Terminal instead<span>Optional. Skip this if you used the app.</span></span></summary>
+      <div class="style-body">
+    <div>
+      <p class="card-text"><span class="wordbox" style="display:block;margin-bottom:12px"><strong>What's the Terminal?</strong> A window where you type commands instead of clicking.</span>Copy the command for your laptop. Paste it in the Terminal (Mac) or PowerShell (Windows) and press Enter. Open a new window. Type <code>cd ~</code> and then <code>claude</code>. Press <strong>Shift + Tab</strong> until you see <strong>plan mode on</strong>. Then paste the prompt.</p>
       <figure class="shot">
         <img src="../../assets/img/guides/free-up-storage/plan.webp" width="720" height="466" loading="lazy" decoding="async" alt="A terminal running Claude Code with the label 'plan mode on (shift+tab to cycle)' under the prompt box.">
         <figcaption>Claude Code in the Terminal, in plan mode.</figcaption>
       </figure>
-    </section>
+    </div>
 
     <section class="prompt on-ink" aria-labelledby="mac-install-label">
       <div class="prompt-head">
@@ -132,6 +145,9 @@ PART 3 — SPEED. Suggest the 5 changes that would make this laptop faster, easi
       </div>
       <p class="prompt-text" id="win-install">irm https://claude.ai/install.ps1 | iex</p>
     </section>
+
+      </div>
+    </details>
 
     <section class="card" aria-labelledby="rules-label">
       <h2 class="label" id="rules-label">Your safety net</h2>

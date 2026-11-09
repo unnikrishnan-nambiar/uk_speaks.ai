@@ -51,6 +51,28 @@
       </ol>
     </section>
 
+    <section class="card" aria-labelledby="who-label">
+      <h2 class="label" id="who-label">Who this is for</h2>
+      <p class="card-text"><strong>For people who sell to other businesses</strong> and want help finding customers by email.</p>
+      <ul class="rules">
+        <li>You need a <strong>computer</strong> (Mac, Windows or Linux). A phone won't work.</li>
+        <li>You need a paid <strong>Claude Pro or Max</strong> plan.</li>
+        <li>You'll copy and paste a few commands. Claude helps with the rest.</li>
+      </ul>
+      <p class="wordbox"><strong>What's an agent?</strong> An AI helper that does jobs on its own, step by step. Harvey is one.</p>
+    </section>
+
+    <section class="card" aria-labelledby="flow-label">
+      <h2 class="label" id="flow-label">How it works</h2>
+      <ol class="flow">
+        <li><strong>Install Claude Code</strong><span>on your computer</span></li>
+        <li><strong>Download Harvey</strong><span>and say “set up Harvey for me”</span></li>
+        <li><strong>Harvey finds businesses</strong><span>and writes a short email to each</span></li>
+        <li><strong>You read every email</strong><span>and approve the good ones</span></li>
+        <li class="flow-end"><strong>Done!</strong><span>Harvey sends them and reads replies</span></li>
+      </ol>
+    </section>
+
     <section class="card" aria-labelledby="demo-label">
       <h2 class="label" id="demo-label">See it working</h2>
       <figure class="shot">
@@ -59,31 +81,33 @@
         </video>
         <figcaption>Harvey's dashboard: today's to-do list, a reply handed back to you, approving an email, choosing signals, building a target list, then dark mode. Demo data, from the Harvey repo.</figcaption>
       </figure>
-      <p class="card-text">Harvey finds small businesses worth selling to, learns one specific thing about each, writes a short cold email that mentions it, sends it, reads the replies and keeps the conversation going toward a meeting. It runs on your own computer, every 15 minutes, on its own.</p>
+      <p class="card-text">Harvey finds small businesses you could sell to. It learns one real thing about each. It writes a short email that mentions it. It sends it, reads the replies and answers them, aiming for a meeting. It runs on your own computer, every 15 minutes.</p>
     </section>
 
     <section class="prompt on-ink" aria-labelledby="repo-label">
       <div class="prompt-head">
-        <h2 class="label" id="repo-label">The repo</h2>
+        <h2 class="label" id="repo-label">Harvey's download page</h2>
         <button class="copy-btn" type="button" data-copy-target="repo">
           <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
           <span class="copy-label" aria-live="polite">Copy</span>
         </button>
       </div>
       <p class="prompt-text" id="repo">https://github.com/ethanplusai/harvey</p>
+      <p class="closer-note">This is Harvey's “repo”: the folder of code where it lives on GitHub.</p>
       <a class="btn-primary" href="https://github.com/ethanplusai/harvey">
         Open on GitHub
         <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
       </a>
     </section>
 
+    <details class="card style-card">
+      <summary><span class="style-name">Why it's cheap, and what it costs<span>Optional reading</span></span></summary>
+      <div class="style-body">
     <!-- ===================== Why ===================== -->
-    <p class="section-break label">Why the subscription thing matters</p>
-
     <section class="card">
-      <p class="card-text">Most AI sales tools <strong>charge per token</strong>, which means for every bit of text the AI reads and writes. An agent that thinks all day burns money all day, so those tools cut corners: shorter prompts, cheaper models, less thinking.</p>
-      <p class="card-text">Harvey runs on the <strong>Claude Pro or Max plan you already pay for</strong>, through Claude Code. No API key, no per-token bill. So it can afford to read each business properly and write a real email, not a template.</p>
-      <p class="card-text">It also <strong>budgets itself</strong>: it checks how much of your plan's limit is used and stops early, so you still have Claude left for your own work. By default it uses at most 80%.</p>
+      <p class="card-text">Most AI sales tools <strong>charge per token</strong>. A token is a small piece of text the AI reads or writes. So an AI that works all day costs money all day. Those tools cut corners to save money.</p>
+      <p class="card-text">Harvey runs on the <strong>Claude Pro or Max plan you already pay for</strong>. No extra bill for each bit of text. So it can read each business properly and write a real email, not a copy-paste one.</p>
+      <p class="card-text">It also <strong>watches your limit</strong>. It stops early, so you still have Claude left for your own work. By default it uses at most 80% of your plan.</p>
     </section>
 
     <section class="card" aria-labelledby="cost-label">
@@ -103,9 +127,6 @@
       <p class="card-text">The tools it replaces start at $250–500 a month.</p>
     </section>
 
-    <!-- ===================== What it does ===================== -->
-    <p class="section-break label">What it does</p>
-
     <section class="card" aria-labelledby="team-label">
       <h2 class="label" id="team-label">Five helpers, one agent</h2>
       <ul class="rules">
@@ -123,6 +144,9 @@
       <p class="card-text"><strong>Runs Google Ads + has an agency + no online booking → 23 companies.</strong> You know exactly why each one is on the list, and so does the email.</p>
     </section>
 
+      </div>
+    </details>
+
     <!-- ===================== Setup ===================== -->
     <p class="section-break label">Set it up</p>
 
@@ -131,16 +155,17 @@
       <ul class="rules">
         <li>A <strong>Mac, Windows or Linux computer</strong> that can stay on while Harvey works.</li>
         <li><strong>Claude Pro or Max</strong>, with <strong>Claude Code</strong> installed and logged in.</li>
-        <li><strong>Python 3.11 or newer.</strong> Claude installs it for you in step 02 if it's missing.</li>
+        <li><strong>Python 3.11 or newer</strong> (a free program Harvey needs). Claude installs it for you in step 02 if it's missing.</li>
         <li>Your product's <strong>website</strong>, so Harvey can learn what you sell.</li>
-        <li>A <strong>separate sending domain</strong> and mailbox (Gmail/Google Workspace or Microsoft 365). Never your main domain: see “Before you send” below.</li>
+        <li>A <strong>separate sending domain</strong> and mailbox (Gmail/Google Workspace or Microsoft 365). A domain is the part after @ in an email address. Never use your main one: see “Before you send” below.</li>
       </ul>
     </section>
 
     <section class="card step">
       <span class="step-num" aria-hidden="true">01</span>
       <h2 class="step-title"><span class="visually-hidden">Step 1: </span>Install Claude Code</h2>
-      <p class="card-text">Open <strong>Terminal</strong> (Mac) or <strong>PowerShell</strong> (Windows), paste the line for your computer, press Enter, then type <code>claude</code> and log in with your Claude account.</p>
+      <p class="card-text">Open <strong>Terminal</strong> (Mac) or <strong>PowerShell</strong> (Windows). Paste the line for your computer. Press Enter. Then type <code>claude</code> and log in with your Claude account.</p>
+      <p class="wordbox"><strong>What's the Terminal?</strong> A window where you type commands instead of clicking. Search for “Terminal” or “PowerShell” on your computer.</p>
     </section>
 
     <section class="prompt on-ink" aria-labelledby="mac-label">
@@ -168,7 +193,7 @@
     <section class="card step">
       <span class="step-num" aria-hidden="true">02</span>
       <h2 class="step-title"><span class="visually-hidden">Step 2: </span>Download Harvey and open it in Claude</h2>
-      <p class="card-text">In the same window, paste these three lines. They download Harvey, open its folder and start Claude Code inside it.</p>
+      <p class="card-text">In the same window, paste these three lines. Press Enter. They download Harvey, open its folder and start Claude inside it.</p>
     </section>
 
     <section class="prompt on-ink" aria-labelledby="clone-label">
@@ -191,7 +216,7 @@ claude</p>
     <section class="card step">
       <span class="step-num" aria-hidden="true">03</span>
       <h2 class="step-title"><span class="visually-hidden">Step 3: </span>Say “set up Harvey for me”</h2>
-      <p class="card-text">Harvey comes with its own setup instructions for Claude. Claude checks what's missing, installs it, asks you questions and <strong>learns your product from your website</strong>. Give it the details up front:</p>
+      <p class="card-text">Harvey comes with setup notes for Claude. Claude checks what's missing and installs it. It asks you questions. It <strong>learns your product from your website</strong>. Fill in this message and send it:</p>
     </section>
 
     <section class="prompt on-ink" aria-labelledby="setup-label">
@@ -215,20 +240,20 @@ Keep approval mode on, so nothing sends without me. Leave LinkedIn off. Explain 
     <section class="card step">
       <span class="step-num" aria-hidden="true">04</span>
       <h2 class="step-title"><span class="visually-hidden">Step 4: </span>Confirm the signals</h2>
-      <p class="card-text">Harvey shows its list of signals and what each costs. Start with the <strong>free ones</strong> (26 of 29). Ask Claude to run this, or tick them in the dashboard's <strong>Signals</strong> tab:</p>
+      <p class="card-text">A signal is a clue about a business, like “has no website”. Harvey shows its list of signals and what each costs. Start with the <strong>free ones</strong> (26 of 29). Ask Claude to run this, or tick them in the dashboard's <strong>Signals</strong> tab:</p>
       <p class="card-text"><code>harvey signals --confirm free</code></p>
     </section>
 
     <section class="card step">
       <span class="step-num" aria-hidden="true">05</span>
       <h2 class="step-title"><span class="visually-hidden">Step 5: </span>Find businesses</h2>
-      <p class="card-text">Run <code>harvey discover</code>. The default source, <strong>OpenStreetMap</strong>, is free and needs no account. It's thin for businesses without a shop front, like plumbers or roofers. A paid source shows its price and an estimate before it spends anything.</p>
+      <p class="card-text">Run <code>harvey discover</code> (or ask Claude to). It uses <strong>OpenStreetMap</strong>, a free map. No account needed. It misses businesses without a shop, like plumbers. A paid source shows its price before it spends anything.</p>
     </section>
 
     <section class="card step">
       <span class="step-num" aria-hidden="true">06</span>
       <h2 class="step-title"><span class="visually-hidden">Step 6: </span>Open the dashboard and start Harvey</h2>
-      <p class="card-text">Run <code>harvey dashboard</code>. It prints a private link: open it in your browser. Then run <code>harvey run</code> in another window. Harvey wakes every 15 minutes, decides what most needs doing, does it and goes back to sleep.</p>
+      <p class="card-text">Run <code>harvey dashboard</code>. It shows a private link. Open it in your web browser. The dashboard is Harvey's control screen. Then run <code>harvey run</code> in another window. Harvey now wakes every 15 minutes, does the next job and sleeps again.</p>
       <p class="card-text">The dashboard only opens on your computer, with that private link.</p>
     </section>
 
@@ -256,8 +281,8 @@ Keep approval mode on, so nothing sends without me. Leave LinkedIn off. Explain 
       <h2 class="label" id="deliver-label">Don't land in spam</h2>
       <ol class="rules">
         <li>Buy a <strong>separate domain</strong> for sending, like getyourbrand.com, not yourbrand.com. If it gets a bad name, your main email is safe.</li>
-        <li>Set up <strong>SPF, DKIM and DMARC</strong> on it. Ask Claude to walk you through it, then run <code>harvey warmup</code> to check.</li>
-        <li><strong>Warm it up for 2–4 weeks</strong> before real volume.</li>
+        <li>Set up <strong>SPF, DKIM and DMARC</strong> on it. These are settings that prove your emails are really from you. Ask Claude to walk you through it, then run <code>harvey warmup</code> to check.</li>
+        <li><strong>Warm it up for 2–4 weeks</strong>: send only a few emails at first, before you send lots.</li>
         <li>Start at <strong>10–20 emails a day</strong> and add about 5 a day. Harvey can ramp up for you.</li>
         <li>Watch bounces. Above about 3%, stop and fix your list. Harvey stops itself past your limit.</li>
       </ol>
@@ -275,9 +300,10 @@ Keep approval mode on, so nothing sends without me. Leave LinkedIn off. Explain 
       </ul>
     </section>
 
+    <details class="card style-card">
+      <summary><span class="style-name">Cheat sheet: all commands<span>For later, once Harvey is running</span></span></summary>
+      <div class="style-body">
     <!-- ===================== Cheat sheet ===================== -->
-    <p class="section-break label">Cheat sheet</p>
-
     <section class="card" aria-labelledby="cmd-label">
       <h2 class="label" id="cmd-label">Commands</h2>
       <p class="card-text">Type them in the Harvey folder, or just ask Claude to run them.</p>
@@ -309,6 +335,9 @@ Keep approval mode on, so nothing sends without me. Leave LinkedIn off. Explain 
         <li><strong>Your data stays on your computer.</strong> Nothing goes anywhere except the services you set up.</li>
       </ul>
     </section>
+
+      </div>
+    </details>
 
     <section class="card tip">
       <span class="label">Credit</span>
