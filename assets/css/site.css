@@ -1274,3 +1274,23 @@ table.data.data--fit td:first-child {
   font-size: 14px;
   line-height: 1.5;
 }
+
+/* Spacing for plain-words boxes stacked with text, flowcharts and each other. */
+.card > * + .wordbox,
+.wordbox + .wordbox,
+.style-body > * + * {
+  margin-top: 12px;
+}
+
+/* A primary button inside a white card is black, so it stays visible. */
+.card:not(.on-ink) .btn-primary {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* Cards nested inside an opened fold-out section: no double border. */
+.style-body > .card:not(.on-ink) {
+  border: 0;
+  padding: 0;
+  background: transparent;
+}

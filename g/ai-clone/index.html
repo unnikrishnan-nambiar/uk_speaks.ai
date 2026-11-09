@@ -27,7 +27,7 @@
   <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
 
   <link rel="preload" href="../../assets/fonts/plus-jakarta-sans-800.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../../assets/css/site.css?v=22">
+  <link rel="stylesheet" href="../../assets/css/site.css?v=23">
   <script src="../../assets/js/copy.js?v=2" defer></script>
 </head>
 <body>
@@ -48,13 +48,25 @@
       </ol>
     </section>
 
+    <section class="card" aria-labelledby="flow-label">
+      <h2 class="label" id="flow-label">How it works</h2>
+      <ol class="flow">
+        <li><strong>Make a project</strong><span>in Claude or ChatGPT</span></li>
+        <li><strong>Add your CV and writing</strong><span>so it learns about you</span></li>
+        <li><strong>Let it interview you</strong><span>about 20 minutes</span></li>
+        <li><strong>Record a 2-minute video</strong><span>HeyGen turns it into your avatar</span></li>
+        <li class="flow-end"><strong>Done!</strong><span>Your clone writes. Your avatar talks.</span></li>
+      </ol>
+    </section>
+
     <section class="card" aria-labelledby="what-label">
       <h2 class="label" id="what-label">Two clones, one you</h2>
       <ul class="rules">
-        <li><strong>Your AI clone (text):</strong> knows your work, your stories, your opinions and how you write. It drafts answers, messages and posts the way you would, using only true facts about you.</li>
-        <li><strong>Your video avatar:</strong> a video version of you, with your face and voice. Give it a script and it makes a video of you saying it. No camera, no retakes.</li>
+        <li><strong>Text clone:</strong> an AI that knows your life and work. It writes messages and answers the way you would.</li>
+        <li><strong>Video avatar:</strong> a video copy of you, with your face and voice. Give it words. It makes a video of you saying them.</li>
       </ul>
-      <p class="card-text">The text clone writes. The avatar presents. You check everything before anyone sees it.</p>
+      <p class="card-text">You check everything before anyone sees it.</p>
+      <p class="wordbox"><strong>What’s a prompt?</strong> It’s the message you type to the AI. Tap <strong>Copy</strong> on a black box below and paste it.</p>
     </section>
 
     <!-- ===================== Part 1 ===================== -->
@@ -63,11 +75,12 @@
     <section class="card step">
       <span class="step-num" aria-hidden="true">01</span>
       <h2 class="step-title"><span class="visually-hidden">Step 1: </span>Make a project and add your files</h2>
-      <p class="card-text">In <strong>Claude</strong> or <strong>ChatGPT</strong>, create a <strong>project</strong> called <strong>“My AI clone”</strong>. Add what describes you:</p>
+      <p class="card-text">In <strong>Claude</strong> or <strong>ChatGPT</strong>, create a <strong>project</strong> called <strong>“My AI clone”</strong>. Add files about you:</p>
+      <p class="wordbox"><strong>What’s a project?</strong> A folder in the AI app. It keeps your files and remembers them in every chat inside it.</p>
       <ul class="rules">
         <li>Your <strong>CV</strong> and your <strong>LinkedIn profile as a PDF</strong> (on a computer: your profile → <strong>More → Save to PDF</strong>).</li>
-        <li>Things <strong>you wrote</strong>: 5–10 emails, posts, captions or messages. This is how it learns your style.</li>
-        <li>Optional: appraisals, project notes, your business's website or brochure.</li>
+        <li>5–10 things <strong>you wrote</strong>: emails, posts or messages. This teaches it your style.</li>
+        <li>Optional: work reviews, notes, or your business brochure.</li>
       </ul>
       <p class="card-text">Remove phone numbers, addresses and anything confidential first.</p>
     </section>
@@ -75,7 +88,7 @@
     <section class="card step">
       <span class="step-num" aria-hidden="true">02</span>
       <h2 class="step-title"><span class="visually-hidden">Step 2: </span>Let it interview you, once</h2>
-      <p class="card-text">Start a chat in the project and send Prompt 1. It asks you questions one at a time, for about 20 minutes. Answer by typing or by voice. The more real detail you give, the more it sounds like you.</p>
+      <p class="card-text">Start a chat in the project. Send Prompt 1. It asks one question at a time, for about 20 minutes. Type or talk your answers. More real detail makes it sound more like you.</p>
     </section>
 
     <section class="prompt on-ink" aria-labelledby="prompt-1-label">
@@ -119,6 +132,7 @@ Give it to me as a downloadable file called my-clone.md, and also in the chat.</
         <li>Add it to the project's <strong>files</strong>.</li>
         <li>Paste Prompt 2 into the project's <strong>Instructions</strong>. Every chat in this project is now your clone.</li>
       </ol>
+      <p class="wordbox"><strong>What are Instructions?</strong> A box in the project settings. The AI reads it before every chat.</p>
     </section>
 
     <section class="prompt on-ink" aria-labelledby="prompt-2-label">
@@ -149,7 +163,7 @@ Talk to me in [English / Manglish]. Write in the language I ask for.</p>
     <p class="section-break label">Part 2 · Your video avatar</p>
 
     <section class="card">
-      <p class="card-text">We'll use <strong>HeyGen</strong>, a popular avatar app. Its free plan includes one avatar of yourself; free videos carry a watermark and are limited each month. Synthesia and other apps work in a similar way.</p>
+      <p class="card-text">We'll use <strong>HeyGen</strong>, an avatar app. The free plan gives you one avatar of yourself. Free videos have a watermark and a monthly limit. Synthesia and other apps work in a similar way.</p>
       <ul class="tools">
         <li><a href="https://www.heygen.com/"><strong>HeyGen</strong><span>Make a video avatar of yourself, with your voice.</span></a></li>
       </ul>
@@ -158,7 +172,7 @@ Talk to me in [English / Manglish]. Write in the language I ask for.</p>
     <section class="card step">
       <span class="step-num" aria-hidden="true">04</span>
       <h2 class="step-title"><span class="visually-hidden">Step 4: </span>Record your training video</h2>
-      <p class="card-text">This one video is what your avatar learns your face, voice and movement from. Get it right once.</p>
+      <p class="card-text">Your avatar learns your face and voice from this one video. Get it right once.</p>
       <ul class="rules">
         <li><strong>One take, no cuts</strong>, 1–2 minutes. Phone camera at eye level, 1080p, on a stand.</li>
         <li><strong>Light on your face</strong>, from a window in front of you. Plain background, quiet room.</li>
@@ -174,7 +188,7 @@ Talk to me in [English / Manglish]. Write in the language I ask for.</p>
       <ol class="rules">
         <li>Sign up at heygen.com. Open <strong>Avatars → New Avatar → Clone a real person</strong>.</li>
         <li>Upload your training video.</li>
-        <li><strong>Consent check:</strong> it shows a code and asks you to read it on camera. Only you can make an avatar of you; this stops anyone cloning someone else.</li>
+        <li><strong>Consent check:</strong> it shows a code. You read it on camera. This stops people cloning someone else.</li>
         <li>Wait for it to process, usually under half an hour. Your voice is cloned from the same video.</li>
       </ol>
     </section>
@@ -182,7 +196,7 @@ Talk to me in [English / Manglish]. Write in the language I ask for.</p>
     <section class="card step">
       <span class="step-num" aria-hidden="true">06</span>
       <h2 class="step-title"><span class="visually-hidden">Step 6: </span>Make your first video</h2>
-      <p class="card-text">Ask your text clone for the script, then paste it into HeyGen. Pick your avatar, paste the script, generate, and watch it before you share it.</p>
+      <p class="card-text">Ask your text clone for a script with Prompt 3. Paste it into HeyGen and pick your avatar. Make the video. Watch it before you share it.</p>
     </section>
 
     <section class="prompt on-ink" aria-labelledby="prompt-3-label">
@@ -209,8 +223,9 @@ Rules: it will be spoken by my video avatar, so write how I talk, not how I writ
     <!-- ===================== Part 3 ===================== -->
     <p class="section-break label">Part 3 · Use your clone</p>
 
-    <section class="card" aria-labelledby="uses-label">
-      <h2 class="label" id="uses-label">What to use it for</h2>
+    <details class="card style-card">
+      <summary><span class="style-name">What to use it for<span>Ideas: interviews, messages, posts, videos</span></span></summary>
+      <div class="style-body">
       <div class="table-wrap" role="region" aria-label="Uses for your AI clone" tabindex="0">
         <table class="data data--fit">
           <thead><tr><th scope="col">Use</th><th scope="col">Ask your clone</th></tr></thead>
@@ -225,12 +240,13 @@ Rules: it will be spoken by my video avatar, so write how I talk, not how I writ
           </tbody>
         </table>
       </div>
-    </section>
+      </div>
+    </details>
 
     <section class="card step">
       <span class="step-num" aria-hidden="true">07</span>
       <h2 class="step-title"><span class="visually-hidden">Use 1: </span>Prepare for interviews</h2>
-      <p class="card-text">Start a new chat in the project for each job, attach the job description and send Prompt 4. Then make each answer yours: read it, fix it, and practise saying it in your own words.</p>
+      <p class="card-text">For each job, start a new chat in the project. Attach the job description. Send Prompt 4. Then read each answer, fix it, and practise saying it your way.</p>
     </section>
 
     <section class="prompt on-ink" aria-labelledby="prompt-4-label">
@@ -245,7 +261,7 @@ Rules: it will be spoken by my video avatar, so write how I talk, not how I writ
 
 1. Match the 6 most important requirements to stories from my clone file. Mark any with no story as a GAP, and tell me the honest way to handle it.
 2. Predict the 12 questions I'm most likely to get, including "Tell me about yourself", "Why this company?" and a weakness question.
-3. Answer each as me, in 60–90 seconds, in STAR format where it fits, using only my clone file.
+3. Answer each as me, in 60–90 seconds, in STAR format (Situation, Task, Action, Result) where it fits, using only my clone file.
 4. Then ask me the questions one at a time. After each of my answers, score it out of 10 and tell me the one thing my clone's answer had that mine didn't.</p>
     </section>
 

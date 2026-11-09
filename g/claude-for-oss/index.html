@@ -27,7 +27,7 @@
   <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
 
   <link rel="preload" href="../../assets/fonts/plus-jakarta-sans-800.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../../assets/css/site.css?v=22">
+  <link rel="stylesheet" href="../../assets/css/site.css?v=23">
   <script src="../../assets/js/copy.js?v=2" defer></script>
 </head>
 <body>
@@ -43,10 +43,41 @@
       <p class="card-text">Commented <strong>CLAUDE</strong> on my reel? You’re in the right place. Claude’s Open Source Program offers six months of free Claude Ultra to eligible open source contributors.</p>
       <a class="btn-primary" href="https://claude.com/contact-sales/claude-for-oss">Open the official application →</a>
     </section>
+    <section class="card" aria-labelledby="flow-label">
+      <h2 class="label" id="flow-label">How it works</h2>
+      <ol class="flow">
+        <li><strong>Check you can apply</strong><span>you need real open source work</span></li>
+        <li><strong>Open the form</strong><span>add your name and GitHub repo</span></li>
+        <li><strong>Write 2 answers</strong><span>use the 2 prompts below</span></li>
+        <li><strong>Submit</strong><span>and watch your email</span></li>
+        <li class="flow-end"><strong>Done!</strong><span>Approval is not guaranteed</span></li>
+      </ol>
+      <p class="wordbox" style="margin-top:16px"><strong>What’s open source?</strong> Software anyone can see and improve for free. A <strong>repo</strong> is a project’s folder on GitHub.</p>
+    </section>
+    <section class="card">
+      <h2 class="step-title">Is this for you?</h2>
+      <p class="card-text">This is for people who build or help run open source projects. You need real project history. Approval is not guaranteed.</p>
+    </section>
+    <details class="card style-card"><summary><span class="style-name">Who can apply?<span>the full list from Anthropic</span></span></summary><div class="style-body">
+      <ul class="card-text">
+        <li><strong>Maintainers / library authors:</strong> packages with 500+ dependent repos, 100+ dependent packages, or 200,000+ combined monthly downloads across registries.</li>
+        <li><strong>Core contributors:</strong> listed committers or maintainers on recognized foundation or language projects, such as CPython, Rust, Node.js TSC, Apache PMC, CNCF, Kubernetes, Linux, Django or Rails.</li>
+        <li><strong>Active contributors:</strong> 100+ authored pull requests merged into repositories you do not own in the last 12 months.</li>
+        <li><strong>Community builders:</strong> a repository with 20+ unique external contributors whose pull requests were merged in the last 12 months.</li>
+        <li><strong>Critical infrastructure:</strong> a repository you maintain with an OpenSSF criticality score of at least 0.4.</li>
+      </ul>
+      <p class="card-text">Don’t quite fit? Anthropic also invites people maintaining projects the ecosystem quietly depends on to explain their impact.</p></div></details>
     <section class="card step">
       <span class="step-num" aria-hidden="true">01</span>
       <h2 class="step-title">Open the link &amp; fill the form</h2>
-      <p class="card-text"><a href="https://claude.com/contact-sales/claude-for-oss">Open Claude’s official form →</a>. If it doesn’t load inside Instagram, open it in Chrome or Safari. Enter your first and last name. If you already use Claude, enter your Claude account email. Tap <strong>Select repo on GitHub</strong> and select your repo, then click <strong>Use this repository</strong>. The form says program updates go to the email on your GitHub account, so check that inbox too.</p>
+      <p class="card-text"><a href="https://claude.com/contact-sales/claude-for-oss">Open Claude’s official form →</a></p>
+      <ol class="rules">
+        <li>Not loading in Instagram? Open it in Chrome or Safari.</li>
+        <li>Enter your first and last name.</li>
+        <li>Already use Claude? Enter your Claude account email.</li>
+        <li>Tap <strong>Select repo on GitHub</strong>, pick your repo, then tap <strong>Use this repository</strong>.</li>
+      </ol>
+      <p class="card-text">Updates go to the email on your GitHub account. Check that inbox too.</p>
     </section>
     <figure class="shot">
       <a href="../../assets/img/guides/claude-for-oss/application-form.png"><img src="../../assets/img/guides/claude-for-oss/application-form.png" width="1098" height="1432" loading="lazy" decoding="async" alt="Application form showing name, account email, GitHub repository selection, project reach and impact, subscription use, and optional other information."></a>
@@ -55,10 +86,16 @@
     <section class="card step">
       <span class="step-num" aria-hidden="true">02</span>
       <h2 class="step-title">Use these prompts to write your answers</h2>
-      <p class="card-text">The form has two required written answers: your project’s reach and impact, and how you will use the subscription. Use one prompt for each field below.</p>
+      <p class="card-text">The form needs two written answers. Use one prompt for each.</p>
+      <ol class="rules">
+        <li>Tap <strong>Copy</strong> and paste into ChatGPT or Claude.</li>
+        <li>Fill in your real project details.</li>
+        <li>Answer its questions. Check every claim.</li>
+        <li>Paste the answer into the matching box in the form.</li>
+      </ol>
+      <p class="card-text">The examples below are about a made-up project. Use your own work.</p>
     </section>
-    <section class="card"><h2 class="step-title">Prepare your two answers</h2><p class="card-text">Use the examples below for structure, then generate each answer separately. The examples describe a fictional project. Replace them with your own work. Paste each finished answer into the matching field shown below.</p></section>
-    <section class="card example"><h2 class="step-title">Answer 1: Your project’s reach and impact</h2><p class="card-text"><strong>Form question:</strong> “Tell us about the project’s reach and impact: e.g. download numbers, GitHub activity, who depends on it, or the gap it fills in the ecosystem.”</p><h3 class="label">Example answer — fictional project</h3><p class="bubble bubble--after">I maintain OpenRead, an open source library that helps libraries turn scanned documents into searchable text. I review pull requests, fix document-parsing bugs and maintain the setup documentation. The package receives 220,000 monthly downloads. My repository, maintainer profile and download statistics are linked below so you can verify my role and the project’s usage.</p></section>
+    <section class="card example"><h2 class="step-title">Answer 1: Your project’s reach and impact</h2><p class="card-text"><strong>Form question:</strong> “Tell us about the project’s reach and impact: e.g. download numbers, GitHub activity, who depends on it, or the gap it fills in the ecosystem.”</p><h3 class="label">Example answer — made-up project</h3><p class="bubble bubble--after">I maintain OpenRead, an open source library that helps libraries turn scanned documents into searchable text. I review pull requests, fix document-parsing bugs and maintain the setup documentation. The package receives 220,000 monthly downloads. My repository, maintainer profile and download statistics are linked below so you can verify my role and the project’s usage.</p></section>
     <section class="prompt on-ink" aria-labelledby="response-1-label"><div class="prompt-head"><h3 class="label" id="response-1-label">Prompt for answer 1</h3><button class="copy-btn" type="button" data-copy-target="response-1"><span class="copy-label" aria-live="polite">Copy</span></button></div><p class="prompt-text" id="response-1">Help me answer this Claude for Open Source application question: “Tell us about the project’s reach and impact: e.g. download numbers, GitHub activity, who depends on it, or the gap it fills in the ecosystem.” Use simple, natural English. Use only my facts and supporting links. Ask for missing information first. Do not invent usage numbers, contributions or eligibility. Answer the exact question and follow its word limit.
 
 Word limit: [paste here, if any]
@@ -67,7 +104,7 @@ What it does and who uses it: [add here]
 My role and actual contributions: [add here]
 Download numbers or GitHub activity, with dates and links: [add here]
 Who depends on it or what gap it fills: [add here]</p></section>
-    <section class="card example"><h2 class="step-title">Answer 2: How you’ll use the subscription</h2><p class="card-text"><strong>Form question:</strong> “How will you use the subscription for your project?”</p><h3 class="label">Example answer — fictional project</h3><p class="bubble bubble--after">I would use Claude to help write regression tests for document-parsing bugs and improve our installation instructions. For a reported bug, I would provide a small reproduction, ask for test cases and check the suggestions against our existing test suite. I would also use it to draft clearer setup examples for new contributors. I would review and test changes before merging them.</p></section>
+    <section class="card example"><h2 class="step-title">Answer 2: How you’ll use the subscription</h2><p class="card-text"><strong>Form question:</strong> “How will you use the subscription for your project?”</p><h3 class="label">Example answer — made-up project</h3><p class="bubble bubble--after">I would use Claude to help write regression tests for document-parsing bugs and improve our installation instructions. For a reported bug, I would provide a small reproduction, ask for test cases and check the suggestions against our existing test suite. I would also use it to draft clearer setup examples for new contributors. I would review and test changes before merging them.</p></section>
     <section class="prompt on-ink" aria-labelledby="response-2-label"><div class="prompt-head"><h3 class="label" id="response-2-label">Prompt for answer 2</h3><button class="copy-btn" type="button" data-copy-target="response-2"><span class="copy-label" aria-live="polite">Copy</span></button></div><p class="prompt-text" id="response-2">Help me answer this Claude for Open Source application question: “How will you use the subscription for your project?” Keep it specific and in simple English. Use only the details I provide. Ask follow-up questions if they are missing. Do not invent tasks, results or time savings. Answer the exact question and follow its word limit.
 
 Word limit: [paste here, if any]
@@ -76,31 +113,22 @@ A real maintenance problem: [add here]
 What I want Claude to help with: [add here]
 Who would benefit and how: [add here]
 How I would review or test the output: [add here]</p></section>
-    <section class="card"><h2 class="step-title">Turn each prompt into your answer</h2><p class="card-text">Tap Copy and paste into ChatGPT or Claude. Fill in your project details. Answer any follow-up questions, check every claim, then paste the finished response into the matching field. Repeat with the second prompt.</p></section>
     <section class="card step">
       <span class="step-num" aria-hidden="true">03</span>
       <h2 class="step-title">Submit &amp; wait for an update</h2>
-      <p class="card-text">Paste answer 1 into the reach-and-impact field and answer 2 into the subscription-use field. Use <strong>Other info</strong> only for relevant extra context; it is not marked required in the form. Remove all brackets, check your links, and make sure every claim is true. Follow the official form’s instructions and keep any confirmation. Submitting is an application; access is not guaranteed and no response time is promised here.</p>
+      <ul class="rules">
+        <li>Answer 1 goes in the reach-and-impact box. Answer 2 goes in the subscription box.</li>
+        <li><strong>Other info</strong> is optional. Use it only for useful extra details.</li>
+        <li>Remove all [brackets]. Check your links. Make sure every claim is true.</li>
+        <li>Keep any confirmation you get.</li>
+      </ul>
+      <p class="card-text">This is an application. Access is not guaranteed, and no reply time is promised.</p>
       <p class="card-text"><strong>After six months:</strong> Anthropic says it will email you before the complimentary subscription ends. A previous paid plan resumes at its prior plan and rate unless you cancel; otherwise the account returns to the free plan.</p>
       <a class="btn-primary" href="https://claude.com/contact-sales/claude-for-oss">Open the application →</a>
     </section>
     <section class="card">
       <h2 class="step-title">Source</h2>
       <p class="card-text">Offer and eligibility checked against the <a href="https://claude.com/contact-sales/claude-for-oss">official Claude page</a> on 2 November 2026. The response templates are our writing suggestions.</p>
-    </section>
-    <section class="card step">
-      <span class="step-num" aria-hidden="true">04</span>
-      <h2 class="step-title">Additional information</h2>
-      <p class="card-text">This is for open source maintainers and contributors. You need real project or contribution history. Approval is not guaranteed.</p>
-      <details><summary>About the open source program</summary>
-      <ul class="card-text">
-        <li><strong>Maintainers / library authors:</strong> packages with 500+ dependent repos, 100+ dependent packages, or 200,000+ combined monthly downloads across registries.</li>
-        <li><strong>Core contributors:</strong> listed committers or maintainers on recognized foundation or language projects, such as CPython, Rust, Node.js TSC, Apache PMC, CNCF, Kubernetes, Linux, Django or Rails.</li>
-        <li><strong>Active contributors:</strong> 100+ authored pull requests merged into repositories you do not own in the last 12 months.</li>
-        <li><strong>Community builders:</strong> a repository with 20+ unique external contributors whose pull requests were merged in the last 12 months.</li>
-        <li><strong>Critical infrastructure:</strong> a repository you maintain with an OpenSSF criticality score of at least 0.4.</li>
-      </ul>
-      <p class="card-text">Don’t quite fit? Anthropic also invites people maintaining projects the ecosystem quietly depends on to explain their impact.</p></details>
     </section>
     <footer class="closer on-ink">
       <h2 class="closer-title">Liked this?<br>Next one drops this week.</h2>

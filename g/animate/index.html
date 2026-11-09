@@ -27,7 +27,7 @@
   <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
 
   <link rel="preload" href="../../assets/fonts/plus-jakarta-sans-800.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../../assets/css/site.css?v=22">
+  <link rel="stylesheet" href="../../assets/css/site.css?v=23">
   <script src="../../assets/js/copy.js?v=2" defer></script>
 </head>
 <body>
@@ -45,6 +45,18 @@
         <li><div>Paste it into Claude and send<span>claude.ai or the Claude app. The free plan works</span></div></li>
         <li><div>Watch it play, then screen-record it<span>Change anything in [brackets] to your own topic</span></div></li>
       </ol>
+    </section>
+
+    <section class="card" aria-labelledby="flow-label">
+      <h2 class="label" id="flow-label">How it works</h2>
+      <ol class="flow">
+        <li><strong>Tap a style</strong><span>it opens with a preview</span></li>
+        <li><strong>Tap Copy</strong><span>change the [brackets] to your topic</span></li>
+        <li><strong>Paste into Claude</strong><span>and send</span></li>
+        <li><strong>Watch it play</strong><span>then screen-record it</span></li>
+        <li class="flow-end"><strong>Done!</strong><span>Post it as a reel</span></li>
+      </ol>
+      <p class="wordbox" style="margin-top:16px"><strong>What’s a prompt?</strong> It’s the message you type to the AI. Here, each prompt tells Claude what animation to make.</p>
     </section>
 
     <p class="section-break label">Part 1 · 6 styles (first reel)</p>
@@ -155,7 +167,7 @@ Keep it looking hand-made, not AI-made: no generic purple gradients unless asked
         </div>
       </details>
       <details class="card style-card" id="frosted-glass">
-        <summary><span class="style-num">08</span><span class="style-name">Frosted Glass UI<span>glassmorphism</span></span></summary>
+        <summary><span class="style-num">08</span><span class="style-name">Frosted Glass UI<span>see-through glass cards</span></span></summary>
         <div class="style-body">
           <img src="../../assets/img/guides/animate/anim-frosted-glass.webp" width="300" height="417" loading="lazy" decoding="async" alt="Looping preview of the Frosted Glass UI animation.">
           <p class="card-text">Frosted-glass cards floating over a moving colour gradient. Looks like a premium app screen.</p>
@@ -185,7 +197,7 @@ Keep it looking hand-made, not AI-made: no generic purple gradients unless asked
         </div>
       </details>
       <details class="card style-card" id="retro-crt">
-        <summary><span class="style-num">10</span><span class="style-name">Retro CRT Glow<span>CRT effect, retro-futurism</span></span></summary>
+        <summary><span class="style-num">10</span><span class="style-name">Retro CRT Glow<span>old green computer screen</span></span></summary>
         <div class="style-body">
           <img src="../../assets/img/guides/animate/anim-retro-crt.webp" width="300" height="417" loading="lazy" decoding="async" alt="Looping preview of the Retro CRT Glow animation.">
           <p class="card-text">An old green computer screen switching on and typing a message.</p>
@@ -200,7 +212,7 @@ Keep it looking hand-made, not AI-made: no generic purple gradients unless asked
         </div>
       </details>
       <details class="card style-card" id="oscilloscope">
-        <summary><span class="style-num">11</span><span class="style-name">Oscilloscope<span>oscilloscope line art</span></span></summary>
+        <summary><span class="style-num">11</span><span class="style-name">Oscilloscope<span>glowing line drawing</span></span></summary>
         <div class="style-body">
           <img src="../../assets/img/guides/animate/anim-oscilloscope.webp" width="300" height="417" loading="lazy" decoding="async" alt="Looping preview of the Oscilloscope animation.">
           <p class="card-text">A glowing green line tracing shapes on a scope grid, ending as a shape you choose.</p>
@@ -231,7 +243,7 @@ Keep it looking hand-made, not AI-made: no generic purple gradients unless asked
         </div>
       </details>
       <details class="card style-card" id="blue-editorial">
-        <summary><span class="style-num">13</span><span class="style-name">Blue Editorial<span>kinetic typography</span></span></summary>
+        <summary><span class="style-num">13</span><span class="style-name">Blue Editorial<span>big moving words</span></span></summary>
         <div class="style-body">
           <img src="../../assets/img/guides/animate/anim-blue-editorial.webp" width="300" height="417" loading="lazy" decoding="async" alt="Looping preview of the Blue Editorial animation.">
           <p class="card-text">Big bold words on electric blue, appearing one by one. Made for quotes and strong opinions.</p>
@@ -296,13 +308,13 @@ Keep it looking hand-made, not AI-made: no generic purple gradients unless asked
     <section class="card step">
       <span class="step-num" aria-hidden="true">01</span>
       <h2 class="step-title"><span class="visually-hidden">Step 1: </span>Make it yours</h2>
-      <p class="card-text">Every prompt has parts in <strong>[brackets]</strong>. Swap them for your own words, numbers or product before you send, like your shop name, your city or your result.</p>
+      <p class="card-text">Every prompt has parts in <strong>[brackets]</strong>. Swap them for your own words before you send. For example, your shop name or your city.</p>
     </section>
 
     <section class="card step">
       <span class="step-num" aria-hidden="true">02</span>
       <h2 class="step-title"><span class="visually-hidden">Step 2: </span>Paste it into Claude</h2>
-      <p class="card-text">Open <strong>claude.ai</strong> or the Claude app, start a new chat, paste the prompt and send. Claude writes the code and shows the animation as a preview next to the chat. On the phone, tap the preview card to open it.</p>
+      <p class="card-text">Open <strong>claude.ai</strong> or the Claude app. Start a new chat. Paste the prompt and send. Claude builds the animation and shows a preview. On a phone, tap the preview card to open it.</p>
     </section>
 
     <section class="card step">
@@ -317,8 +329,9 @@ Keep it looking hand-made, not AI-made: no generic purple gradients unless asked
       <p class="card-text">Open the preview full screen, tap <strong>Replay</strong> and screen-record it on your phone (iPhone: Control Centre → Screen Recording; Android: Quick Settings → Screen record). Trim the start and end, then add music in Instagram.</p>
     </section>
 
-    <section class="card" aria-labelledby="bonus-label">
-      <h2 class="label" id="bonus-label">Bonus: lines that stop it looking AI-made</h2>
+    <details class="card style-card">
+      <summary><span class="style-name">Bonus: make it look less AI-made<span>optional extra lines</span></span></summary>
+      <div class="style-body">
       <p class="card-text">Add any of these to the end of a prompt:</p>
       <ul class="rules">
         <li>“Use one accent colour only.”</li>
@@ -328,8 +341,8 @@ Keep it looking hand-made, not AI-made: no generic purple gradients unless asked
         <li>“Keep every line of text on screen for at least 1.5 seconds.”</li>
         <li>“Make it feel like a premium brand film, not a template.”</li>
       </ul>
-    </section>
-
+      </div>
+    </details>
     <section class="card" aria-labelledby="tips-label">
       <h2 class="label" id="tips-label">Good to know</h2>
       <ul class="rules">

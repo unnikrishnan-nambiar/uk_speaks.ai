@@ -27,7 +27,7 @@
   <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
 
   <link rel="preload" href="../../assets/fonts/plus-jakarta-sans-800.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../../assets/css/site.css?v=22">
+  <link rel="stylesheet" href="../../assets/css/site.css?v=23">
   <script src="../../assets/js/copy.js?v=2" defer></script>
 </head>
 <body>
@@ -42,15 +42,28 @@
       <span class="label keyword">Launch</span>
       <h1 class="guide-title">Make a launch video with <span class="underline">Claude.</span></h1>
       <ol class="quick-steps">
-        <li><div>Open Claude, start a new project<span>Attach your logo (PNG, transparent background)</span></div></li>
-        <li><div>Paste the prompt below<span>Fill the [brackets], or let Claude ask you the questions</span></div></li>
-        <li><div>Add audio, download, share<span>Then let the response decide your next move</span></div></li>
+        <li><div>Open Claude and add your logo<span>A PNG file with a see-through background</span></div></li>
+        <li><div>Paste the prompt below<span>Fill the [brackets], or let Claude ask you</span></div></li>
+        <li><div>Add music, download, share<span>Then see if people want it</span></div></li>
       </ol>
+    </section>
+
+    <section class="card" aria-labelledby="flow-label">
+      <h2 class="label" id="flow-label">How it works</h2>
+      <ol class="flow">
+        <li><strong>Paste the video prompt</strong><span>with your logo attached</span></li>
+        <li><strong>Answer Claude's questions</strong><span>then reply “go”</span></li>
+        <li><strong>Add music</strong><span>paste the audio prompt</span></li>
+        <li><strong>Download and combine</strong><span>picture and sound in one file</span></li>
+        <li><strong>Post it on Instagram</strong><span>as a Reel</span></li>
+        <li class="flow-end"><strong>Done!</strong><span>watch who gets interested</span></li>
+      </ol>
+      <p class="wordbox"><strong>What's a prompt?</strong> The message you type to Claude. Claude is an AI app, like ChatGPT.</p>
     </section>
 
     <section class="card" aria-labelledby="sample-label">
       <h2 class="label" id="sample-label">Sample reel: made with Claude</h2>
-      <p class="card-text">A 30-second launch reel for <strong>Lastbite</strong>, a surplus-food app. It follows the same steps: problem, product in action, results, how to start, then the logo and a clear call to action, with music. Tap to play with sound.</p>
+      <p class="card-text">A 30-second reel for <strong>Lastbite</strong>, an app for leftover food. It shows the problem, the app, the results and how to start. Then the logo and music. Tap to play.</p>
       <figure class="reel">
         <video controls playsinline preload="none" width="338" height="600" poster="../../assets/video/launch-sample-lastbite.jpg">
           <source src="../../assets/video/launch-sample-lastbite.mp4" type="video/mp4">
@@ -125,8 +138,10 @@ When you have everything, show me the full brief and a 5-scene plan: problem (0�
     <section class="card step">
       <span class="step-num" aria-hidden="true">01</span>
       <h2 class="step-title"><span class="visually-hidden">Step 1: </span>Where to place the prompt</h2>
-      <p class="card-text">Open <strong>Claude</strong> (the app or claude.ai) and start a <strong>new project</strong>, or a new chat. Attach your <strong>logo as a PNG with a transparent background</strong>. Paste the video prompt, replace every [bracket] with your product, and send it. Keep each answer short, because every line becomes text on screen.</p>
-      <p class="card-text"><strong>Claude asks you questions back</strong> before it builds anything: anything you left in [brackets], your colours, your tone. Answer one at a time. It then shows a 5-scene plan, and you reply <strong>“go”</strong>. Using the “No time to fill it in?” prompt instead? Claude asks you every question, one by one.</p>
+      <p class="card-text">Open <strong>Claude</strong> (the app or claude.ai). Start a <strong>new project</strong> or a new chat. Attach your <strong>logo as a PNG with a transparent background</strong>.</p>
+      <p class="wordbox"><strong>What's a project?</strong> A folder in Claude that keeps your chats and files together.</p>
+      <p class="card-text">Paste the video prompt. Swap every [bracket] for your product. Send it. Keep answers short: each line shows up on screen.</p>
+      <p class="card-text"><strong>Claude asks you questions first.</strong> Answer one at a time. It shows a 5-scene plan. Reply <strong>“go”</strong>. Used the “No time to fill it in?” prompt? Claude asks you everything.</p>
     </section>
 
     <section class="card step">
@@ -148,7 +163,7 @@ When you have everything, show me the full brief and a 5-scene plan: problem (0�
 
     <section class="card step">
       <span class="step-num" aria-hidden="true">03</span>
-      <h2 class="step-title"><span class="visually-hidden">Step 3: </span>Iterate till you like it</h2>
+      <h2 class="step-title"><span class="visually-hidden">Step 3: </span>Fix it till you like it</h2>
       <ul class="rules">
         <li>Watch it twice: once for the story, once for the timing.</li>
         <li>Ask for one change per message. Name the scene and the second: “At 4s the receipt appears too fast.”</li>
@@ -157,39 +172,46 @@ When you have everything, show me the full brief and a 5-scene plan: problem (0�
       </ul>
     </section>
 
+    <details class="card style-card">
+      <summary><span class="style-num">+</span><span class="style-name">Optional: add a voiceover<span>A voice that reads the story, using ElevenLabs</span></span></summary>
+      <div class="style-body">
+      <section class="card step">
+        <span class="step-num" aria-hidden="true">A</span>
+        <h3 class="step-title"><span class="visually-hidden">Voiceover step A: </span>Connect ElevenLabs</h3>
+        <p class="card-text">In Claude, open <strong>Settings → Connectors</strong>. Choose <strong>ElevenLabs</strong> and sign in with your ElevenLabs account. No API key needed. Then send this prompt.</p>
+          <p class="wordbox"><strong>What's a connector?</strong> A link that lets Claude use another app for you. ElevenLabs makes AI voices.</p>
+      </section>
+
+      <section class="prompt on-ink" aria-labelledby="prompt-3-label">
+        <div class="prompt-head">
+          <h3 class="label" id="prompt-3-label">3 · Voiceover prompt</h3>
+          <button class="copy-btn" type="button" data-copy-target="prompt-3">
+            <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+            <span class="copy-label" aria-live="polite">Copy</span>
+          </button>
+        </div>
+        <p class="prompt-text" id="prompt-3">Write a short voiceover script for this video, one line per scene, timed to fit each scene. Show me the script first. When I say yes, use ElevenLabs to generate it with a [warm, confident] voice, add it to the video so each line starts with its scene, and lower the music while the voice is speaking.</p>
+      </section>
+
+      <section class="card step">
+        <span class="step-num" aria-hidden="true">B</span>
+        <h3 class="step-title"><span class="visually-hidden">Voiceover step B: </span>Fix it again</h3>
+        <p class="card-text">Watch it with the voice. Change one thing at a time: “Make the voice slower in scene 3”, “Try a different voice”, or “Move the line in scene 2 to start at 6s”.</p>
+      </section>
+
+      </div>
+    </details>
+
     <section class="card step">
       <span class="step-num" aria-hidden="true">04</span>
-      <h2 class="step-title"><span class="visually-hidden">Step 4: </span>Want a voiceover? Connect ElevenLabs</h2>
-      <p class="card-text">Optional. In Claude, open <strong>Settings → Connectors</strong>, choose <strong>ElevenLabs</strong> and sign in with your ElevenLabs account. No API key needed. Then send this prompt.</p>
-    </section>
-
-    <section class="prompt on-ink" aria-labelledby="prompt-3-label">
-      <div class="prompt-head">
-        <h3 class="label" id="prompt-3-label">3 · Voiceover prompt</h3>
-        <button class="copy-btn" type="button" data-copy-target="prompt-3">
-          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
-          <span class="copy-label" aria-live="polite">Copy</span>
-        </button>
-      </div>
-      <p class="prompt-text" id="prompt-3">Write a short voiceover script for this video, one line per scene, timed to fit each scene. Show me the script first. When I say yes, use ElevenLabs to generate it with a [warm, confident] voice, add it to the video so each line starts with its scene, and lower the music while the voice is speaking.</p>
+      <h2 class="step-title"><span class="visually-hidden">Step 4: </span>Download the video</h2>
+      <p class="card-text">In the video preview, click <strong>Export video</strong>. Choose <strong>1080p</strong>. You get an MP4 with <strong>picture only</strong>. Sound comes next.</p>
     </section>
 
     <section class="card step">
       <span class="step-num" aria-hidden="true">05</span>
-      <h2 class="step-title"><span class="visually-hidden">Step 5: </span>Iterate again</h2>
-      <p class="card-text">Watch it with the voice. Change one thing at a time: “Make the voice slower in scene 3”, “Try a different voice”, or “Move the line in scene 2 to start at 6s”.</p>
-    </section>
-
-    <section class="card step">
-      <span class="step-num" aria-hidden="true">06</span>
-      <h2 class="step-title"><span class="visually-hidden">Step 6: </span>Download the video</h2>
-      <p class="card-text">In the video preview, click <strong>Export video</strong> and choose <strong>1080p</strong>. This saves an MP4 with <strong>picture only</strong>. The sound comes in the next step.</p>
-    </section>
-
-    <section class="card step">
-      <span class="step-num" aria-hidden="true">07</span>
-      <h2 class="step-title"><span class="visually-hidden">Step 7: </span>Combine it with the audio</h2>
-      <p class="card-text">Ask Claude to make a small page that joins your video and audio into one file. Open that page, choose your MP4 and click <strong>Combine</strong>. Keep the tab open in Chrome until it finishes.</p>
+      <h2 class="step-title"><span class="visually-hidden">Step 5: </span>Combine it with the audio</h2>
+      <p class="card-text">Send the prompt below. Claude makes a small page that joins video and sound. Open it, choose your MP4 and click <strong>Combine</strong>. Keep the Chrome tab open until it's done.</p>
     </section>
 
     <section class="prompt on-ink" aria-labelledby="prompt-4-label">
@@ -204,14 +226,14 @@ When you have everything, show me the full brief and a 5-scene plan: problem (0�
     </section>
 
     <section class="card step">
-      <span class="step-num" aria-hidden="true">08</span>
-      <h2 class="step-title"><span class="visually-hidden">Step 8: </span>Download the final video</h2>
+      <span class="step-num" aria-hidden="true">06</span>
+      <h2 class="step-title"><span class="visually-hidden">Step 6: </span>Download the final video</h2>
       <p class="card-text">You get one MP4 with picture and sound. Play it once on your phone before posting. Prefer an app? Add the audio in CapCut or iMovie at 0:00 instead.</p>
     </section>
 
     <section class="card step">
-      <span class="step-num" aria-hidden="true">09</span>
-      <h2 class="step-title"><span class="visually-hidden">Step 9: </span>Share it on Instagram with a link</h2>
+      <span class="step-num" aria-hidden="true">07</span>
+      <h2 class="step-title"><span class="visually-hidden">Step 7: </span>Share it on Instagram with a link</h2>
       <ul class="rules">
         <li>Post it as a <strong>Reel</strong>. Write one line on the problem it solves, then the call to action.</li>
         <li>Links in captions aren't clickable, so put your link in your <strong>bio</strong> and say “link in bio”.</li>
@@ -221,8 +243,8 @@ When you have everything, show me the full brief and a 5-scene plan: problem (0�
     </section>
 
     <section class="card step">
-      <span class="step-num" aria-hidden="true">10</span>
-      <h2 class="step-title"><span class="visually-hidden">Step 10: </span>Let the interest decide</h2>
+      <span class="step-num" aria-hidden="true">08</span>
+      <h2 class="step-title"><span class="visually-hidden">Step 8: </span>Let the interest decide</h2>
       <p class="card-text">Give it 3–7 days, then look at the comments, DMs, saves, shares and link clicks.</p>
       <ul class="rules">
         <li><strong>Lots of interest:</strong> people want it. Build it, or open a waitlist.</li>

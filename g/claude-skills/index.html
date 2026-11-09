@@ -27,7 +27,7 @@
   <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
 
   <link rel="preload" href="../../assets/fonts/plus-jakarta-sans-800.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../../assets/css/site.css?v=22">
+  <link rel="stylesheet" href="../../assets/css/site.css?v=23">
   <script src="../../assets/js/copy.js?v=2" defer></script>
 </head>
 <body>
@@ -40,7 +40,7 @@
     <section class="card guide-intro">
       <span class="label keyword">CLAUDE</span>
       <h1 class="guide-title">What are skills in Claude? <span class="underline">Write once. Use every time.</span></h1>
-      <p class="card-text"><strong>Becoming a Claude Master · Episode 1.</strong> A skill is a paper of instructions you give Claude once. Claude reads it only when that job comes up, so you never explain the same thing twice.</p>
+      <p class="card-text"><strong>Becoming a Claude Master · Episode 1.</strong> A skill is a note of instructions you give Claude once. Claude reads it when that job comes up. You never explain the same thing twice.</p>
     </section>
 
     <section class="card quick" aria-labelledby="short-label">
@@ -50,6 +50,18 @@
         <li><div>Ask Claude to make a skill<span>Explain your process, upload one example, answer its questions.</span></div></li>
         <li><div>Save it and turn it on<span>Customize › Skills. Claude uses it on its own from then on.</span></div></li>
       </ol>
+    </section>
+
+    <section class="card" aria-labelledby="flow-label">
+      <h2 class="label" id="flow-label">How it works</h2>
+      <ol class="flow">
+        <li><strong>Turn on file creation</strong><span>one switch in Settings</span></li>
+        <li><strong>Ask Claude for a skill</strong><span>copy Prompt 1 below</span></li>
+        <li><strong>Answer its questions</strong><span>and upload one example</span></li>
+        <li><strong>Save it and turn it on</strong><span>Customize › Skills</span></li>
+        <li class="flow-end"><strong>Done!</strong><span>Claude follows your way every time</span></li>
+      </ol>
+      <p class="wordbox" style="margin-top:16px"><strong>What’s a prompt?</strong> It’s the message you type to the AI. Tap <strong>Copy</strong> on the black box and paste it.</p>
     </section>
 
     <p class="section-break label">What a skill is</p>
@@ -62,17 +74,19 @@
         <li><strong>A description</strong>: one line that tells Claude <em>when</em> to use it.</li>
         <li><strong>The instructions</strong>: your steps, your rules, your examples.</li>
       </ul>
-      <p class="card-text">Claude first reads only the name and description of each skill. It opens the full instructions only when your request needs them. That's why you can keep many skills on without slowing anything down.</p>
+      <p class="card-text">Claude first reads only the name and description. It opens the full instructions only when your request needs them. So you can keep many skills on.</p>
     </section>
 
-    <section class="card">
-      <h2 class="step-title">3 types of skills</h2>
+    <details class="card style-card">
+      <summary><span class="style-name">3 types of skills<span>built-in, from apps, your own</span></span></summary>
+      <div class="style-body">
       <ul class="rules">
         <li><strong>Built-in.</strong> Made by Anthropic for Excel, Word, PowerPoint and PDF files.</li>
         <li><strong>From apps.</strong> Apps like Notion, Figma, Canva and Atlassian have skills in Claude's skills directory.</li>
         <li><strong>Your own.</strong> Your process, your style. This is the best part, and it's what the rest of this guide is about.</li>
       </ul>
-    </section>
+      </div>
+    </details>
 
     <p class="section-break label">Make your own skill</p>
 
@@ -116,7 +130,7 @@ The job: [for example: writing my weekly update to clients]</p>
     <section class="card step">
       <span class="step-num" aria-hidden="true">03</span>
       <h2 class="step-title"><span class="visually-hidden">Step 3: </span>Explain, upload, answer</h2>
-      <p class="card-text">Tell Claude your process in your own words and upload one good example. Claude will ask you questions: when to use it, what the steps are, what the output should be. Answer them honestly.</p>
+      <p class="card-text">Tell Claude how you do the job, in your own words. Upload one good example. Claude will ask questions: when to use it, the steps, and the result you want. Answer honestly.</p>
       <p class="card-text"><strong>The final decision is yours.</strong> Read what Claude writes and change anything that isn't how you work.</p>
     </section>
     <figure class="shot">
@@ -171,8 +185,9 @@ The job: [for example: writing my weekly update to clients]</p>
       </ul>
     </section>
 
-    <section class="card">
-      <h2 class="step-title">Want to go deeper?</h2>
+    <details class="card style-card">
+      <summary><span class="style-name">Want to go deeper?<span>official guides from Anthropic</span></span></summary>
+      <div class="style-body">
       <p class="card-text">Official guides from Anthropic, the company that makes Claude. They're in English.</p>
       <ul class="rules">
         <li><a href="https://support.claude.com/en/articles/12512176-what-are-skills">What are skills?</a> The short explainer from Claude's help centre.</li>
@@ -181,7 +196,8 @@ The job: [for example: writing my weekly update to clients]</p>
         <li><a href="https://claude.com/resources/guides/the-complete-guide-to-building-skills-for-claude">The complete guide to building skills for Claude</a>. Anthropic's long guide, for when you want every detail.</li>
         <li><a href="https://claude.com/skills">Claude Skills</a>. Anthropic's skills page.</li>
       </ul>
-    </section>
+      </div>
+    </details>
 
     <a class="card card-link" href="../../claude-master/">
       <span class="label">The series</span>
