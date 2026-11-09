@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Build your AI Job Hunter — uk_speaks.ai</title>
+  <meta name="description" content="ChatGPT searches LinkedIn, Indeed and Naukri for you every day, checks each job against your CV and emails you a short list. You only do 3 things.">
+  <meta name="theme-color" content="#0a0a0a">
+
+  <!-- Social previews need absolute URLs. BASE_URL = https://unnikrishnan-nambiar.github.io/uk_speaks.ai/ (see README). -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="uk_speaks.ai">
+  <meta property="og:title" content="Build your AI Job Hunter">
+  <meta property="og:description" content="LinkedIn, Indeed and Naukri, searched for you every day and checked against your CV. You only do 3 things.">
+  <meta property="og:url" content="https://unnikrishnan-nambiar.github.io/uk_speaks.ai/g/job-hunter/">
+  <meta property="og:image" content="https://unnikrishnan-nambiar.github.io/uk_speaks.ai/assets/og/og-job-hunter.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Build your AI Job Hunter">
+  <meta name="twitter:description" content="LinkedIn, Indeed and Naukri, searched for you every day and checked against your CV. You only do 3 things.">
+  <meta name="twitter:image" content="https://unnikrishnan-nambiar.github.io/uk_speaks.ai/assets/og/og-job-hunter.png">
+
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../../favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+
+  <link rel="preload" href="../../assets/fonts/plus-jakarta-sans-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../../assets/css/site.css?v=24">
+  <script src="../../assets/js/copy.js?v=2" defer></script>
+</head>
+<body>
+  <main class="page guide">
+    <header class="topbar">
+      <a class="brand" href="../../">uk_speaks.ai</a>
+      <span class="label">Free guide</span>
+    </header>
+
+    <!-- First screen: the whole guide in 3 things. -->
+    <section class="card guide-intro quick">
+      <span class="label keyword">Hunter</span>
+      <h1 class="guide-title">Your AI Job Hunter. You only do <span class="underline">3 things.</span></h1>
+      <ol class="quick-steps">
+        <li><div>Connect Apify and Gmail<span>One time, in ChatGPT · 5 minutes</span></div></li>
+        <li><div>Upload your CV and paste the prompt<span>The prompt is right below</span></div></li>
+        <li><div>Check the preview and say yes<span>Then a job report lands in your Gmail every day</span></div></li>
+      </ol>
+    </section>
+
+    <section class="card" aria-labelledby="flow-label">
+      <h2 class="label" id="flow-label">What happens every day</h2>
+      <ol class="flow">
+        <li><strong>ChatGPT wakes up</strong><span>at the time you chose</span></li>
+        <li><strong>It searches 3 job sites</strong><span>LinkedIn · Indeed · Naukri</span></li>
+        <li><strong>It throws out the bad ones</strong><span>old posts, jobs you already got, reposts</span></li>
+        <li><strong>It checks each job against your CV</strong><span>why you fit, and what you're missing</span></li>
+        <li class="flow-end"><strong>A report lands in your Gmail</strong><span>you read it and apply yourself</span></li>
+      </ol>
+    </section>
+
+    <section class="card" aria-labelledby="words-label">
+      <h2 class="label" id="words-label">3 words you'll see</h2>
+      <p class="wordbox"><strong>Prompt:</strong> the message you paste into ChatGPT. It tells ChatGPT what to do.</p>
+      <p class="wordbox"><strong>Apify:</strong> a website with little robots that read job sites for you. You pay a few cents, from your own account.</p>
+      <p class="wordbox"><strong>Connect:</strong> letting ChatGPT use another app, like Gmail. You sign in yourself. ChatGPT never sees your password.</p>
+    </section>
+
+    <!-- ===================== 1 ===================== -->
+    <p class="section-break label">Thing 1 · Connect your apps</p>
+
+    <section class="card step">
+      <span class="step-num" aria-hidden="true">01</span>
+      <h2 class="step-title"><span class="visually-hidden">Thing 1: </span>Connect Apify and Gmail</h2>
+      <p class="card-text">Do this once. Use a computer, it's easier.</p>
+      <ol class="rules">
+        <li>Make a free account at <strong>apify.com</strong>.</li>
+        <li>In ChatGPT, open <strong>Plugins</strong>. Tap <strong>+</strong>, then <strong>Add custom MCP server</strong>.</li>
+        <li>Fill in the 3 boxes like the picture below. Tap <strong>Create</strong>. Sign in to Apify when it asks.</li>
+        <li>Now open the <strong>Gmail</strong> plugin in ChatGPT and sign in with the Gmail that should get your reports.</li>
+      </ol>
+    </section>
+
+    <section class="card" aria-labelledby="form-label">
+      <h2 class="label" id="form-label">Fill in the 3 boxes like this</h2>
+      <figure class="mock-form" aria-label="Drawing of the form: Name Apify, Server URL https://mcp.apify.com, Authentication OAuth">
+        <div class="mock-row"><span>Name</span><b>Apify</b></div>
+        <div class="mock-row"><span>Server URL</span><b>https://mcp.apify.com</b></div>
+        <div class="mock-row"><span>Authentication</span><b>OAuth</b></div>
+        <div class="mock-btn">Create</div>
+        <figcaption>A drawing, not a real screenshot. Menu names in ChatGPT can change a little.</figcaption>
+      </figure>
+    </section>
+
+    <section class="prompt on-ink" aria-labelledby="url-label">
+      <div class="prompt-head">
+        <h3 class="label" id="url-label">Server URL</h3>
+        <button class="copy-btn" type="button" data-copy-target="url">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+          <span class="copy-label" aria-live="polite">Copy</span>
+        </button>
+      </div>
+      <p class="prompt-text" id="url">https://mcp.apify.com</p>
+    </section>
+
+    <!-- ===================== 2 ===================== -->
+    <p class="section-break label">Thing 2 · CV + prompt</p>
+
+    <section class="card step">
+      <span class="step-num" aria-hidden="true">02</span>
+      <h2 class="step-title"><span class="visually-hidden">Thing 2: </span>Upload your CV and paste the prompt</h2>
+      <ol class="rules">
+        <li>Start a <strong>new chat</strong> in ChatGPT.</li>
+        <li>Tap <strong>+</strong> and attach your <strong>CV</strong> (PDF or Word).</li>
+        <li>Copy the prompt below, paste it, and send.</li>
+        <li>ChatGPT asks a few questions: the job you want, the city, what time you want the email. Just answer.</li>
+      </ol>
+    </section>
+
+    <section class="prompt on-ink" aria-labelledby="prompt-label">
+      <div class="prompt-head">
+        <h3 class="label" id="prompt-label">The prompt</h3>
+        <button class="copy-btn" type="button" data-copy-target="prompt">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+          <span class="copy-label" aria-live="polite">Copy</span>
+        </button>
+      </div>
+      <p class="prompt-text prompt-text--paras" id="prompt">Set up AI Job Hunter using my CV and preferences.
+
+Search LinkedIn, Indeed and Naukri daily at my chosen time. Require verified posting evidence within the preceding 24 hours. For the strict shortlist, require a verified numeric applicant count below 25. Show broader matches separately.
+
+Exclude previously emailed jobs and recognizable reposts across all days. Explain my fit and material gaps. Use only facts from my CV.
+
+Keep Apify Actor charges capped at $0.06 per run.
+
+Run a preview here, then create the daily task with my CV facts and these rules. I authorize report emails only to my verified own Gmail address. Confirm the schedule, timezone and recipient. Never apply or contact employers.</p>
+    </section>
+
+    <section class="card" aria-labelledby="says-label">
+      <h2 class="label" id="says-label">What the prompt tells ChatGPT, in plain words</h2>
+      <ul class="rules">
+        <li><strong>Fresh jobs only:</strong> posted in the last 24 hours.</li>
+        <li><strong>Top list:</strong> fewer than 25 people have applied. Everything else goes in a second list.</li>
+        <li><strong>No repeats:</strong> never the same job twice, even if it's posted again.</li>
+        <li><strong>Honest:</strong> it uses only what's really in your CV.</li>
+        <li><strong>Cheap:</strong> never more than 6 cents a day.</li>
+        <li><strong>Safe:</strong> it emails only you. It never applies or contacts anyone.</li>
+      </ul>
+    </section>
+
+    <!-- ===================== 3 ===================== -->
+    <p class="section-break label">Thing 3 · Check and say yes</p>
+
+    <section class="card step">
+      <span class="step-num" aria-hidden="true">03</span>
+      <h2 class="step-title"><span class="visually-hidden">Thing 3: </span>Check the preview, then say yes</h2>
+      <ol class="rules">
+        <li>ChatGPT shows you a <strong>sample report</strong> in the chat. Tap a few job links. Are they real and fresh?</li>
+        <li>It shows your <strong>time, timezone and email</strong>. Check all 3.</li>
+        <li>All good? Reply <strong>“Yes, start it.”</strong></li>
+      </ol>
+      <p class="card-text">That's it. Tomorrow, check your Gmail at your time.</p>
+    </section>
+
+    <section class="card" aria-labelledby="report-label">
+      <h2 class="label" id="report-label">Your daily email looks like this</h2>
+      <figure class="mock-mail" aria-label="Example report email">
+        <p class="mock-subject">AI Job Hunter · 3 new jobs</p>
+        <div class="mock-job">
+          <b>Data Analyst · Bengaluru</b>
+          <span>Posted 6 hours ago · 12 applicants · LinkedIn</span>
+          <span><strong>Why you fit:</strong> SQL, Power BI dashboards</span>
+          <span><strong>Missing:</strong> Snowflake</span>
+        </div>
+        <div class="mock-job">
+          <b>Junior BI Analyst · Pune</b>
+          <span>Posted 20 hours ago · 8 applicants · Naukri</span>
+          <span><strong>Why you fit:</strong> Excel reports, Python cleaning</span>
+          <span><strong>Missing:</strong> none found</span>
+        </div>
+        <p class="mock-more">+ 1 more, and a second list of other matches</p>
+        <figcaption>An example with made-up jobs. Some days the top list is empty. That's normal: it means nothing fresh and quiet came up.</figcaption>
+      </figure>
+    </section>
+
+    <!-- ===================== Extras ===================== -->
+    <p class="section-break label">Good to know</p>
+
+    <section class="card" aria-labelledby="cost-label">
+      <h2 class="label" id="cost-label">What it costs</h2>
+      <div class="table-wrap" role="region" aria-label="Cost" tabindex="0">
+        <table class="data data--fit">
+          <thead><tr><th scope="col">How often</th><th scope="col">About</th></tr></thead>
+          <tbody>
+            <tr><td>1 day</td><td>2 cents (never more than 6)</td></tr>
+            <tr><td>30 days</td><td>60 cents (never more than $1.80)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="card-text">Apify charges your own Apify account. Its free plan gives some free credit each month: check your Apify billing page. Your ChatGPT plan is separate.</p>
+    </section>
+
+    <details class="card style-card">
+      <summary><span class="style-num">+</span><span class="style-name">Something went wrong?<span>Quick fixes</span></span></summary>
+      <div class="style-body">
+        <ul class="rules">
+          <li><strong>“No Apify tools”:</strong> turn on the Apify plugin in that chat and sign in again.</li>
+          <li><strong>No jobs in the top list:</strong> normal on quiet days. Look at the second list.</li>
+          <li><strong>Jobs that don't fit:</strong> job sites mix in wrong roles. Read the “Missing” line.</li>
+          <li><strong>No email:</strong> check Spam. Then ask ChatGPT: “Did today's AI Job Hunter email send?”</li>
+          <li><strong>Stop it:</strong> tell ChatGPT “Pause my AI Job Hunter task”.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card style-card">
+      <summary><span class="style-num">+</span><span class="style-name">For tech people<span>The exact job robots and limits it uses</span></span></summary>
+      <div class="style-body">
+        <ul class="rules">
+          <li>Apify Actors: <code>valig/linkedin-jobs-scraper</code> (30 results, $0.03 cap), <code>valig/indeed-jobs-scraper</code> (10, $0.02), <code>valig/naukri-jobs-scraper</code> (10, $0.01). 120-second timeout each.</li>
+          <li>These are third-party tools, not official LinkedIn, Indeed or Naukri apps. Job sites can change and block them.</li>
+          <li>LinkedIn's “Be among the first 25 applicants” is a label, not a real count, so it doesn't pass the top list. Unknown counts don't pass either.</li>
+          <li>Repeats are found by checking your Gmail Sent folder for earlier AI Job Hunter emails.</li>
+          <li>Tested on 9 November 2026: all 3 job sites returned results and a test email arrived. A full scheduled run with all 3 sites wasn't verified yet.</li>
+        </ul>
+      </div>
+    </details>
+
+    <section class="card tip">
+      <span class="label">Stay safe</span>
+      <ul class="rules">
+        <li>Never type a password or Apify token into the chat. Sign in through the plugin only.</li>
+        <li>It only finds jobs. You read them and apply yourself.</li>
+        <li>Check every job link before you apply. Scrapers can get things wrong.</li>
+      </ul>
+    </section>
+
+    <footer class="closer on-ink">
+      <h2 class="closer-title">Liked this?<br>Next one drops this week.</h2>
+      <a class="btn-primary" href="https://www.instagram.com/uk_speaks.ai/">
+        <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8"/></svg>
+        Follow @uk_speaks.ai
+      </a>
+      <p class="closer-note"><a href="../../">Visit the uk_speaks.ai website →</a></p>
+    </footer>
+  </main>
+</body>
+</html>

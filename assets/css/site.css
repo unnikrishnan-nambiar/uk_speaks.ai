@@ -1294,3 +1294,24 @@ table.data.data--fit td:first-child {
   padding: 0;
   background: transparent;
 }
+
+/* Drawn mock-ups (not screenshots): a form and an email report. */
+.mock-form, .mock-mail {
+  margin: 0;
+  padding: 14px;
+  border: 1.5px solid var(--ink);
+  border-radius: 14px;
+  box-shadow: 4px 4px 0 var(--ink);
+  background: var(--paper);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.mock-row { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: #404040; }
+.mock-row b { padding: 8px 10px; border: 1.5px solid var(--ink); border-radius: 8px; font-size: 14px; color: var(--ink); overflow-wrap: anywhere; }
+.mock-btn { align-self: flex-end; padding: 8px 16px; border-radius: 999px; background: var(--ink); color: var(--paper); font-weight: 800; font-size: 14px; }
+.mock-subject { margin: 0; font-weight: 800; font-size: 15px; padding-bottom: 8px; border-bottom: 1.5px solid var(--ink); }
+.mock-job { display: flex; flex-direction: column; gap: 2px; padding: 10px; border-radius: 10px; background: var(--soft); font-size: 13px; }
+.mock-job b { font-size: 15px; }
+.mock-more { margin: 0; font-size: 13px; color: #404040; }
+.mock-form figcaption, .mock-mail figcaption { font-size: 12px; line-height: 1.5; color: #404040; }
