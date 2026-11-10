@@ -42,7 +42,7 @@
       <span class="label keyword">Hunter</span>
       <h1 class="guide-title">Your AI Job Hunter. You only do <span class="underline">3 things.</span></h1>
       <ol class="quick-steps">
-        <li><div>Connect Apify and Gmail<span>One time, in ChatGPT · 5 minutes</span></div></li>
+        <li><div>Add the plugin and sign in<span>One time, in ChatGPT · 5 minutes</span></div></li>
         <li><div>Upload your CV and paste the prompt<span>The prompt is right below</span></div></li>
         <li><div>Check the preview and say yes<span>Then a job report lands in your Gmail every day</span></div></li>
       </ol>
@@ -67,41 +67,53 @@
     </section>
 
     <!-- ===================== 1 ===================== -->
-    <p class="section-break label">Thing 1 · Connect your apps</p>
+    <p class="section-break label">Thing 1 · Add the plugin</p>
 
     <section class="card step">
       <span class="step-num" aria-hidden="true">01</span>
-      <h2 class="step-title"><span class="visually-hidden">Thing 1: </span>Connect Apify and Gmail</h2>
+      <h2 class="step-title"><span class="visually-hidden">Thing 1: </span>Add the plugin, then sign in</h2>
       <p class="card-text">Do this once. Use a computer, it's easier.</p>
       <ol class="rules">
-        <li>Make a free account at <strong>apify.com</strong>.</li>
-        <li>In ChatGPT, open <strong>Plugins</strong>. Tap <strong>+</strong>, then <strong>Add custom MCP server</strong>.</li>
-        <li>Fill in the 3 boxes like the picture below. Tap <strong>Create</strong>. Sign in to Apify when it asks.</li>
-        <li>Now open the <strong>Gmail</strong> plugin in ChatGPT and sign in with the Gmail that should get your reports.</li>
+        <li>Make a free account at <strong>apify.com</strong>. It's the job-search robot the plugin uses.</li>
+        <li>Download the <strong>AI Job Hunter</strong> plugin below. Don't unzip it.</li>
+        <li>In ChatGPT, open <strong>Plugins</strong>, tap <strong>+</strong> and add the plugin file you downloaded.</li>
+        <li>Sign in to <strong>Apify</strong> when it asks.</li>
+        <li>Open the <strong>Gmail</strong> plugin in ChatGPT and sign in with the Gmail that should get your reports.</li>
       </ol>
+      <a class="btn-primary" href="../../assets/files/ai-job-hunter.zip" download>
+        Download the plugin (.zip)
+        <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12"/><path d="m6 10 6 6 6-6"/><path d="M5 20h14"/></svg>
+      </a>
     </section>
 
-    <section class="card" aria-labelledby="form-label">
-      <h2 class="label" id="form-label">Fill in the 3 boxes like this</h2>
-      <figure class="mock-form" aria-label="Drawing of the form: Name Apify, Server URL https://mcp.apify.com, Authentication OAuth">
-        <div class="mock-row"><span>Name</span><b>Apify</b></div>
-        <div class="mock-row"><span>Server URL</span><b>https://mcp.apify.com</b></div>
-        <div class="mock-row"><span>Authentication</span><b>OAuth</b></div>
-        <div class="mock-btn">Create</div>
-        <figcaption>A drawing, not a real screenshot. Menu names in ChatGPT can change a little.</figcaption>
-      </figure>
+    <section class="card" aria-labelledby="plugin-label">
+      <h2 class="label" id="plugin-label">What's inside the plugin?</h2>
+      <p class="wordbox"><strong>Plugin:</strong> a small add-on for ChatGPT. This one holds the job-hunting rules and the link to Apify. No app to install, and no password inside.</p>
     </section>
 
-    <section class="prompt on-ink" aria-labelledby="url-label">
-      <div class="prompt-head">
-        <h3 class="label" id="url-label">Server URL</h3>
-        <button class="copy-btn" type="button" data-copy-target="url">
-          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
-          <span class="copy-label" aria-live="polite">Copy</span>
-        </button>
+    <details class="card style-card">
+      <summary><span class="style-num">+</span><span class="style-name">Can't add the plugin file?<span>Connect Apify by hand instead</span></span></summary>
+      <div class="style-body">
+        <p class="card-text">In ChatGPT: <strong>Plugins → + → Add custom MCP server</strong>. Fill in the 3 boxes like this, tap <strong>Create</strong>, and sign in to Apify.</p>
+        <figure class="mock-form" aria-label="Drawing of the form: Name Apify, Server URL https://mcp.apify.com, Authentication OAuth">
+          <div class="mock-row"><span>Name</span><b>Apify</b></div>
+          <div class="mock-row"><span>Server URL</span><b>https://mcp.apify.com</b></div>
+          <div class="mock-row"><span>Authentication</span><b>OAuth</b></div>
+          <div class="mock-btn">Create</div>
+          <figcaption>A drawing, not a real screenshot. Menu names in ChatGPT can change a little.</figcaption>
+        </figure>
+        <section class="prompt on-ink" aria-labelledby="url-label">
+          <div class="prompt-head">
+            <h3 class="label" id="url-label">Server URL</h3>
+            <button class="copy-btn" type="button" data-copy-target="url">
+              <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+              <span class="copy-label" aria-live="polite">Copy</span>
+            </button>
+          </div>
+          <p class="prompt-text" id="url">https://mcp.apify.com</p>
+        </section>
       </div>
-      <p class="prompt-text" id="url">https://mcp.apify.com</p>
-    </section>
+    </details>
 
     <!-- ===================== 2 ===================== -->
     <p class="section-break label">Thing 2 · CV + prompt</p>
