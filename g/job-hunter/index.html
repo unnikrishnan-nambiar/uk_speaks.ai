@@ -53,7 +53,8 @@
       <ol class="flow">
         <li><strong>ChatGPT wakes up</strong><span>at the time you chose</span></li>
         <li><strong>It searches 3 job sites</strong><span>LinkedIn · Indeed · Naukri</span></li>
-        <li><strong>It throws out the bad ones</strong><span>old posts, jobs you already got, reposts</span></li>
+        <li><strong>It removes repeats</strong><span>old posts, jobs you already got, reposts</span></li>
+        <li><strong>It removes scams</strong><span>fees, OTP requests, fake company links</span></li>
         <li><strong>It checks each job against your CV</strong><span>why you fit, and what you're missing</span></li>
         <li class="flow-end"><strong>A report lands in your Gmail</strong><span>you read it and apply yourself</span></li>
       </ol>
@@ -80,7 +81,7 @@
         <li>Sign in to <strong>Apify</strong> when it asks.</li>
         <li>Open the <strong>Gmail</strong> plugin in ChatGPT and sign in with the Gmail that should get your reports.</li>
       </ol>
-      <a class="btn-primary" href="../../assets/files/ai-job-hunter.zip" download>
+      <a class="btn-primary" href="../../assets/files/ai-job-hunter.zip?v=2" download>
         Download the plugin (.zip)
         <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12"/><path d="m6 10 6 6 6-6"/><path d="M5 20h14"/></svg>
       </a>
@@ -154,6 +155,7 @@ Run a preview here, then create the daily task with my CV facts and these rules.
         <li><strong>Fresh jobs only:</strong> posted in the last 24 hours.</li>
         <li><strong>Top list:</strong> fewer than 25 people have applied. Everything else goes in a second list.</li>
         <li><strong>No repeats:</strong> never the same job twice, even if it's posted again.</li>
+        <li><strong>Scam check:</strong> jobs that ask for money, OTPs or bank details, or look fake, are kept out.</li>
         <li><strong>Honest:</strong> it uses only what's really in your CV.</li>
         <li><strong>Cheap:</strong> never more than 6 cents a day.</li>
         <li><strong>Safe:</strong> it emails only you. It never applies or contacts anyone.</li>
@@ -233,6 +235,7 @@ Run a preview here, then create the daily task with my CV facts and these rules.
           <li>These are third-party tools, not official LinkedIn, Indeed or Naukri apps. Job sites can change and block them.</li>
           <li>LinkedIn's “Be among the first 25 applicants” is a label, not a real count, so it doesn't pass the top list. Unknown counts don't pass either.</li>
           <li>Repeats are found by checking your Gmail Sent folder for earlier AI Job Hunter emails.</li>
+          <li>Scam check: each job gets one label: “High-risk indicators — excluded”, “Needs verification — withheld” or “No obvious red flags found”. The last one is not a guarantee. Excluded jobs are listed separately with the reason.</li>
           <li>Tested on 9 November 2026: all 3 job sites returned results and a test email arrived. A full scheduled run with all 3 sites wasn't verified yet.</li>
         </ul>
       </div>
@@ -244,6 +247,7 @@ Run a preview here, then create the daily task with my CV facts and these rules.
         <li>Never type a password or Apify token into the chat. Sign in through the plugin only.</li>
         <li>It only finds jobs. You read them and apply yourself.</li>
         <li>Check every job link before you apply. Scrapers can get things wrong.</li>
+          <li>A real job never asks you to pay a fee or share an OTP. If one does, walk away.</li>
       </ul>
     </section>
 
