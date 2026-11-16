@@ -27,7 +27,7 @@
   <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
 
   <link rel="preload" href="../../assets/fonts/plus-jakarta-sans-800.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../../assets/css/site.css?v=24">
+  <link rel="stylesheet" href="../../assets/css/site.css?v=25">
   <script src="../../assets/js/copy.js?v=2" defer></script>
 </head>
 <body>
@@ -37,14 +37,13 @@
       <span class="label">Free guide</span>
     </header>
 
-    <!-- First screen: the 3 steps at a glance. -->
     <section class="card guide-intro quick">
       <span class="label keyword">WiFi</span>
       <h1 class="guide-title">Find out why your <span class="underline">WiFi</span> is slow, and fix it.</h1>
       <ol class="quick-steps">
-        <li><div>Open Claude on your laptop<span>Claude desktop app → <strong>Code</strong> tab.</span></div></li>
+        <li><div>Open Claude on your laptop<span>Desktop app → <strong>Code</strong> tab → <strong>Local</strong>.</span></div></li>
         <li><div>Paste the prompt below<span>Put your plan speed in place of <strong>[X]</strong>.</span></div></li>
-        <li><div>Say yes only to fixes you want<span>Claude <strong>asks before</strong> it changes anything.</span></div></li>
+        <li><div>Click yes only for fixes you want<span>Claude <strong>asks first</strong>, then retests.</span></div></li>
       </ol>
     </section>
 
@@ -68,48 +67,33 @@ Start by making a to-do list of these 7 steps and tick them off as you go. Expla
 Rules: use the tools already on my computer where you can. If you need an admin password or a permission, ask me. For router changes, open my router's admin page and let me type the password myself. If my router can only be changed in my provider's app, give me exact steps instead. Never pause, quit or block anything without my yes.</p>
     </section>
 
-    <p class="section-break label">Need help? Full steps</p>
-
-    <section class="card step">
-      <span class="step-num" aria-hidden="true">01</span>
-      <h2 class="step-title"><span class="visually-hidden">Step 1: </span>Open the Code tab</h2>
-      <p class="card-text">Install the <strong>Claude desktop app</strong> on your Mac or Windows laptop and sign in. Click the <strong>Code</strong> tab at the top of the sidebar.</p>
-      <p class="card-text">Under the message box, pick the <strong>Local</strong> environment, then <strong>Open folder…</strong> and choose any folder, for example Documents. Claude needs to run on your own laptop to test your WiFi.</p>
+    <section class="card" aria-labelledby="flow-label">
+      <h2 class="label" id="flow-label">What Claude does</h2>
+      <ol class="wf"><li class="wf-step"><span class="wf-n">1</span><div><strong>Speed test</strong><span>You pay for vs what you get</span></div></li><li class="wf-step"><span class="wf-n">2</span><div><strong>Your laptop</strong><span>Band, DNS, VPN, background apps</span></div></li><li class="wf-step"><span class="wf-n">3</span><div><strong>Signal</strong><span>Strength and channel</span></div></li><li class="wf-step"><span class="wf-n">4</span><div><strong>Devices</strong><span>Who is on your WiFi</span></div></li><li class="wf-step"><span class="wf-n">5</span><div><strong>Neighbours</strong><span>Which channel is empty</span></div></li><li class="wf-step"><span class="wf-n">6</span><div><strong>Asks you</strong><span>Yes / Let me choose / Not now</span></div></li><li class="wf-step"><span class="wf-n">7</span><div><strong>Fix + retest</strong><span>Before and after table</span></div></li></ol>
     </section>
 
-    <section class="card step">
-      <span class="step-num" aria-hidden="true">02</span>
-      <h2 class="step-title"><span class="visually-hidden">Step 2: </span>Set it to ask first</h2>
-      <p class="card-text">In the same row, set the permission mode to <strong>Manual</strong>. Then Claude asks you before it runs a command or changes a setting.</p>
-    </section>
-
-    <section class="card step">
-      <span class="step-num" aria-hidden="true">03</span>
-      <h2 class="step-title"><span class="visually-hidden">Step 3: </span>Paste the prompt</h2>
-      <p class="card-text">Copy the prompt above, replace <strong>[X]</strong> with the speed on your WiFi bill (for example 100), and send it. Claude works through the 7 steps and shows each result in a small table.</p>
-    </section>
-
-    <section class="card step">
-      <span class="step-num" aria-hidden="true">04</span>
-      <h2 class="step-title"><span class="visually-hidden">Step 4: </span>Change the channel</h2>
-      <p class="card-text">If your neighbours' WiFi is on the same channel as yours, Claude tells you which empty channel to move to.</p>
-      <p class="card-text">Router changes need your router login. Claude tells you the address (often <strong>192.168.1.1</strong>, or your provider's app). Type the password there yourself. It's usually on a sticker under the router.</p>
-    </section>
-
-    <section class="card step">
-      <span class="step-num" aria-hidden="true">05</span>
-      <h2 class="step-title"><span class="visually-hidden">Step 5: </span>Test again</h2>
-      <p class="card-text">After the fixes, Claude runs the same speed test and shows you a before and after table, so you can see what actually changed.</p>
+    <section class="card" aria-labelledby="see-label">
+      <h2 class="label" id="see-label">What you'll see</h2>
+      <figure class="shot">
+        <img src="../../assets/img/guides/wifi/steps.webp?v=1" width="720" height="305" loading="lazy" decoding="async" alt="Claude's to-do list with the 7 steps ticked off.">
+        <figcaption>Claude ticks off the 7 steps.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="../../assets/img/guides/wifi/channels.webp?v=1" width="720" height="308" loading="lazy" decoding="async" alt="Table of nearby WiFi networks by channel and signal, with the emptiest channel at the bottom.">
+        <figcaption>Nearby WiFi by channel. Neighbour names blurred.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="../../assets/img/guides/wifi/permission.webp?v=1" width="720" height="652" loading="lazy" decoding="async" alt="Claude listing its fixes and asking: Yes, make all of them, Let me choose, or Not now.">
+        <figcaption>Nothing changes until you click.</figcaption>
+      </figure>
     </section>
 
     <section class="card" aria-labelledby="rules-label">
       <h2 class="label" id="rules-label">Points to be noted</h2>
       <ul class="rules">
-        <li>The Code tab needs a paid Claude plan (Pro or higher). The free plan can't run checks on your laptop.</li>
-        <li>Results depend on your home. If the slowdown comes from your provider or an old router, Claude will tell you that instead.</li>
-        <li>Say yes only to changes you understand. Claude writes down your old settings first so you can undo them.</li>
-        <li>On hostel, office or college WiFi, only the laptop fixes apply. Don't change shared routers.</li>
-        <li>Never paste your router or WiFi password into the chat.</li>
+        <li>The Code tab needs a paid Claude plan (Pro or higher).</li>
+        <li>Router changes: Claude opens your router page. Type the password yourself (usually on a sticker under the router).</li>
+        <li>On hostel, office or college WiFi, only the laptop fixes apply.</li>
       </ul>
     </section>
 

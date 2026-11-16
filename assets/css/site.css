@@ -1315,3 +1315,14 @@ table.data.data--fit td:first-child {
 .mock-job b { font-size: 15px; }
 .mock-more { margin: 0; font-size: 13px; color: #404040; }
 .mock-form figcaption, .mock-mail figcaption { font-size: 12px; line-height: 1.5; color: #404040; }
+
+/* Simple vertical flowchart (guides). */
+.wf { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.wf-step { display: flex; align-items: flex-start; gap: 14px; position: relative; padding-bottom: 18px; }
+.wf-step:last-child { padding-bottom: 0; }
+.wf-step:not(:last-child)::after { content: ""; position: absolute; left: 17px; top: 38px; bottom: 2px; width: 2px; background: var(--ink); }
+.wf-n { flex: none; width: 36px; height: 36px; border-radius: 50%; background: var(--ink); color: var(--paper); display: grid; place-items: center; font-weight: 800; font-size: 15px; }
+.wf-step div { display: flex; flex-direction: column; gap: 2px; padding-top: 6px; }
+.wf-step strong { font-weight: 800; font-size: 17px; line-height: 1.2; }
+.wf-step div span { font-size: 14px; line-height: 1.4; color: var(--muted); }
+.wf-step:nth-child(6) .wf-n { background: var(--paper); color: var(--ink); box-shadow: inset 0 0 0 2px var(--ink); }
