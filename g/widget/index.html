@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Make your own iPhone widget with Claude — uk_speaks.ai</title>
+  <meta name="description" content="Build a working iPhone home-screen widget with Claude and the free Scriptable app. No coding. One prompt, copy, paste, done.">
+  <meta name="theme-color" content="#0a0a0a">
+
+  <!-- Social previews need absolute URLs. BASE_URL = https://unnikrishnan-nambiar.github.io/uk_speaks.ai/ (see README). -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="uk_speaks.ai">
+  <meta property="og:title" content="Make your own iPhone widget with Claude">
+  <meta property="og:description" content="No coding. One prompt, copy, paste, done.">
+  <meta property="og:url" content="https://unnikrishnan-nambiar.github.io/uk_speaks.ai/g/widget/">
+  <meta property="og:image" content="https://unnikrishnan-nambiar.github.io/uk_speaks.ai/assets/og/og-widget.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Make your own iPhone widget with Claude">
+  <meta name="twitter:description" content="No coding. One prompt, copy, paste, done.">
+  <meta name="twitter:image" content="https://unnikrishnan-nambiar.github.io/uk_speaks.ai/assets/og/og-widget.png">
+
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../../favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+
+  <link rel="preload" href="../../assets/fonts/plus-jakarta-sans-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../../assets/css/site.css?v=25">
+  <script src="../../assets/js/copy.js?v=2" defer></script>
+</head>
+<body>
+  <main class="page guide">
+    <header class="topbar">
+      <a class="brand" href="../../">uk_speaks.ai</a>
+      <span class="label">Free guide</span>
+    </header>
+
+    <section class="card guide-intro quick">
+      <span class="label keyword">Widget</span>
+      <h1 class="guide-title">Make your own <span class="underline">iPhone widget</span>. No coding.</h1>
+      <ol class="quick-steps">
+        <li><div>Paste the prompt into Claude<span>Answer its 9 quick questions.</span></div></li>
+        <li><div>Copy the script into Scriptable<span>Tap <strong>+</strong>, paste, give it a name.</span></div></li>
+        <li><div>Add the widget to your home screen<span>Then pick your script in the widget.</span></div></li>
+      </ol>
+    </section>
+
+    <section class="card" aria-labelledby="tools-label">
+      <h2 class="label" id="tools-label">What you need</h2>
+      <ul class="tools">
+        <li><a href="https://claude.ai/"><strong>Claude</strong><span>Free plan works · writes the widget for you</span></a></li>
+        <li><a href="https://apps.apple.com/app/id1405459188"><strong>Scriptable</strong><span>Free iPhone app · runs the widget</span></a></li>
+        <li><a href="https://support.apple.com/guide/shortcuts/welcome/ios"><strong>Shortcuts</strong><span>Already on your iPhone · optional, for extras</span></a></li>
+      </ul>
+    </section>
+
+    <section class="card" aria-labelledby="mine-label">
+      <h2 class="label" id="mine-label">Widgets I made</h2>
+      <figure class="shot">
+        <img src="../../assets/img/guides/widget/water.webp?v=1" width="640" height="299" loading="lazy" decoding="async" alt="Blue water widget showing 0 of 8 glasses with a progress ring.">
+        <figcaption>Water tracker: tap to log a glass.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="../../assets/img/guides/widget/vellam-kudi.webp?v=1" width="360" height="361" loading="lazy" decoding="async" alt="Dark widget titled Vellam Kudi showing 3 of 8 glasses.">
+        <figcaption>Vellam Kudi: small size, Manglish.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="../../assets/img/guides/widget/gym.webp?v=1" width="640" height="666" loading="lazy" decoding="async" alt="Orange gym widget with a shame meter and the last 14 days.">
+        <figcaption>Gym Check: roasts me when I skip.</figcaption>
+      </figure>
+    </section>
+
+    <section class="card" aria-labelledby="flow-label">
+      <h2 class="label" id="flow-label">How it works</h2>
+      <ol class="wf">
+        <li class="wf-step"><span class="wf-n">1</span><div><strong>Claude asks you 9 questions</strong><span>idea, tap action, reminders, design, size…</span></div></li>
+        <li class="wf-step"><span class="wf-n">2</span><div><strong>Claude tells you the iPhone limits</strong><span>before it builds anything</span></div></li>
+        <li class="wf-step"><span class="wf-n">3</span><div><strong>Claude writes one script</strong><span>your answers already filled in</span></div></li>
+        <li class="wf-step"><span class="wf-n">4</span><div><strong>You copy and paste it</strong><span>into Scriptable</span></div></li>
+        <li class="wf-step"><span class="wf-n">5</span><div><strong>Add it to your home screen</strong><span>done</span></div></li>
+      </ol>
+    </section>
+
+    <section class="prompt on-ink" aria-labelledby="prompt-1-label">
+      <div class="prompt-head">
+        <h2 class="label" id="prompt-1-label">Prompt · Widget builder</h2>
+        <button class="copy-btn" type="button" data-copy-target="prompt-1">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+          <span class="copy-label" aria-live="polite">Copy</span>
+        </button>
+      </div>
+      <p class="prompt-text prompt-text--paras" id="prompt-1">You are an expert iOS widget builder. You build home-screen widgets with the Scriptable app (free, JavaScript) and connect them to Apple Shortcuts when useful. Your user is NOT a developer: they will copy, paste and tap, nothing else.
+
+## STEP 1 — Interview me first (don&#x27;t write code yet)
+Ask these in ONE short message, numbered, with example answers so I can reply fast:
+1. Idea: What should the widget do or show? (tracker, reminder, countdown, quote, habit, stats…)
+2. Interaction: What happens when I tap it? (log something, open an app, show a pop-up, nothing)
+3. Reminders: Should it send notifications? When and how often? Quiet hours?
+4. Data: Where does the data come from? (I log it by tapping, Apple Health, Calendar, Reminders, a website, nothing)
+5. Shortcuts: Do you want it connected to a Shortcut (e.g. log to Apple Health, run from Siri, Back Tap, or an Automation)? Yes / No / Not sure
+6. Design: Vibe (minimal, bold, cute, dark, neon, gradient), colours or brand colours, emoji or icons, and font feel (rounded, mono, heavy)
+7. Language and tone: English, Manglish, Hindi…; serious, friendly or roasting
+8. Size: Small, Medium, Large, or all three
+9. Name: What should the script be called? (one word, e.g. &quot;Water&quot;)
+
+If my answer is vague, suggest 2–3 concrete options instead of asking again.
+
+## STEP 2 — Be honest about iOS limits BEFORE building
+Tell me upfront if my idea hits any of these, and offer the closest thing that does work:
+- Scriptable CANNOT read Screen Time, app usage, Health, or other apps&#x27; data directly. A Shortcut can read Health and pass it in.
+- Widgets refresh when iOS decides (roughly every 5–30 minutes). A widget can&#x27;t update instantly after a tap; use a notification or pop-up for instant feedback.
+- Tapping a widget always briefly opens the Scriptable or Shortcuts app. There is no silent background tap.
+- You cannot give me an importable .shortcut file. I build the Shortcut on my phone.
+
+## STEP 3 — Build the script
+Rules:
+- ONE complete file, ready to paste. All my answers are pre-filled in a SETTINGS block at the top, so I never need to edit code.
+- Support small, medium and large widgets (config.widgetFamily) and show a preview when run in the app.
+- Store data with FileManager.local() as JSON. Use the LOCAL date for the day key (never toISOString(), which breaks in non-UTC time zones).
+- Reminders: schedule at FIXED clock times (e.g. 8:00, 9:30, 11:00…). Never schedule &quot;X minutes from now&quot;, because widget refreshes would keep pushing it back so it never fires. Clear old pending notifications with the same threadIdentifier before rescheduling. Add an action button to notifications when useful.
+- Tap handling: w.url = URLScheme.forRunningScript() + &quot;?action=…&quot; for in-app actions, or &quot;shortcuts://run-shortcut?name=&quot; + encodeURIComponent(name) to run a Shortcut.
+- Input from Shortcuts: read BOTH args.shortcutParameter AND args.plainTexts[0], because in the new Shortcuts app the &quot;Parameter&quot; field only accepts files, so text must go in the &quot;Texts&quot; field. Return a result with Script.setShortcutOutput(&quot;…&quot;) so the Shortcut can show it in a notification.
+- Design: follow my vibe. Use LinearGradient backgrounds, DrawContext for progress bars, rings or dots, and clear hierarchy (one big number or headline, one supporting line, one small footer). Text must never overflow: set lineLimit and minimumScaleFactor.
+- Wrap anything that can fail (permissions, network) in try/catch and fall back gracefully.
+- Check the code for syntax errors before giving it to me.
+
+## STEP 4 — Setup instructions (max 3 steps per part)
+A) Scriptable: Install Scriptable → tap + → paste → name it exactly [NAME] → tap ▶ once and Allow notifications.
+B) Widget: Long-press the home screen → + → Scriptable → add the size → tap the widget → set Script to [NAME] (it defaults to &quot;Untitled Script&quot;, which is the #1 mistake). Leave Parameter empty unless the script needs it.
+C) Shortcut (only if I said yes): The new Shortcuts app builds Shortcuts from a description. Give me ONE ready-to-paste sentence for &quot;Describe a shortcut&quot; that names every action exactly, e.g.:
+   &quot;Create a shortcut named &#x27;[SHORTCUT NAME]&#x27;. First, [action]. Second, use Scriptable&#x27;s &#x27;Run Script&#x27; action to run &#x27;[NAME]&#x27; with the text &#x27;[value]&#x27; in the Texts field, Parameter empty, Run In App and Show When Run turned off. Third, show a notification with the Script Result.&quot;
+   Tell me the Shortcut name must match the one in the script&#x27;s settings exactly, including capital letters.
+
+## STEP 5 — Troubleshooting mode
+If I say it&#x27;s not working, don&#x27;t rewrite everything. Ask me for ONE screenshot, find the single broken thing, and give me at most 2 steps to fix it. Check these first: the widget isn&#x27;t set to the right script; the Shortcut name doesn&#x27;t match; text is in Parameter instead of Texts; notifications aren&#x27;t allowed; I&#x27;m expecting an instant widget refresh.
+
+Tone: short, friendly, no jargon. Number every step. One question at a time once the interview is done.</p>
+    </section>
+
+    <p class="section-break label">Need help? Full steps</p>
+
+    <section class="card step">
+      <span class="step-num" aria-hidden="true">01</span>
+      <h2 class="step-title"><span class="visually-hidden">Step 1: </span>Install Scriptable</h2>
+      <p class="card-text">Get the free <a href="https://apps.apple.com/app/id1405459188"><strong>Scriptable</strong></a> app from the App Store.</p>
+    </section>
+
+    <section class="card step">
+      <span class="step-num" aria-hidden="true">02</span>
+      <h2 class="step-title"><span class="visually-hidden">Step 2: </span>Paste the prompt in Claude</h2>
+      <p class="card-text">Copy the prompt above, paste it into Claude and send. Claude asks 9 short questions. Reply with numbers, like <strong>“1: water tracker, 2: log a glass…”</strong>. Short answers are fine.</p>
+      <p class="card-text">You can also just talk: tap the mic and describe the widget you want.</p>
+    </section>
+
+    <section class="card step">
+      <span class="step-num" aria-hidden="true">03</span>
+      <h2 class="step-title"><span class="visually-hidden">Step 3: </span>Paste the script in Scriptable</h2>
+      <p class="card-text">Tap <strong>Copy</strong> on Claude's script. Open Scriptable → <strong>+</strong> → paste → give it the name Claude told you. Tap ▶ once and <strong>Allow</strong> notifications.</p>
+      <figure class="shot">
+        <img src="../../assets/img/guides/widget/scripts.webp?v=1" width="720" height="766" loading="lazy" decoding="async" alt="Scriptable app showing a list of scripts.">
+        <figcaption>Your script shows up in this list.</figcaption>
+      </figure>
+    </section>
+
+    <section class="card step">
+      <span class="step-num" aria-hidden="true">04</span>
+      <h2 class="step-title"><span class="visually-hidden">Step 4: </span>Add the widget</h2>
+      <p class="card-text">Long-press your home screen → <strong>+</strong> → search <strong>Scriptable</strong> → pick a size → <strong>Add Widget</strong>.</p>
+      <p class="card-text">Then tap the new widget and set <strong>Script</strong> to your script's name. It starts as “Untitled Script”, the #1 mistake.</p>
+      <figure class="shot">
+        <img src="../../assets/img/guides/widget/choose-script.webp?v=1" width="720" height="698" loading="lazy" decoding="async" alt="Scriptable widget settings with Script, When Interacting and Parameter.">
+        <figcaption>Tap “Script” and choose yours.</figcaption>
+      </figure>
+    </section>
+
+    <section class="card step">
+      <span class="step-num" aria-hidden="true">05</span>
+      <h2 class="step-title"><span class="visually-hidden">Step 5: </span>Optional: connect a Shortcut</h2>
+      <p class="card-text">If you said yes to Shortcuts, Claude gives you one sentence to paste into the Shortcuts app. Use it to log water to Apple Health, run the widget from Siri, or set a daily automation.</p>
+      <figure class="shot">
+        <img src="../../assets/img/guides/widget/shortcuts.webp?v=1" width="720" height="733" loading="lazy" decoding="async" alt="Shortcuts app showing a Vellam Kudichu shortcut.">
+        <figcaption>My “Vellam Kudichu” shortcut logs a glass.</figcaption>
+      </figure>
+    </section>
+
+    <section class="card" aria-labelledby="rules-label">
+      <h2 class="label" id="rules-label">Points to be noted</h2>
+      <ul class="rules">
+        <li>iPhone only. Android version coming soon.</li>
+        <li>Widgets refresh every few minutes, not instantly. That's normal on iPhone.</li>
+        <li>Tapping a widget briefly opens Scriptable. There's no silent tap.</li>
+        <li>Not working? Tell Claude “it's not working” and send one screenshot. The prompt has a fix mode built in.</li>
+        <li>The widget name in Scriptable and in the Shortcut must match exactly, including capital letters.</li>
+      </ul>
+    </section>
+
+    <footer class="closer on-ink">
+      <h2 class="closer-title">Made one?<br>Share a screenshot in the comments.</h2>
+      <a class="btn-primary" href="https://www.instagram.com/uk_speaks.ai/">
+        <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8"/></svg>
+        Follow @uk_speaks.ai
+      </a>
+      <p class="closer-note"><a href="../../">Visit the uk_speaks.ai website →</a></p>
+    </footer>
+  </main>
+</body>
+</html>
