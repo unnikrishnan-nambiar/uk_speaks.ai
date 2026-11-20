@@ -41,89 +41,152 @@
       <span class="label keyword">Price</span>
       <h1 class="guide-title">Let ChatGPT tell you when the price <span class="underline">really drops</span>.</h1>
       <ol class="quick-steps">
-        <li><div>Copy the prompt<span>Paste your product link at the end.</span></div></li>
-        <li><div>Send it in ChatGPT<span>It sets up a daily scheduled task for you.</span></div></li>
-        <li><div>Buy when it messages you<span>Then turn the task off.</span></div></li>
+        <li><div>Check the real lowest price<span>Free on BuyHatke, before you trust any sale.</span></div></li>
+        <li><div>Make a scheduled task in ChatGPT<span>Copy the prompt, add your link and target price.</span></div></li>
+        <li><div>Buy when it pings you<span>Then turn the task off.</span></div></li>
       </ol>
+    </section>
+
+    <section class="card" aria-labelledby="what-label">
+      <h2 class="label" id="what-label">First: what's a scheduled task?</h2>
+      <p class="card-text">It's different from a normal chat. A normal chat answers you <strong>once</strong>. A <strong>scheduled task</strong> runs <strong>by itself</strong> every day and sends you a notification, even when the app is closed.</p>
+      <ul class="card-text" style="margin-top:12px">
+        <li><strong>Free plan:</strong> up to 3 active tasks. They run once a day, in a time window like "morning" (not an exact time).</li>
+        <li><strong>Plus:</strong> up to 5 active tasks, at exact times.</li>
+        <li>All your tasks live under <strong>Scheduled</strong> in ChatGPT's side menu. Pause or delete them there.</li>
+      </ul>
     </section>
 
     <section class="card" aria-labelledby="flow-label">
       <h2 class="label" id="flow-label">How it works</h2>
       <ol class="wf">
-        <li class="wf-step"><span class="wf-n">1</span><div><strong>Copy the prompt</strong><span>add your product link</span></div></li>
-        <li class="wf-step"><span class="wf-n">2</span><div><strong>Send it in ChatGPT</strong><span>it creates a daily task</span></div></li>
-        <li class="wf-step"><span class="wf-n">3</span><div><strong>ChatGPT checks every day</strong><span>price, card offers, price history</span></div></li>
-        <li class="wf-step"><span class="wf-n">4</span><div><strong>You get a message</strong><span>only when it's a real drop</span></div></li>
-        <li class="wf-step"><span class="wf-n">5</span><div><strong>Buy, then turn the task off</strong><span>Scheduled → pause or delete</span></div></li>
+        <li class="wf-step"><span class="wf-n">1</span><div><strong>BuyHatke</strong><span>see the real lowest price</span></div></li>
+        <li class="wf-step"><span class="wf-n">2</span><div><strong>Set your target price</strong><span>usually that lowest price</span></div></li>
+        <li class="wf-step"><span class="wf-n">3</span><div><strong>Send the prompt in ChatGPT</strong><span>it creates the scheduled task</span></div></li>
+        <li class="wf-step"><span class="wf-n">4</span><div><strong>It checks every morning</strong><span>stores + your card offers</span></div></li>
+        <li class="wf-step"><span class="wf-n">5</span><div><strong>Notification → buy</strong><span>then Scheduled → delete</span></div></li>
       </ol>
+    </section>
+
+    <section class="card step">
+      <span class="step-num" aria-hidden="true">01</span>
+      <h2 class="step-title"><span class="visually-hidden">Step 1: </span>Check the real price on BuyHatke</h2>
+      <p class="card-text">Sale prices are often raised first and then "cut". Check the real price before anything else.</p>
+      <ul class="card-text" style="margin-top:12px">
+        <li><strong>On a browser:</strong> type <strong>buyhatke.com/</strong> in front of the product link and open it.</li>
+        <li><strong>On Android:</strong> tap <strong>Share</strong> on the product page and pick the Buyhatke app.</li>
+        <li><strong>On iPhone:</strong> copy the link and paste it in the Buyhatke app's search bar.</li>
+      </ul>
+      <p class="card-text" style="margin-top:12px">You'll see a 3-month price chart with the <strong>lowest</strong> and <strong>average</strong> price. Use the lowest price as your <strong>target price</strong>.</p>
     </section>
 
     <section class="prompt on-ink" aria-labelledby="prompt-1-label">
       <div class="prompt-head">
-        <h2 class="label" id="prompt-1-label">Prompt · Price-drop alert</h2>
+        <h2 class="label" id="prompt-1-label">Prompt 1 · Daily price alert (scheduled task)</h2>
         <button class="copy-btn" type="button" data-copy-target="prompt-1">
           <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
           <span class="copy-label" aria-live="polite">Copy</span>
         </button>
       </div>
-      <p class="prompt-text prompt-text--paras" id="prompt-1">Create a scheduled task that runs every day at 9 AM.
+      <p class="prompt-text prompt-text--paras" id="prompt-1">Create a scheduled task that runs every morning.
 
-Task: Watch the price of this product for me and tell me the right moment to buy it.
+Task: Watch the price of the product below and tell me the right moment to buy it.
+
+Product: [PASTE YOUR PRODUCT LINK]
+Exact model: [model name, size, colour, storage]
+My target price: ₹[from BuyHatke, e.g. its lowest price]
+My cards: [e.g. HDFC credit card, SBI debit card]
 
 Each time it runs:
-1. Open the product link below and note today's price, the listed price and any discount shown.
-2. Search for the same model (same size, colour and storage) on Amazon, Flipkart, Croma, Reliance Digital and the brand's own store.
-3. Find the bank card, wallet and exchange offers I can apply, and work out the final price I would actually pay.
-4. Check the price history (for example on BuyHatke or PriceHistory) and find the usual price and the lowest price so far.
+1. Open my product link and write down today's price exactly as shown on the page.
+2. Search for the SAME model on Amazon, Flipkart, Croma, Reliance Digital and the brand's own store. Skip any listing that is a different size, colour or version.
+3. Check the bank offers for my cards and work out the final price I would actually pay.
+4. Compare with my target price.
 
-Message me ONLY if one of these is true:
-- the final price is the lowest it has been in the last 3 months, or
-- it is at least 15% below the usual price, or
-- it goes below my target price: ₹[YOUR TARGET PRICE, or leave blank].
+Message me ONLY when the final price is at or below my target price.
 
-When you message me, keep it short:
-- 🔔 Price drop: [product name]
-- Today: ₹… on [site] (usual price: ₹…, lowest so far: ₹…)
-- Offers to apply: [card / wallet / coupon] → final price ₹…
-- Verdict: Buy now / Wait
-- Link: [direct link]
+The message, short:
+Price drop: [product]
+₹[price] on [store] → ₹[final] with [offer]
+Target: ₹[target]
+Link: [direct link]
 
-If there is no real drop, reply with one line only: "No drop today."
-Never make up a price. If you can't check a site, say so.
-
-Product link: [PASTE YOUR LINK HERE]</p>
-    </section>
-
-    <section class="card step">
-      <span class="step-num" aria-hidden="true">01</span>
-      <h2 class="step-title"><span class="visually-hidden">Step 1: </span>Send the prompt</h2>
-      <p class="card-text">Copy the prompt, paste your product link at the end and send it in ChatGPT. It creates a daily scheduled task. This works on the free plan too.</p>
+If the price is above my target, reply with one line only: "No drop yet: ₹[today's lowest] on [store]."
+Never guess or make up a price. If you can't open a store's page, say "couldn't check [store]".</p>
     </section>
 
     <section class="card step">
       <span class="step-num" aria-hidden="true">02</span>
-      <h2 class="step-title"><span class="visually-hidden">Step 2: </span>Turn notifications on</h2>
-      <p class="card-text">Allow notifications for the ChatGPT app, or you won't see the alert. You can see your task under <strong>Scheduled</strong> in ChatGPT's menu.</p>
+      <h2 class="step-title"><span class="visually-hidden">Step 2: </span>Create the task</h2>
+      <p class="card-text">Open the <strong>ChatGPT app</strong> on your phone, fill in the brackets in Prompt 1 and send it. ChatGPT replies that the task is set. Check it shows up under <strong>Scheduled</strong> in the side menu.</p>
+      <p class="card-text" style="margin-top:12px">Make it from the phone app, so the alerts reach your phone.</p>
     </section>
 
     <section class="card step">
       <span class="step-num" aria-hidden="true">03</span>
-      <h2 class="step-title"><span class="visually-hidden">Step 3: </span>Buy, then turn it off</h2>
-      <p class="card-text">When ChatGPT says <strong>Buy now</strong>, check the price on the site and buy. Then open <strong>Scheduled</strong> and pause or delete the task.</p>
+      <h2 class="step-title"><span class="visually-hidden">Step 3: </span>Turn notifications on</h2>
+      <p class="card-text">In ChatGPT go to <strong>Settings → Notifications</strong> and turn on <strong>Push</strong> (and Email if you like) for tasks. Also allow notifications for the ChatGPT app in your phone settings. No notifications, no alert.</p>
+    </section>
+
+    <section class="card step">
+      <span class="step-num" aria-hidden="true">04</span>
+      <h2 class="step-title"><span class="visually-hidden">Step 4: </span>Buy, then turn it off</h2>
+      <p class="card-text">When the alert comes, open the link and check the price yourself. Buy with the card offer it mentioned. Then go to <strong>Scheduled</strong> and delete the task, so you have a free slot for the next product.</p>
+    </section>
+
+    <section class="prompt on-ink" aria-labelledby="prompt-2-label">
+      <div class="prompt-head">
+        <h2 class="label" id="prompt-2-label">Prompt 2 · Is this sale real? (one-time check)</h2>
+        <button class="copy-btn" type="button" data-copy-target="prompt-2">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+          <span class="copy-label" aria-live="polite">Copy</span>
+        </button>
+      </div>
+      <p class="prompt-text prompt-text--paras" id="prompt-2">I want to buy this: [PASTE PRODUCT LINK]
+Today's price: ₹[PRICE]
+[Attach a screenshot of the BuyHatke price chart]
+
+1. Is this a real sale price or a marketing discount? Was the price raised before the sale?
+2. Compare today's price with the lowest and average price in the chart.
+3. Does this kind of product usually get cheaper in big sales or festive season?
+4. Verdict in one line: Buy now or Wait, and the price I should wait for.</p>
     </section>
 
     <section class="card" aria-labelledby="wa-label">
-      <h2 class="label" id="wa-label">Want it on WhatsApp?</h2>
-      <p class="card-text">If you miss app notifications, use <strong>Instinct</strong>, my WhatsApp assistant. Send it the same prompt and your product link, and the price alert comes to you on WhatsApp.</p>
-      <p class="card-text" style="margin-top:12px"><a href="../instinct-assistant/">How to get Instinct →</a></p>
+      <h2 class="label" id="wa-label">Want the alert on WhatsApp?</h2>
+      <p class="card-text">Miss app notifications? <strong>Instinct</strong> is an AI assistant that lives in your WhatsApp. It can watch a price and message you there.</p>
+      <ol class="card-text" style="margin-top:12px">
+        <li>Go to <a href="https://instinct.com/">instinct.com</a>. Join the waitlist, or open an invite link if a friend sent you one.</li>
+        <li>Sign in with your phone number and the code.</li>
+        <li>Choose <strong>WhatsApp</strong>. Instinct is now a contact in your chats.</li>
+        <li>Send it a screenshot of the product (or the link) with the message below.</li>
+      </ol>
+    </section>
+
+    <section class="prompt on-ink" aria-labelledby="prompt-3-label">
+      <div class="prompt-head">
+        <h2 class="label" id="prompt-3-label">Send to Instinct with the screenshot</h2>
+        <button class="copy-btn" type="button" data-copy-target="prompt-3">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+          <span class="copy-label" aria-live="polite">Copy</span>
+        </button>
+      </div>
+      <p class="prompt-text prompt-text--paras" id="prompt-3">Watch the price of this product. Check it every day and message me as soon as it drops below ₹[PRICE], with the link and the store. Don't buy it, just tell me.</p>
+    </section>
+
+    <section class="card" aria-labelledby="inst-more">
+      <h2 class="label" id="inst-more">More things Instinct can do</h2>
+      <p class="card-text">To-dos, medicine reminders, grocery lists and more.</p>
+      <p class="card-text" style="margin-top:12px"><a href="../instinct-assistant/">Full Instinct guide →</a></p>
     </section>
 
     <section class="card" aria-labelledby="note-label">
       <h2 class="label" id="note-label">Good to know</h2>
       <ul class="card-text">
-        <li>Track one product per task. Make a new task for each thing you want to buy.</li>
-        <li>Bank and card offers depend on your card, so your final price can be different from mine.</li>
-        <li>Always check the price on the site before you pay. ChatGPT can be wrong.</li>
+        <li>One product per task. On the free plan you can watch 3 products at a time.</li>
+        <li>Card and bank offers depend on your card, so your final price can be different from mine.</li>
+        <li>ChatGPT can misread a price. Always check on the site before you pay.</li>
+        <li>BuyHatke can also send its own price alert. Use it as a backup.</li>
       </ul>
     </section>
 
