@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Get a price-drop alert from ChatGPT — uk_speaks.ai</title>
+  <meta name="description" content="Set up a free ChatGPT scheduled task that checks a product's price every day and messages you when it really drops.">
+  <meta name="theme-color" content="#0a0a0a">
+
+  <!-- Social previews need absolute URLs. BASE_URL = https://unnikrishnan-nambiar.github.io/uk_speaks.ai/ (see README). -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="uk_speaks.ai">
+  <meta property="og:title" content="Get a price-drop alert from ChatGPT">
+  <meta property="og:description" content="Don't buy in the sale. Let ChatGPT tell you when the price really drops.">
+  <meta property="og:url" content="https://unnikrishnan-nambiar.github.io/uk_speaks.ai/g/price/">
+  <meta property="og:image" content="https://unnikrishnan-nambiar.github.io/uk_speaks.ai/assets/og/og-price.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Get a price-drop alert from ChatGPT">
+  <meta name="twitter:description" content="Don't buy in the sale. Let ChatGPT tell you when the price really drops.">
+  <meta name="twitter:image" content="https://unnikrishnan-nambiar.github.io/uk_speaks.ai/assets/og/og-price.png">
+
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../../favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+
+  <link rel="preload" href="../../assets/fonts/plus-jakarta-sans-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../../assets/css/site.css?v=25">
+  <script src="../../assets/js/copy.js?v=2" defer></script>
+</head>
+<body>
+  <main class="page guide">
+    <header class="topbar">
+      <a class="brand" href="../../">uk_speaks.ai</a>
+      <span class="label">Free guide</span>
+    </header>
+
+    <section class="card guide-intro quick">
+      <span class="label keyword">Price</span>
+      <h1 class="guide-title">Let ChatGPT tell you when the price <span class="underline">really drops</span>.</h1>
+      <ol class="quick-steps">
+        <li><div>Copy the prompt<span>Paste your product link at the end.</span></div></li>
+        <li><div>Send it in ChatGPT<span>It sets up a daily scheduled task for you.</span></div></li>
+        <li><div>Buy when it messages you<span>Then turn the task off.</span></div></li>
+      </ol>
+    </section>
+
+    <section class="card" aria-labelledby="flow-label">
+      <h2 class="label" id="flow-label">How it works</h2>
+      <ol class="wf">
+        <li class="wf-step"><span class="wf-n">1</span><div><strong>Copy the prompt</strong><span>add your product link</span></div></li>
+        <li class="wf-step"><span class="wf-n">2</span><div><strong>Send it in ChatGPT</strong><span>it creates a daily task</span></div></li>
+        <li class="wf-step"><span class="wf-n">3</span><div><strong>ChatGPT checks every day</strong><span>price, card offers, price history</span></div></li>
+        <li class="wf-step"><span class="wf-n">4</span><div><strong>You get a message</strong><span>only when it's a real drop</span></div></li>
+        <li class="wf-step"><span class="wf-n">5</span><div><strong>Buy, then turn the task off</strong><span>Scheduled → pause or delete</span></div></li>
+      </ol>
+    </section>
+
+    <section class="prompt on-ink" aria-labelledby="prompt-1-label">
+      <div class="prompt-head">
+        <h2 class="label" id="prompt-1-label">Prompt · Price-drop alert</h2>
+        <button class="copy-btn" type="button" data-copy-target="prompt-1">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+          <span class="copy-label" aria-live="polite">Copy</span>
+        </button>
+      </div>
+      <p class="prompt-text prompt-text--paras" id="prompt-1">Create a scheduled task that runs every day at 9 AM.
+
+Task: Watch the price of this product for me and tell me the right moment to buy it.
+
+Each time it runs:
+1. Open the product link below and note today's price, the listed price and any discount shown.
+2. Search for the same model (same size, colour and storage) on Amazon, Flipkart, Croma, Reliance Digital and the brand's own store.
+3. Find the bank card, wallet and exchange offers I can apply, and work out the final price I would actually pay.
+4. Check the price history (for example on BuyHatke or PriceHistory) and find the usual price and the lowest price so far.
+
+Message me ONLY if one of these is true:
+- the final price is the lowest it has been in the last 3 months, or
+- it is at least 15% below the usual price, or
+- it goes below my target price: ₹[YOUR TARGET PRICE, or leave blank].
+
+When you message me, keep it short:
+- 🔔 Price drop: [product name]
+- Today: ₹… on [site] (usual price: ₹…, lowest so far: ₹…)
+- Offers to apply: [card / wallet / coupon] → final price ₹…
+- Verdict: Buy now / Wait
+- Link: [direct link]
+
+If there is no real drop, reply with one line only: "No drop today."
+Never make up a price. If you can't check a site, say so.
+
+Product link: [PASTE YOUR LINK HERE]</p>
+    </section>
+
+    <section class="card step">
+      <span class="step-num" aria-hidden="true">01</span>
+      <h2 class="step-title"><span class="visually-hidden">Step 1: </span>Send the prompt</h2>
+      <p class="card-text">Copy the prompt, paste your product link at the end and send it in ChatGPT. It creates a daily scheduled task. This works on the free plan too.</p>
+    </section>
+
+    <section class="card step">
+      <span class="step-num" aria-hidden="true">02</span>
+      <h2 class="step-title"><span class="visually-hidden">Step 2: </span>Turn notifications on</h2>
+      <p class="card-text">Allow notifications for the ChatGPT app, or you won't see the alert. You can see your task under <strong>Scheduled</strong> in ChatGPT's menu.</p>
+    </section>
+
+    <section class="card step">
+      <span class="step-num" aria-hidden="true">03</span>
+      <h2 class="step-title"><span class="visually-hidden">Step 3: </span>Buy, then turn it off</h2>
+      <p class="card-text">When ChatGPT says <strong>Buy now</strong>, check the price on the site and buy. Then open <strong>Scheduled</strong> and pause or delete the task.</p>
+    </section>
+
+    <section class="card" aria-labelledby="wa-label">
+      <h2 class="label" id="wa-label">Want it on WhatsApp?</h2>
+      <p class="card-text">If you miss app notifications, use <strong>Instinct</strong>, my WhatsApp assistant. Send it the same prompt and your product link, and the price alert comes to you on WhatsApp.</p>
+      <p class="card-text" style="margin-top:12px"><a href="../instinct-assistant/">How to get Instinct →</a></p>
+    </section>
+
+    <section class="card" aria-labelledby="note-label">
+      <h2 class="label" id="note-label">Good to know</h2>
+      <ul class="card-text">
+        <li>Track one product per task. Make a new task for each thing you want to buy.</li>
+        <li>Bank and card offers depend on your card, so your final price can be different from mine.</li>
+        <li>Always check the price on the site before you pay. ChatGPT can be wrong.</li>
+      </ul>
+    </section>
+
+    <footer class="closer on-ink">
+      <h2 class="closer-title">Got a deal?<br>Tell me what you saved in the comments.</h2>
+      <a class="btn-primary" href="https://www.instagram.com/uk_speaks.ai/">
+        <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8"/></svg>
+        Follow @uk_speaks.ai
+      </a>
+      <p class="closer-note"><a href="../../">Visit the uk_speaks.ai website →</a></p>
+    </footer>
+  </main>
+</body>
+</html>
