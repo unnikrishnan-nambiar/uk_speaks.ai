@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Check a Claude skill before you install it — uk_speaks.ai</title>
+  <meta name="description" content="One prompt for Claude and NVIDIA's free SkillSpector scanner: check any skill before it touches your laptop.">
+  <meta name="theme-color" content="#0a0a0a">
+
+  <!-- Social previews need absolute URLs. BASE_URL = https://unnikrishnan-nambiar.github.io/uk_speaks.ai/ (see README). -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="uk_speaks.ai">
+  <meta property="og:title" content="Check a Claude skill before you install it">
+  <meta property="og:description" content="Don't install a skill from a reel before you check it.">
+  <meta property="og:url" content="https://unnikrishnan-nambiar.github.io/uk_speaks.ai/g/skill/">
+  <meta property="og:image" content="https://unnikrishnan-nambiar.github.io/uk_speaks.ai/assets/og/og-skill.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Check a Claude skill before you install it">
+  <meta name="twitter:description" content="Don't install a skill from a reel before you check it.">
+  <meta name="twitter:image" content="https://unnikrishnan-nambiar.github.io/uk_speaks.ai/assets/og/og-skill.png">
+
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../../favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+
+  <link rel="preload" href="../../assets/fonts/plus-jakarta-sans-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../../assets/css/site.css?v=25">
+  <script src="../../assets/js/copy.js?v=2" defer></script>
+</head>
+<body>
+  <main class="page guide">
+    <header class="topbar">
+      <a class="brand" href="../../">uk_speaks.ai</a>
+      <span class="label">Free guide</span>
+    </header>
+
+    <section class="card guide-intro quick">
+      <span class="label keyword">Skill</span>
+      <h1 class="guide-title">Don't install a skill <span class="underline">before you check it</span>.</h1>
+      <ol class="quick-steps">
+        <li><div>Tell Claude the safety rule<span>One prompt. Save it so Claude always follows it.</span></div></li>
+        <li><div>Scan with NVIDIA SkillSpector<span>Free. About 5 minutes to set up.</span></div></li>
+        <li><div>Install only if it's safe<span>Anything marked "Do not install", skip.</span></div></li>
+      </ol>
+    </section>
+
+    <section class="card" aria-labelledby="why-label">
+      <h2 class="label" id="why-label">Why this matters</h2>
+      <p class="card-text">A skill isn't just text. Many skills come with scripts that <strong>run on your laptop</strong>. A bad one can read your files and passwords and send them out.</p>
+      <p class="card-text" style="margin-top:12px">Researchers found <strong>341 fake skills</strong> on one skill store. They looked like useful tools. Inside, they stole passwords and logins.</p>
+      <p class="card-text" style="margin-top:12px">The person in the reel telling you to install a skill usually hasn't checked it either.</p>
+    </section>
+
+    <section class="prompt on-ink" aria-labelledby="prompt-1-label">
+      <div class="prompt-head">
+        <h2 class="label" id="prompt-1-label">Fix 1 · Tell Claude this once</h2>
+        <button class="copy-btn" type="button" data-copy-target="prompt-1">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+          <span class="copy-label" aria-live="polite">Copy</span>
+        </button>
+      </div>
+      <p class="prompt-text prompt-text--paras" id="prompt-1">Before you install any skill for me, check if it is safe. Tell me if it can steal my passwords, personal details or files, or send anything to the internet. Only install it after I say yes.</p>
+    </section>
+
+    <section class="card" aria-labelledby="save-label">
+      <h2 class="label" id="save-label">Make Claude remember it</h2>
+      <ul class="card-text">
+        <li><strong>Claude app:</strong> Settings → Profile → paste it in the personal preferences box.</li>
+        <li><strong>Claude Code:</strong> add it to your <strong>CLAUDE.md</strong> file (the one in your home folder, <code>~/.claude/CLAUDE.md</code>, works for every project).</li>
+      </ul>
+    </section>
+
+    <section class="prompt on-ink" aria-labelledby="prompt-2-label">
+      <div class="prompt-head">
+        <h2 class="label" id="prompt-2-label">Check one skill in detail</h2>
+        <button class="copy-btn" type="button" data-copy-target="prompt-2">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+          <span class="copy-label" aria-live="polite">Copy</span>
+        </button>
+      </div>
+      <p class="prompt-text prompt-text--paras" id="prompt-2">I'm about to install this skill. Here it is: [paste the SKILL.md and any script files, or the GitHub link]
+
+Act as a security reviewer. Check:
+1. Does it run commands, scripts or download anything?
+2. Does it read passwords, API keys, .env files, SSH keys or browser data?
+3. Does it send any data to a website or server?
+4. Hidden instructions: text telling the AI to ignore rules, invisible characters, HTML comments.
+5. Does the code do only what the description says?
+
+Give me one verdict: Safe / Risky / Don't install.
+Then show the exact lines that worry you and explain each in simple words.</p>
+    </section>
+
+    <section class="card step">
+      <span class="step-num" aria-hidden="true">01</span>
+      <h2 class="step-title"><span class="visually-hidden">Step 1: </span>What is SkillSpector?</h2>
+      <p class="card-text">A free, open-source scanner made by NVIDIA (<a href="https://github.com/NVIDIA/skillspector">github.com/NVIDIA/skillspector</a>). It reads a skill before you install it and checks for <strong>71 known attack patterns</strong>: password stealing, data sent to the internet, hidden instructions and more.</p>
+    </section>
+
+    <section class="card step">
+      <span class="step-num" aria-hidden="true">02</span>
+      <h2 class="step-title"><span class="visually-hidden">Step 2: </span>Easiest: let Claude Code set it up</h2>
+      <p class="card-text">If you use Claude Code, paste the prompt below. It installs SkillSpector and scans the skill for you.</p>
+    </section>
+
+    <section class="prompt on-ink" aria-labelledby="prompt-3-label">
+      <div class="prompt-head">
+        <h2 class="label" id="prompt-3-label">Fix 2 · Paste in Claude Code</h2>
+        <button class="copy-btn" type="button" data-copy-target="prompt-3">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+          <span class="copy-label" aria-live="polite">Copy</span>
+        </button>
+      </div>
+      <p class="prompt-text prompt-text--paras" id="prompt-3">Install NVIDIA SkillSpector for me from https://github.com/NVIDIA/skillspector (install uv first if I don't have it). Then scan this skill: [paste the folder path or GitHub link].
+Show me the Score, Severity and Recommendation in simple words. Don't install the skill itself.</p>
+    </section>
+
+    <section class="card step">
+      <span class="step-num" aria-hidden="true">03</span>
+      <h2 class="step-title"><span class="visually-hidden">Step 3: </span>Or set it up yourself</h2>
+      <p class="card-text">Needs <strong>uv</strong> (a Python installer). Mac or Linux, in Terminal:</p><pre class="card-text" style="white-space:pre-wrap;word-break:break-all;font:600 14px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--soft);border-radius:12px;padding:12px;margin-top:10px">curl -LsSf https://astral.sh/uv/install.sh | sh</pre><p class="card-text" style="margin-top:12px">Then install SkillSpector:</p><pre class="card-text" style="white-space:pre-wrap;word-break:break-all;font:600 14px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--soft);border-radius:12px;padding:12px;margin-top:10px">uv tool install --python 3.13 git+https://github.com/NVIDIA/skillspector.git</pre><p class="card-text" style="margin-top:12px">Scan a skill folder, a SKILL.md or a GitHub link:</p><pre class="card-text" style="white-space:pre-wrap;word-break:break-all;font:600 14px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--soft);border-radius:12px;padding:12px;margin-top:10px">skillspector scan ./my-skill/
+skillspector scan https://github.com/user/my-skill</pre>
+    </section>
+
+    <section class="card step">
+      <span class="step-num" aria-hidden="true">04</span>
+      <h2 class="step-title"><span class="visually-hidden">Step 4: </span>Read the result</h2>
+      <p class="card-text">You get a <strong>risk score out of 100</strong>:</p>
+      <ul class="card-text" style="margin-top:12px">
+        <li><strong>0–20 · LOW:</strong> Safe</li>
+        <li><strong>21–50 · MEDIUM:</strong> Caution. Read what it found first.</li>
+        <li><strong>51–100 · HIGH / CRITICAL:</strong> Do not install.</li>
+      </ul>
+    </section>
+
+    <section class="card" aria-labelledby="note-label">
+      <h2 class="label" id="note-label">Good to know</h2>
+      <ul class="card-text">
+        <li>Try new skills on a spare or test laptop, not your personal or office laptop.</li>
+        <li>Install skills only from people and companies you trust.</li>
+        <li>No scanner catches everything. A "safe" score lowers the risk, it doesn't remove it.</li>
+        <li>Delete skills you don't use anymore.</li>
+      </ul>
+    </section>
+
+    <footer class="closer on-ink">
+      <h2 class="closer-title">Stay safe.<br>Send this to the friend who installs everything.</h2>
+      <a class="btn-primary" href="https://www.instagram.com/uk_speaks.ai/">
+        <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8"/></svg>
+        Follow @uk_speaks.ai
+      </a>
+      <p class="closer-note"><a href="../../">Visit the uk_speaks.ai website →</a></p>
+    </footer>
+  </main>
+</body>
+</html>
